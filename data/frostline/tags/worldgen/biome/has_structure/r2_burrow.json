@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "frostline:hollow_warrens",
-    "frostline:crevasse_fields",
-    "frostline:bone_drifts"
+    "frostline:frozen_burrow_hills",
+    "frostline:frozen_crevasse_hills",
+    "frostline:frozen_drift_plains"
   ]
 }

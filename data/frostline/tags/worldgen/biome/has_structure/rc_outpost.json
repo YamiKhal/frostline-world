@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostline:snowcliff_shelf",
-    "frostline:snowcliff_terrace"
+    "frostline:ice_wall_plains",
+    "frostline:ice_wall_hills"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostline:sculk_sea",
-    "frostline:the_quiet"
+    "frostline:consumed_plains",
+    "frostline:heart_of_the_quiet"
   ]
 }

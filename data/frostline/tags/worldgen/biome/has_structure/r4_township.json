@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostline:hollowed_township",
-    "frostline:razed_commons"
+    "frostline:blizzard_ruined_plains",
+    "frostline:blizzard_rubble_hills"
   ]
 }

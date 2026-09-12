@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "frostline:stormheart_flats",
-    "frostline:stormcut_barrens",
-    "frostline:razed_commons"
+    "frostline:blizzard_barren_plains",
+    "frostline:blizzard_barren_hills",
+    "frostline:blizzard_rubble_hills"
   ]
 }

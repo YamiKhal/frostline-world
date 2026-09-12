@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "frostline:slate_horns",
+          "biome": "frostline:glacial_slate_peaks",
           "parameters": {
             "temperature": [
               -0.2,
@@ -37,7 +37,7 @@
           }
         },
         {
-          "biome": "frostline:glacier_horns",
+          "biome": "frostline:glacial_ice_peaks",
           "parameters": {
             "temperature": [
               -0.2,
@@ -67,7 +67,7 @@
           }
         },
         {
-          "biome": "frostline:riven_shelf",
+          "biome": "frostline:glacial_slate_cliffs",
           "parameters": {
             "temperature": [
               -0.2,
@@ -97,7 +97,7 @@
           }
         },
         {
-          "biome": "frostline:overhang_shelf",
+          "biome": "frostline:glacial_overhang_cliffs",
           "parameters": {
             "temperature": [
               -0.2,
@@ -127,7 +127,7 @@
           }
         },
         {
-          "biome": "frostline:spike_barrens",
+          "biome": "frostline:glacial_spike_hills",
           "parameters": {
             "temperature": [
               -0.2,
@@ -157,7 +157,7 @@
           }
         },
         {
-          "biome": "frostline:slate_hollows",
+          "biome": "frostline:glacial_slate_hills",
           "parameters": {
             "temperature": [
               -0.2,
@@ -187,7 +187,7 @@
           }
         },
         {
-          "biome": "frostline:settled_hollows",
+          "biome": "frostline:glacial_settlement_hills",
           "parameters": {
             "temperature": [
               -0.2,
@@ -217,7 +217,7 @@
           }
         },
         {
-          "biome": "frostline:riven_flats",
+          "biome": "frostline:glacial_rifted_plains",
           "parameters": {
             "temperature": [
               -0.2,
@@ -247,7 +247,7 @@
           }
         },
         {
-          "biome": "frostline:frozen_commons",
+          "biome": "frostline:glacial_settlement_plains",
           "parameters": {
             "temperature": [
               -0.2,

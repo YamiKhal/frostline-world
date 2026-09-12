@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "frostline:vein_hollows",
-    "frostline:bloom_hollows",
-    "frostline:shrieker_fields",
-    "frostline:sculk_sea",
-    "frostline:the_quiet"
+    "frostline:infested_hills",
+    "frostline:overgrown_hills",
+    "frostline:consumed_hills",
+    "frostline:consumed_plains",
+    "frostline:heart_of_the_quiet"
   ]
 }

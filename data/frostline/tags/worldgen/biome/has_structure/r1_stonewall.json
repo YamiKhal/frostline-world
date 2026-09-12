@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "frostline:frozen_hollow",
-    "frostline:snowveil_flats",
-    "frostline:drift_barrens",
-    "frostline:riven_stoneshelf"
+    "frostline:snowy_plains",
+    "frostline:snowy_gravel_plains",
+    "frostline:snowy_hills",
+    "frostline:snowy_rifted_slopes"
   ]
 }

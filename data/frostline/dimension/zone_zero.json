@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "frostline:whisper_spires",
+          "biome": "frostline:tainted_heights",
           "parameters": {
             "temperature": [
               -1.0,
@@ -37,7 +37,7 @@
           }
         },
         {
-          "biome": "frostline:sculkspine_peaks",
+          "biome": "frostline:infested_heights",
           "parameters": {
             "temperature": [
               -1.0,
@@ -67,7 +67,7 @@
           }
         },
         {
-          "biome": "frostline:hushed_shelf",
+          "biome": "frostline:tainted_cliffs",
           "parameters": {
             "temperature": [
               -1.0,
@@ -97,7 +97,7 @@
           }
         },
         {
-          "biome": "frostline:resonant_crag",
+          "biome": "frostline:tainted_obsidian_cliffs",
           "parameters": {
             "temperature": [
               -1.0,
@@ -127,7 +127,7 @@
           }
         },
         {
-          "biome": "frostline:creeping_downs",
+          "biome": "frostline:tainted_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -157,7 +157,7 @@
           }
         },
         {
-          "biome": "frostline:vein_hollows",
+          "biome": "frostline:infested_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -187,7 +187,7 @@
           }
         },
         {
-          "biome": "frostline:bloom_hollows",
+          "biome": "frostline:overgrown_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -217,7 +217,7 @@
           }
         },
         {
-          "biome": "frostline:shrieker_fields",
+          "biome": "frostline:consumed_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -247,7 +247,7 @@
           }
         },
         {
-          "biome": "frostline:muted_flats",
+          "biome": "frostline:tainted_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -277,7 +277,7 @@
           }
         },
         {
-          "biome": "frostline:still_barrens",
+          "biome": "frostline:infested_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -307,7 +307,7 @@
           }
         },
         {
-          "biome": "frostline:sculk_sea",
+          "biome": "frostline:consumed_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -337,7 +337,7 @@
           }
         },
         {
-          "biome": "frostline:the_quiet",
+          "biome": "frostline:heart_of_the_quiet",
           "parameters": {
             "temperature": [
               -1.0,

@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "frostline:rustspine_peaks",
+          "biome": "frostline:blizzard_red_peaks",
           "parameters": {
             "temperature": [
               0.15,
@@ -37,7 +37,7 @@
           }
         },
         {
-          "biome": "frostline:scoured_horns",
+          "biome": "frostline:blizzard_granite_peaks",
           "parameters": {
             "temperature": [
               0.15,
@@ -67,7 +67,7 @@
           }
         },
         {
-          "biome": "frostline:rustfall_shelf",
+          "biome": "frostline:blizzard_red_cliffs",
           "parameters": {
             "temperature": [
               0.15,
@@ -97,7 +97,7 @@
           }
         },
         {
-          "biome": "frostline:storm_valley",
+          "biome": "frostline:blizzard_granite_cliffs",
           "parameters": {
             "temperature": [
               0.15,
@@ -127,7 +127,7 @@
           }
         },
         {
-          "biome": "frostline:stormcut_barrens",
+          "biome": "frostline:blizzard_barren_hills",
           "parameters": {
             "temperature": [
               0.15,
@@ -157,7 +157,7 @@
           }
         },
         {
-          "biome": "frostline:ruined_hollows",
+          "biome": "frostline:blizzard_ruined_hills",
           "parameters": {
             "temperature": [
               0.15,
@@ -187,7 +187,7 @@
           }
         },
         {
-          "biome": "frostline:razed_commons",
+          "biome": "frostline:blizzard_rubble_hills",
           "parameters": {
             "temperature": [
               0.15,
@@ -217,7 +217,7 @@
           }
         },
         {
-          "biome": "frostline:stormheart_flats",
+          "biome": "frostline:blizzard_barren_plains",
           "parameters": {
             "temperature": [
               0.15,
@@ -247,7 +247,7 @@
           }
         },
         {
-          "biome": "frostline:hollowed_township",
+          "biome": "frostline:blizzard_ruined_plains",
           "parameters": {
             "temperature": [
               0.15,
@@ -277,7 +277,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_crown",
+          "biome": "frostline:ice_wall_peaks",
           "parameters": {
             "temperature": [
               0.54,
@@ -307,7 +307,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_brink",
+          "biome": "frostline:ice_wall_cliffs",
           "parameters": {
             "temperature": [
               0.54,
@@ -337,7 +337,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_terrace",
+          "biome": "frostline:ice_wall_hills",
           "parameters": {
             "temperature": [
               0.54,
@@ -367,7 +367,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_shelf",
+          "biome": "frostline:ice_wall_plains",
           "parameters": {
             "temperature": [
               0.54,

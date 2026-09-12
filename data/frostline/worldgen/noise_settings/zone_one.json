@@ -5454,7 +5454,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:snowcliff_brink"
+                  "frostline:ice_wall_cliffs"
                 ]
               },
               "then_run": {
@@ -5569,9 +5569,9 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:snowcliff_crown",
-                  "frostline:snowcliff_shelf",
-                  "frostline:snowcliff_terrace"
+                  "frostline:ice_wall_peaks",
+                  "frostline:ice_wall_plains",
+                  "frostline:ice_wall_hills"
                 ]
               },
               "then_run": {
@@ -5686,7 +5686,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:crevasse_fields"
+                  "frostline:frozen_crevasse_hills"
                 ]
               },
               "then_run": {
@@ -5780,7 +5780,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:bone_drifts"
+                  "frostline:frozen_drift_plains"
                 ]
               },
               "then_run": {
@@ -5874,7 +5874,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:glass_ridges"
+                  "frostline:frozen_ice_peaks"
                 ]
               },
               "then_run": {
@@ -5968,11 +5968,11 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:mossy_shelf",
-                  "frostline:sunlit_hollows",
-                  "frostline:sunlit_meadow",
-                  "frostline:verdant_downs",
-                  "frostline:verdant_plains"
+                  "frostline:green_slopes",
+                  "frostline:green_hollows",
+                  "frostline:green_meadow",
+                  "frostline:green_hills",
+                  "frostline:green_plains"
                 ]
               },
               "then_run": {
@@ -6049,8 +6049,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:emerald_bluffs",
-                  "frostline:verdant_crags"
+                  "frostline:green_bluffs",
+                  "frostline:green_crags"
                 ]
               },
               "then_run": {
@@ -6164,8 +6164,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:deadly_snowfield",
-                  "frostline:whiteout_flats"
+                  "frostline:frozen_deadwood_hills",
+                  "frostline:frozen_plains"
                 ]
               },
               "then_run": {
@@ -6274,8 +6274,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:muted_flats",
-                  "frostline:whisper_spires"
+                  "frostline:tainted_plains",
+                  "frostline:tainted_heights"
                 ]
               },
               "then_run": {
@@ -6390,8 +6390,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:sculk_sea",
-                  "frostline:shrieker_fields"
+                  "frostline:consumed_plains",
+                  "frostline:consumed_hills"
                 ]
               },
               "then_run": {
@@ -6488,7 +6488,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:bloom_hollows"
+                  "frostline:overgrown_hills"
                 ]
               },
               "then_run": {
@@ -6600,8 +6600,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:creeping_downs",
-                  "frostline:hushed_shelf"
+                  "frostline:tainted_hills",
+                  "frostline:tainted_cliffs"
                 ]
               },
               "then_run": {
@@ -6713,7 +6713,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:resonant_crag"
+                  "frostline:tainted_obsidian_cliffs"
                 ]
               },
               "then_run": {
@@ -6825,7 +6825,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:the_quiet"
+                  "frostline:heart_of_the_quiet"
                 ]
               },
               "then_run": {
@@ -6902,9 +6902,9 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:sculkspine_peaks",
-                  "frostline:still_barrens",
-                  "frostline:vein_hollows"
+                  "frostline:infested_heights",
+                  "frostline:infested_plains",
+                  "frostline:infested_hills"
                 ]
               },
               "then_run": {
@@ -7016,8 +7016,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:riven_stoneshelf",
-                  "frostline:windscoured_crags"
+                  "frostline:snowy_rifted_slopes",
+                  "frostline:snowy_stony_highlands"
                 ]
               },
               "then_run": {
@@ -7141,7 +7141,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:frostcap_rise"
+                  "frostline:snowy_highlands"
                 ]
               },
               "then_run": {
@@ -7267,12 +7267,12 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:drift_barrens",
-                  "frostline:frost_shelf",
-                  "frostline:frozen_hollow",
-                  "frostline:rime_hollows",
-                  "frostline:snowveil_flats",
-                  "frostline:standing_pines"
+                  "frostline:snowy_hills",
+                  "frostline:snowy_slopes",
+                  "frostline:snowy_plains",
+                  "frostline:snowy_dead_forest",
+                  "frostline:snowy_gravel_plains",
+                  "frostline:snowy_pine_forest"
                 ]
               },
               "then_run": {
@@ -7396,8 +7396,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:shattered_shelf",
-                  "frostline:undercut_shelf"
+                  "frostline:frozen_cliffs",
+                  "frostline:frozen_overhang_cliffs"
                 ]
               },
               "then_run": {
@@ -7506,7 +7506,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:hollow_warrens"
+                  "frostline:frozen_burrow_hills"
                 ]
               },
               "then_run": {
@@ -7615,7 +7615,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:glacier_horns"
+                  "frostline:glacial_ice_peaks"
                 ]
               },
               "then_run": {
@@ -7730,9 +7730,9 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:riven_shelf",
-                  "frostline:slate_hollows",
-                  "frostline:slate_horns"
+                  "frostline:glacial_slate_cliffs",
+                  "frostline:glacial_slate_hills",
+                  "frostline:glacial_slate_peaks"
                 ]
               },
               "then_run": {
@@ -7853,11 +7853,11 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:frozen_commons",
-                  "frostline:overhang_shelf",
-                  "frostline:riven_flats",
-                  "frostline:settled_hollows",
-                  "frostline:spike_barrens"
+                  "frostline:glacial_settlement_plains",
+                  "frostline:glacial_overhang_cliffs",
+                  "frostline:glacial_rifted_plains",
+                  "frostline:glacial_settlement_hills",
+                  "frostline:glacial_spike_hills"
                 ]
               },
               "then_run": {
@@ -7972,8 +7972,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:rustfall_shelf",
-                  "frostline:rustspine_peaks"
+                  "frostline:blizzard_red_cliffs",
+                  "frostline:blizzard_red_peaks"
                 ]
               },
               "then_run": {
@@ -8117,9 +8117,9 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:hollowed_township",
-                  "frostline:razed_commons",
-                  "frostline:ruined_hollows"
+                  "frostline:blizzard_ruined_plains",
+                  "frostline:blizzard_rubble_hills",
+                  "frostline:blizzard_ruined_hills"
                 ]
               },
               "then_run": {
@@ -8231,8 +8231,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:scoured_horns",
-                  "frostline:storm_valley"
+                  "frostline:blizzard_granite_peaks",
+                  "frostline:blizzard_granite_cliffs"
                 ]
               },
               "then_run": {
@@ -8362,8 +8362,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:stormcut_barrens",
-                  "frostline:stormheart_flats"
+                  "frostline:blizzard_barren_hills",
+                  "frostline:blizzard_barren_plains"
                 ]
               },
               "then_run": {
@@ -8478,7 +8478,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "frostline:frozen_spires"
+                  "frostline:frozen_spike_peaks"
                 ]
               },
               "then_run": {
@@ -8590,18 +8590,18 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "frostline:whisper_spires",
-            "frostline:sculkspine_peaks",
-            "frostline:hushed_shelf",
-            "frostline:resonant_crag",
-            "frostline:creeping_downs",
-            "frostline:vein_hollows",
-            "frostline:bloom_hollows",
-            "frostline:shrieker_fields",
-            "frostline:muted_flats",
-            "frostline:still_barrens",
-            "frostline:sculk_sea",
-            "frostline:the_quiet"
+            "frostline:tainted_heights",
+            "frostline:infested_heights",
+            "frostline:tainted_cliffs",
+            "frostline:tainted_obsidian_cliffs",
+            "frostline:tainted_hills",
+            "frostline:infested_hills",
+            "frostline:overgrown_hills",
+            "frostline:consumed_hills",
+            "frostline:tainted_plains",
+            "frostline:infested_plains",
+            "frostline:consumed_plains",
+            "frostline:heart_of_the_quiet"
           ]
         },
         "then_run": {
@@ -8715,8 +8715,8 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "frostline:slate_horns",
-            "frostline:riven_shelf"
+            "frostline:glacial_slate_peaks",
+            "frostline:glacial_slate_cliffs"
           ]
         },
         "then_run": {
@@ -8747,8 +8747,8 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "frostline:rustspine_peaks",
-            "frostline:rustfall_shelf"
+            "frostline:blizzard_red_peaks",
+            "frostline:blizzard_red_cliffs"
           ]
         },
         "then_run": {
@@ -8829,8 +8829,8 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "frostline:snowcliff_brink",
-            "frostline:snowcliff_crown"
+            "frostline:ice_wall_cliffs",
+            "frostline:ice_wall_peaks"
           ]
         },
         "then_run": {

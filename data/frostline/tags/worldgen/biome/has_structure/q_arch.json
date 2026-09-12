@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "frostline:hushed_shelf",
-    "frostline:resonant_crag",
-    "frostline:sculkspine_peaks",
-    "frostline:whisper_spires"
+    "frostline:tainted_cliffs",
+    "frostline:tainted_obsidian_cliffs",
+    "frostline:infested_heights",
+    "frostline:tainted_heights"
   ]
 }

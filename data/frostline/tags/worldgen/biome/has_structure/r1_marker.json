@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "frostline:frostcap_rise",
-    "frostline:windscoured_crags",
-    "frostline:frost_shelf",
-    "frostline:riven_stoneshelf",
-    "frostline:drift_barrens",
-    "frostline:rime_hollows",
-    "frostline:standing_pines",
-    "frostline:frozen_hollow",
-    "frostline:snowveil_flats"
+    "frostline:snowy_highlands",
+    "frostline:snowy_stony_highlands",
+    "frostline:snowy_slopes",
+    "frostline:snowy_rifted_slopes",
+    "frostline:snowy_hills",
+    "frostline:snowy_dead_forest",
+    "frostline:snowy_pine_forest",
+    "frostline:snowy_plains",
+    "frostline:snowy_gravel_plains"
   ]
 }

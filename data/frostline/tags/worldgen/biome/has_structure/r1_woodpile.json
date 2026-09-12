@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "frostline:rime_hollows",
-    "frostline:standing_pines",
-    "frostline:frozen_hollow",
-    "frostline:snowveil_flats"
+    "frostline:snowy_dead_forest",
+    "frostline:snowy_pine_forest",
+    "frostline:snowy_plains",
+    "frostline:snowy_gravel_plains"
   ]
 }

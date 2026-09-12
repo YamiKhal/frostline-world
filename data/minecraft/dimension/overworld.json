@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "frostline:whisper_spires",
+          "biome": "frostline:tainted_heights",
           "parameters": {
             "temperature": [
               -1.0,
@@ -37,7 +37,7 @@
           }
         },
         {
-          "biome": "frostline:sculkspine_peaks",
+          "biome": "frostline:infested_heights",
           "parameters": {
             "temperature": [
               -1.0,
@@ -67,7 +67,7 @@
           }
         },
         {
-          "biome": "frostline:hushed_shelf",
+          "biome": "frostline:tainted_cliffs",
           "parameters": {
             "temperature": [
               -1.0,
@@ -76,36 +76,6 @@
             "humidity": [
               -1.0,
               0.0
-            ],
-            "continentalness": [
-              0.6,
-              1.0
-            ],
-            "erosion": [
-              -0.55,
-              -0.375
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ],
-            "depth": [
-              -1.5,
-              1.5
-            ],
-            "offset": 0.0
-          }
-        },
-        {
-          "biome": "frostline:resonant_crag",
-          "parameters": {
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.0,
-              1.0
             ],
             "continentalness": [
               0.6,
@@ -127,7 +97,37 @@
           }
         },
         {
-          "biome": "frostline:creeping_downs",
+          "biome": "frostline:tainted_obsidian_cliffs",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              1.0
+            ],
+            "humidity": [
+              0.0,
+              1.0
+            ],
+            "continentalness": [
+              0.6,
+              1.0
+            ],
+            "erosion": [
+              -0.55,
+              -0.375
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": [
+              -1.5,
+              1.5
+            ],
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "frostline:tainted_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -157,7 +157,7 @@
           }
         },
         {
-          "biome": "frostline:vein_hollows",
+          "biome": "frostline:infested_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -187,7 +187,7 @@
           }
         },
         {
-          "biome": "frostline:bloom_hollows",
+          "biome": "frostline:overgrown_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -217,7 +217,7 @@
           }
         },
         {
-          "biome": "frostline:shrieker_fields",
+          "biome": "frostline:consumed_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -247,7 +247,7 @@
           }
         },
         {
-          "biome": "frostline:muted_flats",
+          "biome": "frostline:tainted_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -277,7 +277,7 @@
           }
         },
         {
-          "biome": "frostline:still_barrens",
+          "biome": "frostline:infested_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -307,7 +307,7 @@
           }
         },
         {
-          "biome": "frostline:sculk_sea",
+          "biome": "frostline:consumed_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -337,7 +337,7 @@
           }
         },
         {
-          "biome": "frostline:the_quiet",
+          "biome": "frostline:heart_of_the_quiet",
           "parameters": {
             "temperature": [
               -1.0,
@@ -367,7 +367,7 @@
           }
         },
         {
-          "biome": "frostline:frostcap_rise",
+          "biome": "frostline:snowy_highlands",
           "parameters": {
             "temperature": [
               -1.0,
@@ -397,7 +397,7 @@
           }
         },
         {
-          "biome": "frostline:windscoured_crags",
+          "biome": "frostline:snowy_stony_highlands",
           "parameters": {
             "temperature": [
               -1.0,
@@ -427,7 +427,7 @@
           }
         },
         {
-          "biome": "frostline:frost_shelf",
+          "biome": "frostline:snowy_slopes",
           "parameters": {
             "temperature": [
               -1.0,
@@ -457,7 +457,7 @@
           }
         },
         {
-          "biome": "frostline:riven_stoneshelf",
+          "biome": "frostline:snowy_rifted_slopes",
           "parameters": {
             "temperature": [
               -1.0,
@@ -487,7 +487,7 @@
           }
         },
         {
-          "biome": "frostline:drift_barrens",
+          "biome": "frostline:snowy_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -517,7 +517,7 @@
           }
         },
         {
-          "biome": "frostline:rime_hollows",
+          "biome": "frostline:snowy_dead_forest",
           "parameters": {
             "temperature": [
               -1.0,
@@ -547,7 +547,7 @@
           }
         },
         {
-          "biome": "frostline:standing_pines",
+          "biome": "frostline:snowy_pine_forest",
           "parameters": {
             "temperature": [
               -1.0,
@@ -577,7 +577,7 @@
           }
         },
         {
-          "biome": "frostline:frozen_hollow",
+          "biome": "frostline:snowy_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -607,7 +607,7 @@
           }
         },
         {
-          "biome": "frostline:snowveil_flats",
+          "biome": "frostline:snowy_gravel_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -637,7 +637,7 @@
           }
         },
         {
-          "biome": "frostline:frozen_spires",
+          "biome": "frostline:frozen_spike_peaks",
           "parameters": {
             "temperature": [
               -0.55,
@@ -667,7 +667,7 @@
           }
         },
         {
-          "biome": "frostline:glass_ridges",
+          "biome": "frostline:frozen_ice_peaks",
           "parameters": {
             "temperature": [
               -0.55,
@@ -697,7 +697,7 @@
           }
         },
         {
-          "biome": "frostline:shattered_shelf",
+          "biome": "frostline:frozen_cliffs",
           "parameters": {
             "temperature": [
               -0.55,
@@ -727,7 +727,7 @@
           }
         },
         {
-          "biome": "frostline:undercut_shelf",
+          "biome": "frostline:frozen_overhang_cliffs",
           "parameters": {
             "temperature": [
               -0.55,
@@ -757,7 +757,7 @@
           }
         },
         {
-          "biome": "frostline:deadly_snowfield",
+          "biome": "frostline:frozen_deadwood_hills",
           "parameters": {
             "temperature": [
               -0.55,
@@ -787,7 +787,7 @@
           }
         },
         {
-          "biome": "frostline:crevasse_fields",
+          "biome": "frostline:frozen_crevasse_hills",
           "parameters": {
             "temperature": [
               -0.55,
@@ -817,7 +817,7 @@
           }
         },
         {
-          "biome": "frostline:hollow_warrens",
+          "biome": "frostline:frozen_burrow_hills",
           "parameters": {
             "temperature": [
               -0.55,
@@ -847,7 +847,7 @@
           }
         },
         {
-          "biome": "frostline:whiteout_flats",
+          "biome": "frostline:frozen_plains",
           "parameters": {
             "temperature": [
               -0.55,
@@ -877,7 +877,7 @@
           }
         },
         {
-          "biome": "frostline:bone_drifts",
+          "biome": "frostline:frozen_drift_plains",
           "parameters": {
             "temperature": [
               -0.55,
@@ -907,7 +907,7 @@
           }
         },
         {
-          "biome": "frostline:slate_horns",
+          "biome": "frostline:glacial_slate_peaks",
           "parameters": {
             "temperature": [
               -0.2,
@@ -937,7 +937,7 @@
           }
         },
         {
-          "biome": "frostline:glacier_horns",
+          "biome": "frostline:glacial_ice_peaks",
           "parameters": {
             "temperature": [
               -0.2,
@@ -967,7 +967,7 @@
           }
         },
         {
-          "biome": "frostline:riven_shelf",
+          "biome": "frostline:glacial_slate_cliffs",
           "parameters": {
             "temperature": [
               -0.2,
@@ -997,7 +997,7 @@
           }
         },
         {
-          "biome": "frostline:overhang_shelf",
+          "biome": "frostline:glacial_overhang_cliffs",
           "parameters": {
             "temperature": [
               -0.2,
@@ -1027,7 +1027,7 @@
           }
         },
         {
-          "biome": "frostline:spike_barrens",
+          "biome": "frostline:glacial_spike_hills",
           "parameters": {
             "temperature": [
               -0.2,
@@ -1057,7 +1057,7 @@
           }
         },
         {
-          "biome": "frostline:slate_hollows",
+          "biome": "frostline:glacial_slate_hills",
           "parameters": {
             "temperature": [
               -0.2,
@@ -1087,7 +1087,7 @@
           }
         },
         {
-          "biome": "frostline:settled_hollows",
+          "biome": "frostline:glacial_settlement_hills",
           "parameters": {
             "temperature": [
               -0.2,
@@ -1117,7 +1117,7 @@
           }
         },
         {
-          "biome": "frostline:riven_flats",
+          "biome": "frostline:glacial_rifted_plains",
           "parameters": {
             "temperature": [
               -0.2,
@@ -1147,7 +1147,7 @@
           }
         },
         {
-          "biome": "frostline:frozen_commons",
+          "biome": "frostline:glacial_settlement_plains",
           "parameters": {
             "temperature": [
               -0.2,
@@ -1177,7 +1177,7 @@
           }
         },
         {
-          "biome": "frostline:rustspine_peaks",
+          "biome": "frostline:blizzard_red_peaks",
           "parameters": {
             "temperature": [
               0.15,
@@ -1207,7 +1207,7 @@
           }
         },
         {
-          "biome": "frostline:scoured_horns",
+          "biome": "frostline:blizzard_granite_peaks",
           "parameters": {
             "temperature": [
               0.15,
@@ -1237,7 +1237,7 @@
           }
         },
         {
-          "biome": "frostline:rustfall_shelf",
+          "biome": "frostline:blizzard_red_cliffs",
           "parameters": {
             "temperature": [
               0.15,
@@ -1267,7 +1267,7 @@
           }
         },
         {
-          "biome": "frostline:storm_valley",
+          "biome": "frostline:blizzard_granite_cliffs",
           "parameters": {
             "temperature": [
               0.15,
@@ -1297,7 +1297,7 @@
           }
         },
         {
-          "biome": "frostline:stormcut_barrens",
+          "biome": "frostline:blizzard_barren_hills",
           "parameters": {
             "temperature": [
               0.15,
@@ -1327,7 +1327,7 @@
           }
         },
         {
-          "biome": "frostline:ruined_hollows",
+          "biome": "frostline:blizzard_ruined_hills",
           "parameters": {
             "temperature": [
               0.15,
@@ -1357,7 +1357,7 @@
           }
         },
         {
-          "biome": "frostline:razed_commons",
+          "biome": "frostline:blizzard_rubble_hills",
           "parameters": {
             "temperature": [
               0.15,
@@ -1387,7 +1387,7 @@
           }
         },
         {
-          "biome": "frostline:stormheart_flats",
+          "biome": "frostline:blizzard_barren_plains",
           "parameters": {
             "temperature": [
               0.15,
@@ -1417,7 +1417,7 @@
           }
         },
         {
-          "biome": "frostline:hollowed_township",
+          "biome": "frostline:blizzard_ruined_plains",
           "parameters": {
             "temperature": [
               0.15,
@@ -1447,7 +1447,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_crown",
+          "biome": "frostline:ice_wall_peaks",
           "parameters": {
             "temperature": [
               0.54,
@@ -1477,7 +1477,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_brink",
+          "biome": "frostline:ice_wall_cliffs",
           "parameters": {
             "temperature": [
               0.54,
@@ -1507,7 +1507,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_terrace",
+          "biome": "frostline:ice_wall_hills",
           "parameters": {
             "temperature": [
               0.54,
@@ -1537,7 +1537,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_shelf",
+          "biome": "frostline:ice_wall_plains",
           "parameters": {
             "temperature": [
               0.54,
@@ -1567,7 +1567,7 @@
           }
         },
         {
-          "biome": "frostline:emerald_bluffs",
+          "biome": "frostline:green_bluffs",
           "parameters": {
             "temperature": [
               0.6,
@@ -1597,7 +1597,7 @@
           }
         },
         {
-          "biome": "frostline:verdant_crags",
+          "biome": "frostline:green_crags",
           "parameters": {
             "temperature": [
               0.6,
@@ -1627,7 +1627,7 @@
           }
         },
         {
-          "biome": "frostline:mossy_shelf",
+          "biome": "frostline:green_slopes",
           "parameters": {
             "temperature": [
               0.6,
@@ -1657,7 +1657,7 @@
           }
         },
         {
-          "biome": "frostline:verdant_downs",
+          "biome": "frostline:green_hills",
           "parameters": {
             "temperature": [
               0.6,
@@ -1687,7 +1687,7 @@
           }
         },
         {
-          "biome": "frostline:sunlit_hollows",
+          "biome": "frostline:green_hollows",
           "parameters": {
             "temperature": [
               0.6,
@@ -1717,7 +1717,7 @@
           }
         },
         {
-          "biome": "frostline:verdant_plains",
+          "biome": "frostline:green_plains",
           "parameters": {
             "temperature": [
               0.6,
@@ -1747,7 +1747,7 @@
           }
         },
         {
-          "biome": "frostline:sunlit_meadow",
+          "biome": "frostline:green_meadow",
           "parameters": {
             "temperature": [
               0.6,

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "frostline:deadly_snowfield",
-    "frostline:whiteout_flats",
-    "frostline:hollow_warrens"
+    "frostline:frozen_deadwood_hills",
+    "frostline:frozen_plains",
+    "frostline:frozen_burrow_hills"
   ]
 }

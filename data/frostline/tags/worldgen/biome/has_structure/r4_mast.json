@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "frostline:rustspine_peaks",
-    "frostline:scoured_horns",
-    "frostline:stormheart_flats"
+    "frostline:blizzard_red_peaks",
+    "frostline:blizzard_granite_peaks",
+    "frostline:blizzard_barren_plains"
   ]
 }

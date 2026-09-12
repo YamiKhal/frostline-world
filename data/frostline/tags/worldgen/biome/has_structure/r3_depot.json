@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "frostline:settled_hollows",
-    "frostline:frozen_commons",
-    "frostline:riven_flats"
+    "frostline:glacial_settlement_hills",
+    "frostline:glacial_settlement_plains",
+    "frostline:glacial_rifted_plains"
   ]
 }

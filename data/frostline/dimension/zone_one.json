@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "frostline:frostcap_rise",
+          "biome": "frostline:snowy_highlands",
           "parameters": {
             "temperature": [
               -1.0,
@@ -37,7 +37,7 @@
           }
         },
         {
-          "biome": "frostline:windscoured_crags",
+          "biome": "frostline:snowy_stony_highlands",
           "parameters": {
             "temperature": [
               -1.0,
@@ -67,7 +67,7 @@
           }
         },
         {
-          "biome": "frostline:frost_shelf",
+          "biome": "frostline:snowy_slopes",
           "parameters": {
             "temperature": [
               -1.0,
@@ -97,7 +97,7 @@
           }
         },
         {
-          "biome": "frostline:riven_stoneshelf",
+          "biome": "frostline:snowy_rifted_slopes",
           "parameters": {
             "temperature": [
               -1.0,
@@ -127,7 +127,7 @@
           }
         },
         {
-          "biome": "frostline:drift_barrens",
+          "biome": "frostline:snowy_hills",
           "parameters": {
             "temperature": [
               -1.0,
@@ -157,7 +157,7 @@
           }
         },
         {
-          "biome": "frostline:rime_hollows",
+          "biome": "frostline:snowy_dead_forest",
           "parameters": {
             "temperature": [
               -1.0,
@@ -187,7 +187,7 @@
           }
         },
         {
-          "biome": "frostline:standing_pines",
+          "biome": "frostline:snowy_pine_forest",
           "parameters": {
             "temperature": [
               -1.0,
@@ -217,7 +217,7 @@
           }
         },
         {
-          "biome": "frostline:frozen_hollow",
+          "biome": "frostline:snowy_plains",
           "parameters": {
             "temperature": [
               -1.0,
@@ -247,7 +247,7 @@
           }
         },
         {
-          "biome": "frostline:snowveil_flats",
+          "biome": "frostline:snowy_gravel_plains",
           "parameters": {
             "temperature": [
               -1.0,

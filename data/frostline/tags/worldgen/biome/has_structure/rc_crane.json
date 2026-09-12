@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "frostline:snowcliff_crown",
-    "frostline:snowcliff_brink"
+    "frostline:ice_wall_peaks",
+    "frostline:ice_wall_cliffs"
   ]
 }

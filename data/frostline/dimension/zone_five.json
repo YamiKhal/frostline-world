@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "frostline:snowcliff_crown",
+          "biome": "frostline:ice_wall_peaks",
           "parameters": {
             "temperature": [
               0.54,
@@ -37,7 +37,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_brink",
+          "biome": "frostline:ice_wall_cliffs",
           "parameters": {
             "temperature": [
               0.54,
@@ -67,7 +67,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_terrace",
+          "biome": "frostline:ice_wall_hills",
           "parameters": {
             "temperature": [
               0.54,
@@ -97,7 +97,7 @@
           }
         },
         {
-          "biome": "frostline:snowcliff_shelf",
+          "biome": "frostline:ice_wall_plains",
           "parameters": {
             "temperature": [
               0.54,
@@ -127,7 +127,7 @@
           }
         },
         {
-          "biome": "frostline:emerald_bluffs",
+          "biome": "frostline:green_bluffs",
           "parameters": {
             "temperature": [
               0.6,
@@ -157,7 +157,7 @@
           }
         },
         {
-          "biome": "frostline:verdant_crags",
+          "biome": "frostline:green_crags",
           "parameters": {
             "temperature": [
               0.6,
@@ -187,7 +187,7 @@
           }
         },
         {
-          "biome": "frostline:mossy_shelf",
+          "biome": "frostline:green_slopes",
           "parameters": {
             "temperature": [
               0.6,
@@ -217,7 +217,7 @@
           }
         },
         {
-          "biome": "frostline:verdant_downs",
+          "biome": "frostline:green_hills",
           "parameters": {
             "temperature": [
               0.6,
@@ -247,7 +247,7 @@
           }
         },
         {
-          "biome": "frostline:sunlit_hollows",
+          "biome": "frostline:green_hollows",
           "parameters": {
             "temperature": [
               0.6,
@@ -277,7 +277,7 @@
           }
         },
         {
-          "biome": "frostline:verdant_plains",
+          "biome": "frostline:green_plains",
           "parameters": {
             "temperature": [
               0.6,
@@ -307,7 +307,7 @@
           }
         },
         {
-          "biome": "frostline:sunlit_meadow",
+          "biome": "frostline:green_meadow",
           "parameters": {
             "temperature": [
               0.6,

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "frostline:hollow_warrens",
-    "frostline:undercut_shelf",
-    "frostline:shattered_shelf"
+    "frostline:frozen_burrow_hills",
+    "frostline:frozen_overhang_cliffs",
+    "frostline:frozen_cliffs"
   ]
 }

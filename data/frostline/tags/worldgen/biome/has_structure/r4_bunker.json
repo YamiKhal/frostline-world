@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "frostline:ruined_hollows",
-    "frostline:stormheart_flats",
-    "frostline:hollowed_township"
+    "frostline:blizzard_ruined_hills",
+    "frostline:blizzard_barren_plains",
+    "frostline:blizzard_ruined_plains"
   ]
 }

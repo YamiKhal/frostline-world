@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "frostline:frozen_spires",
+          "biome": "frostline:frozen_spike_peaks",
           "parameters": {
             "temperature": [
               -0.55,
@@ -37,7 +37,7 @@
           }
         },
         {
-          "biome": "frostline:glass_ridges",
+          "biome": "frostline:frozen_ice_peaks",
           "parameters": {
             "temperature": [
               -0.55,
@@ -67,7 +67,7 @@
           }
         },
         {
-          "biome": "frostline:shattered_shelf",
+          "biome": "frostline:frozen_cliffs",
           "parameters": {
             "temperature": [
               -0.55,
@@ -97,7 +97,7 @@
           }
         },
         {
-          "biome": "frostline:undercut_shelf",
+          "biome": "frostline:frozen_overhang_cliffs",
           "parameters": {
             "temperature": [
               -0.55,
@@ -127,7 +127,7 @@
           }
         },
         {
-          "biome": "frostline:deadly_snowfield",
+          "biome": "frostline:frozen_deadwood_hills",
           "parameters": {
             "temperature": [
               -0.55,
@@ -157,7 +157,7 @@
           }
         },
         {
-          "biome": "frostline:crevasse_fields",
+          "biome": "frostline:frozen_crevasse_hills",
           "parameters": {
             "temperature": [
               -0.55,
@@ -187,7 +187,7 @@
           }
         },
         {
-          "biome": "frostline:hollow_warrens",
+          "biome": "frostline:frozen_burrow_hills",
           "parameters": {
             "temperature": [
               -0.55,
@@ -217,7 +217,7 @@
           }
         },
         {
-          "biome": "frostline:whiteout_flats",
+          "biome": "frostline:frozen_plains",
           "parameters": {
             "temperature": [
               -0.55,
@@ -247,7 +247,7 @@
           }
         },
         {
-          "biome": "frostline:bone_drifts",
+          "biome": "frostline:frozen_drift_plains",
           "parameters": {
             "temperature": [
               -0.55,
