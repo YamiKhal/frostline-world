@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frostline:slate_hollows",
+    "frostline:settled_hollows",
+    "frostline:riven_flats",
+    "frostline:frozen_commons"
+  ]
+}

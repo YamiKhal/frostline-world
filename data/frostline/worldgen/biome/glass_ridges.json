@@ -1,0 +1,127 @@
+{
+  "has_precipitation": true,
+  "temperature": -0.54,
+  "downfall": 0.85,
+  "temperature_modifier": "none",
+  "effects": {
+    "sky_color": 8756400,
+    "fog_color": 11517128,
+    "water_color": 4020182,
+    "water_fog_color": 329011,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 5200,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "grass_color": 7503223,
+    "foliage_color": 6976879,
+    "music": {
+      "sound": "minecraft:music.overworld.frozen_peaks",
+      "min_delay": 14000,
+      "max_delay": 26000,
+      "replace_current_music": false
+    },
+    "particle": {
+      "probability": 0.0065,
+      "options": {
+        "type": "minecraft:snowflake"
+      }
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+    "additions_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.additions",
+      "tick_chance": 0.0055
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:stray",
+        "weight": 90,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 40,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 50,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:spider",
+        "weight": 60,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 60,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:enderman",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:witch",
+        "weight": 4,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:rabbit",
+        "weight": 4,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:fox",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "frostline:ice_needle",
+      "frostline:icicle"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:freeze_top_layer",
+      "frostline:snow/normal/first",
+      "frostline:snow/normal/second",
+      "frostline:snow/normal/third",
+      "frostline:snow/fix"
+    ]
+  ]
+}

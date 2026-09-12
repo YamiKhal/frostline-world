@@ -1,0 +1,132 @@
+{
+  "has_precipitation": true,
+  "temperature": -0.09999999999999999,
+  "downfall": 0.85,
+  "temperature_modifier": "none",
+  "effects": {
+    "sky_color": 7035480,
+    "fog_color": 9072488,
+    "water_color": 4020182,
+    "water_fog_color": 329011,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 3000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "grass_color": 6969936,
+    "foliage_color": 6443592,
+    "music": {
+      "sound": "minecraft:music.overworld.jagged_peaks",
+      "min_delay": 14000,
+      "max_delay": 26000,
+      "replace_current_music": false
+    },
+    "particle": {
+      "probability": 0.02,
+      "options": {
+        "type": "minecraft:white_ash"
+      }
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+    "additions_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.additions",
+      "tick_chance": 0.016
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:stray",
+        "weight": 110,
+        "minCount": 3,
+        "maxCount": 5
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 60,
+        "minCount": 3,
+        "maxCount": 5
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 80,
+        "minCount": 3,
+        "maxCount": 5
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 25,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:spider",
+        "weight": 70,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 70,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:enderman",
+        "weight": 16,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "minecraft:witch",
+        "weight": 12,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "minecraft:vindicator",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:rabbit",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [
+      "frostline:rubble_slate"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:freeze_top_layer",
+      "frostline:snow/deep/first",
+      "frostline:snow/deep/second",
+      "frostline:snow/deep/third",
+      "frostline:snow/fix"
+    ]
+  ]
+}

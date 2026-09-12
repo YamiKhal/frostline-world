@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:multiface_growth",
+  "config": {
+    "block": "minecraft:sculk_vein",
+    "search_range": 20,
+    "can_place_on_floor": true,
+    "can_place_on_ceiling": true,
+    "can_place_on_wall": true,
+    "chance_of_spreading": 0.7,
+    "can_be_placed_on": [
+      "minecraft:sculk",
+      "minecraft:smooth_basalt",
+      "minecraft:blackstone",
+      "minecraft:deepslate",
+      "minecraft:cobbled_deepslate",
+      "minecraft:basalt",
+      "minecraft:obsidian"
+    ]
+  }
+}

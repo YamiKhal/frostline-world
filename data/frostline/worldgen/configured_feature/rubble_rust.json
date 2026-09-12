@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
+          {
+            "weight": 3,
+            "data": {
+              "Name": "minecraft:red_terracotta"
+            }
+          },
+          {
+            "weight": 2,
+            "data": {
+              "Name": "minecraft:terracotta"
+            }
+          },
+          {
+            "weight": 2,
+            "data": {
+              "Name": "minecraft:granite"
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:gravel"
+            }
+          }
+        ]
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_block_tag",
+      "tag": "frostline:drift_ground"
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 4
+      }
+    },
+    "half_height": 0
+  }
+}

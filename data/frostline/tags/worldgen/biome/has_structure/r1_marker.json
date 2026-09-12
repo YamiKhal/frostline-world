@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "frostline:frostcap_rise",
+    "frostline:windscoured_crags",
+    "frostline:frost_shelf",
+    "frostline:riven_stoneshelf",
+    "frostline:drift_barrens",
+    "frostline:rime_hollows",
+    "frostline:standing_pines",
+    "frostline:frozen_hollow",
+    "frostline:snowveil_flats"
+  ]
+}

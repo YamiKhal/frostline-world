@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frostline:frozen_hollow",
+    "frostline:snowveil_flats",
+    "frostline:drift_barrens",
+    "frostline:riven_stoneshelf"
+  ]
+}

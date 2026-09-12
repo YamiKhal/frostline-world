@@ -1,0 +1,39 @@
+{
+  "feature": "frostline:rubble_rust",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:constant",
+        "value": 0
+      },
+      "y_spread": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": -1,
+          "max_inclusive": 0
+        }
+      }
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_factor": 160,
+      "noise_offset": 0.0,
+      "noise_to_count_ratio": 1
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

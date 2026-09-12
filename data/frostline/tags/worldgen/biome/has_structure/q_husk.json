@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frostline:muted_flats",
+    "frostline:creeping_downs",
+    "frostline:vein_hollows",
+    "frostline:still_barrens"
+  ]
+}

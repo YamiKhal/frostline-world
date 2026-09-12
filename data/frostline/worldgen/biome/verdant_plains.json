@@ -1,0 +1,120 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.8300000000000001,
+  "downfall": 0.5,
+  "temperature_modifier": "none",
+  "effects": {
+    "sky_color": 8630783,
+    "fog_color": 13361663,
+    "water_color": 4020182,
+    "water_fog_color": 329011,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.meadow",
+      "min_delay": 14000,
+      "max_delay": 26000,
+      "replace_current_music": false
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:skeleton",
+        "weight": 70,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 80,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:spider",
+        "weight": 80,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 80,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:enderman",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "minecraft:witch",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:sheep",
+        "weight": 12,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:cow",
+        "weight": 8,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:pig",
+        "weight": 8,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:chicken",
+        "weight": 8,
+        "minCount": 3,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:horse",
+        "weight": 5,
+        "minCount": 2,
+        "maxCount": 5
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "frostline:grass_meadow",
+      "frostline:meadow_flowers"
+    ],
+    []
+  ]
+}

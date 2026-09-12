@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "frostline:vein_hollows",
+    "frostline:bloom_hollows",
+    "frostline:shrieker_fields",
+    "frostline:sculk_sea",
+    "frostline:the_quiet"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "replace": true,
+  "values": [
+    "frostline:frostcap_rise",
+    "frostline:windscoured_crags",
+    "frostline:frost_shelf",
+    "frostline:riven_stoneshelf",
+    "frostline:frozen_spires",
+    "frostline:glass_ridges",
+    "frostline:shattered_shelf",
+    "frostline:undercut_shelf",
+    "frostline:slate_horns",
+    "frostline:glacier_horns",
+    "frostline:riven_shelf",
+    "frostline:overhang_shelf",
+    "frostline:rustspine_peaks",
+    "frostline:scoured_horns",
+    "frostline:rustfall_shelf",
+    "frostline:storm_valley",
+    "frostline:snowcliff_crown",
+    "frostline:snowcliff_brink",
+    "frostline:emerald_bluffs",
+    "frostline:verdant_crags",
+    "frostline:mossy_shelf",
+    "frostline:whisper_spires",
+    "frostline:sculkspine_peaks",
+    "frostline:hushed_shelf",
+    "frostline:resonant_crag"
+  ]
+}
