@@ -1,13 +1,13 @@
 {
-  "feature": "frostline:snow/fells_canopy",
+  "feature": "frostline:snow/fells_unstack",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 32
+      "count": 64
     },
     {
       "type": "minecraft:count",
-      "count": 32
+      "count": 64
     },
     {
       "type": "minecraft:in_square"
@@ -17,16 +17,19 @@
       "heightmap": "WORLD_SURFACE_WG"
     },
     {
-      "type": "minecraft:environment_scan",
-      "direction_of_search": "down",
-      "max_steps": 32,
-      "target_condition": {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -1
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
         "type": "minecraft:all_of",
         "predicates": [
           {
             "type": "minecraft:matching_blocks",
             "blocks": [
-              "minecraft:air"
+              "minecraft:snow"
             ],
             "offset": [
               0,
@@ -37,29 +40,15 @@
           {
             "type": "minecraft:matching_blocks",
             "blocks": [
-              "minecraft:grass_block"
+              "minecraft:snow",
+              "minecraft:snow_block",
+              "minecraft:powder_snow"
             ],
             "offset": [
               0,
               -1,
               0
             ]
-          },
-          {
-            "type": "minecraft:not",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:snow",
-                "minecraft:snow_block",
-                "minecraft:powder_snow"
-              ],
-              "offset": [
-                0,
-                -1,
-                0
-              ]
-            }
           }
         ]
       }

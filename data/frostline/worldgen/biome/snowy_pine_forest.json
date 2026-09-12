@@ -121,7 +121,9 @@
       "frostline:bare/dirt",
       "minecraft:freeze_top_layer",
       "frostline:snow/fells_holes",
-      "frostline:snow/fells_canopy"
+      "frostline:snow/fells_canopy",
+      "frostline:snow/fells_unstack",
+      "frostline:snow/fells_flatten"
     ]
   ]
 }
