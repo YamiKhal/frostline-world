@@ -14,8 +14,8 @@
       "block_search_extent": 8,
       "offset": 2.0
     },
-    "grass_color": 6911845,
-    "foliage_color": 6385501,
+    "grass_color": 10727854,
+    "foliage_color": 9346202,
     "music": {
       "sound": "minecraft:music.overworld.snowy_slopes",
       "min_delay": 14000,
@@ -120,15 +120,15 @@
     [],
     [],
     [],
-    [],
     [
-      "minecraft:freeze_top_layer",
-      "frostline:snow/light/first",
-      "frostline:snow/light/second",
-      "frostline:snow/light/third",
-      "frostline:snow/fix",
+      "frostline:tree/fells_lone"
+    ],
+    [
       "frostline:bare/stone",
-      "frostline:bare/gravel"
+      "frostline:bare/gravel",
+      "minecraft:freeze_top_layer",
+      "frostline:snow/fells_holes",
+      "frostline:snow/fells_canopy"
     ]
   ]
 }

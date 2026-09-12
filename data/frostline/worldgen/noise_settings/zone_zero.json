@@ -7403,9 +7403,36 @@
                           }
                         },
                         {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:noise_threshold",
+                            "noise": "frostline:variety",
+                            "min_threshold": 0.3,
+                            "max_threshold": 2.0
+                          },
+                          "then_run": {
+                            "type": "minecraft:condition",
+                            "if_true": {
+                              "type": "minecraft:noise_threshold",
+                              "noise": "minecraft:powder_snow",
+                              "min_threshold": 0.55,
+                              "max_threshold": 2.0
+                            },
+                            "then_run": {
+                              "type": "minecraft:block",
+                              "result_state": {
+                                "Name": "minecraft:snow_block"
+                              }
+                            }
+                          }
+                        },
+                        {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:snow_block"
+                            "Name": "minecraft:grass_block",
+                            "Properties": {
+                              "snowy": "true"
+                            }
                           }
                         }
                       ]
@@ -7529,9 +7556,36 @@
                           }
                         },
                         {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:noise_threshold",
+                            "noise": "frostline:variety",
+                            "min_threshold": 0.3,
+                            "max_threshold": 2.0
+                          },
+                          "then_run": {
+                            "type": "minecraft:condition",
+                            "if_true": {
+                              "type": "minecraft:noise_threshold",
+                              "noise": "minecraft:powder_snow",
+                              "min_threshold": 0.55,
+                              "max_threshold": 2.0
+                            },
+                            "then_run": {
+                              "type": "minecraft:block",
+                              "result_state": {
+                                "Name": "minecraft:snow_block"
+                              }
+                            }
+                          }
+                        },
+                        {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:snow_block"
+                            "Name": "minecraft:grass_block",
+                            "Properties": {
+                              "snowy": "true"
+                            }
                           }
                         }
                       ]
@@ -7646,21 +7700,33 @@
                           "type": "minecraft:condition",
                           "if_true": {
                             "type": "minecraft:noise_threshold",
-                            "noise": "minecraft:powder_snow",
-                            "min_threshold": 0.8,
+                            "noise": "frostline:variety",
+                            "min_threshold": 0.3,
                             "max_threshold": 2.0
                           },
                           "then_run": {
-                            "type": "minecraft:block",
-                            "result_state": {
-                              "Name": "minecraft:powder_snow"
+                            "type": "minecraft:condition",
+                            "if_true": {
+                              "type": "minecraft:noise_threshold",
+                              "noise": "minecraft:powder_snow",
+                              "min_threshold": 0.55,
+                              "max_threshold": 2.0
+                            },
+                            "then_run": {
+                              "type": "minecraft:block",
+                              "result_state": {
+                                "Name": "minecraft:snow_block"
+                              }
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:snow_block"
+                            "Name": "minecraft:grass_block",
+                            "Properties": {
+                              "snowy": "true"
+                            }
                           }
                         }
                       ]
