@@ -1,12 +1,13 @@
 {
   "type": "frostline:frozen_lake",
   "config": {
-    "basin_fraction": 0.75,
-    "min_depth": 5,
-    "max_depth": 8,
-    "max_bank_height": 6,
-    "warp": 0.25,
-    "warp_scale": 0.33,
+    "basin_fraction": 0.8,
+    "min_depth": 8,
+    "max_depth": 14,
+    "max_berm_height": 4,
+    "shore_height": 4,
+    "warp": 0.2,
+    "warp_scale": 0.12,
     "surface": {
       "Name": "immersive_weathering:thin_ice",
       "Properties": {
@@ -31,7 +32,7 @@
         }
       ]
     },
-    "floe_scale": 0.6,
+    "floe_scale": 0.35,
     "floe_threshold": 0.3,
     "shoreline": 0.6,
     "floor": {
@@ -60,7 +61,7 @@
     "wall": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:packed_ice"
+        "Name": "minecraft:stone"
       }
     },
     "ground": "#frostline:pond_ground"

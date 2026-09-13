@@ -75,8 +75,8 @@
       }
     },
     "ground": "#frostline:pond_ground",
-    "spacing": 24,
-    "region_chance": 0.55,
+    "spacing": 12,
+    "region_chance": 0.6,
     "salt": 740211
   }
 }
