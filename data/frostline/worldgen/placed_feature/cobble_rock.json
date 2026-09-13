@@ -1,9 +1,9 @@
 {
-  "feature": "frostline:stone_boulder",
+  "feature": "frostline:cobble_rock",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 24
+      "chance": 7
     },
     {
       "type": "minecraft:in_square"

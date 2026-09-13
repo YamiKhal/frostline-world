@@ -16,19 +16,27 @@
       }
     },
     "floe": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
+      "type": "minecraft:noise_provider",
+      "seed": 510450,
+      "noise": {
+        "firstOctave": 0,
+        "amplitudes": [
+          1.0
+        ]
+      },
+      "scale": 0.12,
+      "states": [
         {
-          "weight": 3,
-          "data": {
-            "Name": "minecraft:ice"
-          }
+          "Name": "minecraft:packed_ice"
         },
         {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:packed_ice"
-          }
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:packed_ice"
         }
       ]
     },
@@ -36,25 +44,27 @@
     "floe_threshold": 0.3,
     "shoreline": 0.6,
     "floor": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
+      "type": "minecraft:noise_provider",
+      "seed": 510451,
+      "noise": {
+        "firstOctave": 0,
+        "amplitudes": [
+          1.0
+        ]
+      },
+      "scale": 0.12,
+      "states": [
         {
-          "weight": 3,
-          "data": {
-            "Name": "minecraft:gravel"
-          }
+          "Name": "minecraft:packed_ice"
         },
         {
-          "weight": 1,
-          "data": {
-            "Name": "minecraft:packed_ice"
-          }
+          "Name": "minecraft:gravel"
         },
         {
-          "weight": 1,
-          "data": {
-            "Name": "minecraft:clay"
-          }
+          "Name": "minecraft:gravel"
+        },
+        {
+          "Name": "minecraft:clay"
         }
       ]
     },

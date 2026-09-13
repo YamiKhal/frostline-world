@@ -28,43 +28,53 @@
       }
     },
     "shallow_cap": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
+      "type": "minecraft:noise_provider",
+      "seed": 510401,
+      "noise": {
+        "firstOctave": 0,
+        "amplitudes": [
+          1.0
+        ]
+      },
+      "scale": 0.15,
+      "states": [
         {
-          "weight": 3,
-          "data": {
-            "Name": "minecraft:ice"
-          }
+          "Name": "minecraft:packed_ice"
         },
         {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:packed_ice"
-          }
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:packed_ice"
         }
       ]
     },
     "cap_chance": 1.0,
     "floor": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
+      "type": "minecraft:noise_provider",
+      "seed": 510402,
+      "noise": {
+        "firstOctave": 0,
+        "amplitudes": [
+          1.0
+        ]
+      },
+      "scale": 0.15,
+      "states": [
         {
-          "weight": 3,
-          "data": {
-            "Name": "minecraft:gravel"
-          }
+          "Name": "minecraft:clay"
         },
         {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:clay"
-          }
+          "Name": "minecraft:gravel"
         },
         {
-          "weight": 1,
-          "data": {
-            "Name": "minecraft:dirt"
-          }
+          "Name": "minecraft:gravel"
+        },
+        {
+          "Name": "minecraft:dirt"
         }
       ]
     },

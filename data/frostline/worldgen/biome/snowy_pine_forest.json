@@ -107,7 +107,10 @@
   "features": [
     [],
     [],
-    [],
+    [
+      "frostline:cobble_rock",
+      "frostline:snowy_rock"
+    ],
     [],
     [],
     [],

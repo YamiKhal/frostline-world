@@ -18,54 +18,78 @@
     "max_bank_height": 5,
     "surface_offset": 0,
     "cap": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
+      "type": "minecraft:noise_provider",
+      "seed": 510430,
+      "noise": {
+        "firstOctave": 0,
+        "amplitudes": [
+          1.0
+        ]
+      },
+      "scale": 0.15,
+      "states": [
         {
-          "weight": 3,
-          "data": {
-            "Name": "minecraft:ice"
-          }
+          "Name": "minecraft:packed_ice"
         },
         {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:packed_ice"
-          }
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:packed_ice"
         }
       ]
     },
     "shallow_cap": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
+      "type": "minecraft:noise_provider",
+      "seed": 510431,
+      "noise": {
+        "firstOctave": 0,
+        "amplitudes": [
+          1.0
+        ]
+      },
+      "scale": 0.15,
+      "states": [
         {
-          "weight": 3,
-          "data": {
-            "Name": "minecraft:ice"
-          }
+          "Name": "minecraft:packed_ice"
         },
         {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:packed_ice"
-          }
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:ice"
+        },
+        {
+          "Name": "minecraft:packed_ice"
         }
       ]
     },
     "cap_chance": 1.0,
     "floor": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
+      "type": "minecraft:noise_provider",
+      "seed": 510432,
+      "noise": {
+        "firstOctave": 0,
+        "amplitudes": [
+          1.0
+        ]
+      },
+      "scale": 0.15,
+      "states": [
         {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:gravel"
-          }
+          "Name": "minecraft:stone"
         },
         {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:stone"
-          }
+          "Name": "minecraft:gravel"
+        },
+        {
+          "Name": "minecraft:gravel"
+        },
+        {
+          "Name": "minecraft:stone"
         }
       ]
     },

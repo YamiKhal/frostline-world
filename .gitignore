@@ -4,3 +4,5 @@ STRUCTURES.md
 WORLDGEN.md
 REF.md
 ref/
+*.pkl
+__pycache__/
