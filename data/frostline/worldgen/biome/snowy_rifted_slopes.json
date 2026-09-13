@@ -4,8 +4,8 @@
   "downfall": 0.85,
   "temperature_modifier": "none",
   "effects": {
-    "sky_color": 10137538,
-    "fog_color": 12701143,
+    "sky_color": 10530490,
+    "fog_color": 12897491,
     "water_color": 4020182,
     "water_fog_color": 329011,
     "mood_sound": {
@@ -14,7 +14,7 @@
       "block_search_extent": 8,
       "offset": 2.0
     },
-    "grass_color": 10727854,
+    "grass_color": 6326127,
     "foliage_color": 9346202,
     "music": {
       "sound": "minecraft:music.overworld.snowy_slopes",
