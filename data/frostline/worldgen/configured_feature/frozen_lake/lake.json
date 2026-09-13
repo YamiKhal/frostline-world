@@ -5,7 +5,7 @@
     "min_depth": 8,
     "max_depth": 14,
     "max_berm_height": 4,
-    "shore_height": 4,
+    "shore_height": 8,
     "warp": 0.2,
     "warp_scale": 0.12,
     "surface": {

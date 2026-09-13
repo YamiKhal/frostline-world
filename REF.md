@@ -164,6 +164,7 @@ two failed attempts:
 | hollow sinks every column in the basin | hills inside the lake sag | reshaping must be gated by **height relative to the water level** (`shore_height` fade), not just by distance from the centre |
 | 48 rim rays on a 300-block lake | leaks plugged with packed-ice dams | rim sampling must scale with circumference (one sample per ~2 blocks) |
 | dense rim sampling + "rim spread ≤ 14" + level = lowest rim point | every lake silently dry | over hundreds of blocks the rim min is a valley floor and the spread is always large. **Set the level from the interior** (35th percentile), lift low rim points with a berm, shrink the basin until it holds, and **log every dry verdict with its numbers**. A feature that silently does nothing costs a full test cycle to diagnose. |
+| berm at full height up to the basin edge, sink scaled by each column's own height | "a clear edge… a difference in y level not blended with the terrain around it" | any shaping term must reach **zero value and zero slope** where the feature's footprint ends: give berms an outer skirt that eases back to natural ground. And never scale a deformation by per-column height: a 1-block step times a depth factor becomes a ledge. Read a **smoothed relief** (coarse base-height grid, bilinear) for decisions, and *pull toward* a target (`g + (target - g) * w`) instead of *adding* offsets, so bumps are compressed, not amplified. |
 
 ---
 
