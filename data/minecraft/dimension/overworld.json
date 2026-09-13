@@ -1181,7 +1181,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               -1.0,
@@ -1211,7 +1211,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               -1.0,
@@ -1241,7 +1241,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               -1.0,
@@ -1271,7 +1271,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               0.0,
@@ -1301,7 +1301,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               -1.0,
@@ -1331,7 +1331,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               0.0,
@@ -1361,7 +1361,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               0.0,
@@ -1391,7 +1391,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               -1.0,
@@ -1421,7 +1421,7 @@
           "parameters": {
             "temperature": [
               0.15,
-              0.54
+              0.588
             ],
             "humidity": [
               0.0,
@@ -1450,7 +1450,7 @@
           "biome": "frostline:ice_wall_peaks",
           "parameters": {
             "temperature": [
-              0.54,
+              0.588,
               0.6
             ],
             "humidity": [
@@ -1480,7 +1480,7 @@
           "biome": "frostline:ice_wall_cliffs",
           "parameters": {
             "temperature": [
-              0.54,
+              0.588,
               0.6
             ],
             "humidity": [
@@ -1510,7 +1510,7 @@
           "biome": "frostline:ice_wall_hills",
           "parameters": {
             "temperature": [
-              0.54,
+              0.588,
               0.6
             ],
             "humidity": [
@@ -1540,7 +1540,7 @@
           "biome": "frostline:ice_wall_plains",
           "parameters": {
             "temperature": [
-              0.54,
+              0.588,
               0.6
             ],
             "humidity": [

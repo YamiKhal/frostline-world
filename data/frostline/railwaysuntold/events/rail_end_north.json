@@ -1,0 +1,15 @@
+{
+  "type": "jigsaw",
+  "estimated_footprint": 24,
+  "weight": 100000,
+  "max_appearances": 1,
+  "structure": "frostline:rail_end_north",
+  "triggers": [
+    {
+      "type": "frostline:climate",
+      "parameter": "temperature",
+      "min": 0.591,
+      "backstop": 0.594
+    }
+  ]
+}
