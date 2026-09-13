@@ -22,12 +22,6 @@
       "max_delay": 26000,
       "replace_current_music": false
     },
-    "particle": {
-      "probability": 0.02,
-      "options": {
-        "type": "minecraft:white_ash"
-      }
-    },
     "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
     "additions_sound": {
       "sound": "minecraft:ambient.basalt_deltas.additions",

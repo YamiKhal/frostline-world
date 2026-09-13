@@ -22,12 +22,6 @@
       "max_delay": 26000,
       "replace_current_music": false
     },
-    "particle": {
-      "probability": 0.0022,
-      "options": {
-        "type": "minecraft:snowflake"
-      }
-    },
     "ambient_sound": "minecraft:ambient.basalt_deltas.loop"
   },
   "spawners": {
