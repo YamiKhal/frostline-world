@@ -125,7 +125,9 @@
       "frostline:snow/fells_holes",
       "frostline:snow/fells_canopy",
       "frostline:snow/fells_unstack",
-      "frostline:snow/fells_flatten"
+      "frostline:snow/fells_flatten",
+      "frostline:pond/deep_flat",
+      "frostline:pond/shallow_flat"
     ]
   ]
 }

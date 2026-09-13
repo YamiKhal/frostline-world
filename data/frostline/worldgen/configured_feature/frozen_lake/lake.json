@@ -1,0 +1,68 @@
+{
+  "type": "frostline:frozen_lake",
+  "config": {
+    "basin_fraction": 0.75,
+    "min_depth": 5,
+    "max_depth": 8,
+    "max_bank_height": 6,
+    "warp": 0.25,
+    "warp_scale": 0.33,
+    "surface": {
+      "Name": "immersive_weathering:thin_ice",
+      "Properties": {
+        "cracked": "0",
+        "can_expand": "false"
+      }
+    },
+    "floe": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 3,
+          "data": {
+            "Name": "minecraft:ice"
+          }
+        },
+        {
+          "weight": 2,
+          "data": {
+            "Name": "minecraft:packed_ice"
+          }
+        }
+      ]
+    },
+    "floe_scale": 0.6,
+    "floe_threshold": 0.3,
+    "shoreline": 0.6,
+    "floor": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 3,
+          "data": {
+            "Name": "minecraft:gravel"
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:packed_ice"
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:clay"
+          }
+        }
+      ]
+    },
+    "wall": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:packed_ice"
+      }
+    },
+    "ground": "#frostline:pond_ground"
+  }
+}

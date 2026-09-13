@@ -1,0 +1,82 @@
+{
+  "type": "frostline:pond",
+  "config": {
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 5,
+        "max_inclusive": 9
+      }
+    },
+    "depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4,
+        "max_inclusive": 5
+      }
+    },
+    "max_bank_height": 6,
+    "surface_offset": 0,
+    "cap": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "immersive_weathering:thin_ice",
+        "Properties": {
+          "cracked": "0",
+          "can_expand": "false"
+        }
+      }
+    },
+    "shallow_cap": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 3,
+          "data": {
+            "Name": "minecraft:ice"
+          }
+        },
+        {
+          "weight": 2,
+          "data": {
+            "Name": "minecraft:packed_ice"
+          }
+        }
+      ]
+    },
+    "cap_chance": 1.0,
+    "floor": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 3,
+          "data": {
+            "Name": "minecraft:gravel"
+          }
+        },
+        {
+          "weight": 2,
+          "data": {
+            "Name": "minecraft:stone"
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:andesite"
+          }
+        }
+      ]
+    },
+    "wall": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:stone"
+      }
+    },
+    "ground": "#frostline:pond_ground",
+    "spacing": 24,
+    "region_chance": 0.5,
+    "salt": 740213
+  }
+}
