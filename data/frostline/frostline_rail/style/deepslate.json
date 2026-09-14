@@ -39,10 +39,12 @@
   },
   "cut_cover": {
     "start": "frostline:cover/deepslate_start",
-    "middle": "frostline:cover/deepslate_middle",
     "end": "frostline:cover/deepslate_end",
+    "top": "frostline:cover/deepslate_top",
+    "top_curve": "frostline:cover/deepslate_top_curve",
     "track_z": 4,
     "track_y": 1,
+    "top_track_y": 1,
     "min_depth": 5,
     "min_length": 8,
     "merge_gap": 6
@@ -52,8 +54,11 @@
     "start": "frostline:bridge/deepslate_start",
     "middle": "frostline:bridge/deepslate_middle",
     "end": "frostline:bridge/deepslate_end",
+    "top": "frostline:bridge/deepslate_top",
+    "top_curve": "frostline:bridge/deepslate_top_curve",
     "track_z": 3,
     "track_y": 9,
+    "top_track_y": 1,
     "min_height": 6,
     "min_length": 20,
     "max_length": 160,
@@ -89,7 +94,8 @@
       }
     },
     "chance": 1.0,
-    "reach": 12,
+    "reach": 24,
+    "inside_train_space": false,
     "exclude_biomes": [
       "frostline:green_bluffs",
       "frostline:green_crags",
