@@ -34,6 +34,7 @@
     }
   },
   "cut_cover": {
+    "weight": 9,
     "start": "frostline:cover/stone_start",
     "end": "frostline:cover/stone_end",
     "top": "frostline:cover/stone_top",
@@ -43,7 +44,18 @@
     "top_track_y": 1,
     "min_depth": 5,
     "min_length": 8,
-    "merge_gap": 6
+    "merge_gap": 6,
+    "tunnel_margin": 8,
+    "connect_gap": 3,
+    "variants": [
+      {
+        "weight": 1,
+        "start": "frostline:cover/stone_start_boarded",
+        "end": "frostline:cover/stone_end_boarded",
+        "top": "frostline:cover/stone_top_boarded",
+        "top_curve": "frostline:cover/stone_top_curve_boarded"
+      }
+    ]
   },
   "bridge_structures": {
     "flat": "frostline:bridge/stone_flat",
