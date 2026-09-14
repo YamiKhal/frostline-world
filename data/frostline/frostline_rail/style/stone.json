@@ -1,0 +1,61 @@
+{
+  "priority": 0,
+  "weight": 3,
+  "bed": {
+    "ballast": {
+      "Name": "minecraft:gravel"
+    },
+    "fill": {
+      "Name": "minecraft:cobblestone"
+    },
+    "shoulder": {
+      "Name": "minecraft:andesite"
+    }
+  },
+  "bridge": {
+    "deck": {
+      "Name": "minecraft:stone_bricks"
+    },
+    "pier": {
+      "Name": "minecraft:stone_bricks"
+    },
+    "railing": {
+      "Name": "minecraft:stone_brick_wall"
+    }
+  },
+  "tunnel": {
+    "half_width": 3,
+    "height": 6,
+    "lining": {
+      "Name": "minecraft:stone_bricks"
+    },
+    "portal": {
+      "Name": "minecraft:chiseled_stone_bricks"
+    }
+  },
+  "additions": [
+    {
+      "where": [
+        "tunnel"
+      ],
+      "spacing": 12,
+      "side": "center",
+      "height": 0,
+      "blocks": [
+        {
+          "at": [
+            0,
+            5,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:lantern",
+            "Properties": {
+              "hanging": "true"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

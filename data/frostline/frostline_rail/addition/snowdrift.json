@@ -1,0 +1,49 @@
+{
+  "biomes": [
+    "#frostline:rail/zone_4"
+  ],
+  "where": [
+    "open",
+    "cut",
+    "bridge"
+  ],
+  "pieces": [
+    "straight",
+    "bend",
+    "ramp",
+    "shift"
+  ],
+  "scatter": {
+    "chance": 0.45,
+    "reach": 3,
+    "states": [
+      {
+        "state": {
+          "Name": "minecraft:snow",
+          "Properties": {
+            "layers": "1"
+          }
+        },
+        "weight": 5
+      },
+      {
+        "state": {
+          "Name": "minecraft:snow",
+          "Properties": {
+            "layers": "2"
+          }
+        },
+        "weight": 3
+      },
+      {
+        "state": {
+          "Name": "minecraft:snow",
+          "Properties": {
+            "layers": "3"
+          }
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

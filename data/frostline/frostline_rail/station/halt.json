@@ -1,0 +1,81 @@
+{
+  "spacing": 3000,
+  "first_at": 3600,
+  "length": 32,
+  "width": 3,
+  "gap": 2,
+  "side": "alternate",
+  "clearance": 4,
+  "platform": {
+    "Name": "minecraft:smooth_stone"
+  },
+  "edge": {
+    "Name": "minecraft:polished_andesite"
+  },
+  "station_block": true,
+  "direction": "north",
+  "additions": [
+    {
+      "side": "center",
+      "offset": 4,
+      "blocks": [
+        {
+          "at": [
+            0,
+            1,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:spruce_fence"
+          }
+        },
+        {
+          "at": [
+            0,
+            2,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:spruce_fence"
+          }
+        },
+        {
+          "at": [
+            0,
+            3,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:lantern"
+          }
+        },
+        {
+          "at": [
+            0,
+            1,
+            6
+          ],
+          "state": {
+            "Name": "minecraft:spruce_stairs",
+            "Properties": {
+              "facing": "west"
+            }
+          }
+        },
+        {
+          "at": [
+            0,
+            1,
+            -6
+          ],
+          "state": {
+            "Name": "minecraft:spruce_stairs",
+            "Properties": {
+              "facing": "west"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

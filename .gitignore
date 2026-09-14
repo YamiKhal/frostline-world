@@ -8,3 +8,5 @@ WEATHER.md
 ref/
 *.pkl
 __pycache__/
+*.md
+*.jar

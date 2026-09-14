@@ -1,0 +1,107 @@
+{
+  "priority": 10,
+  "weight": 1,
+  "biomes": [
+    "#frostline:rail/zone_3",
+    "#frostline:rail/zone_4"
+  ],
+  "bed": {
+    "ballast": {
+      "Name": "minecraft:gravel"
+    },
+    "fill": {
+      "Name": "minecraft:cobbled_deepslate"
+    },
+    "shoulder": {
+      "Name": "minecraft:tuff"
+    }
+  },
+  "bridge": {
+    "deck": {
+      "Name": "minecraft:deepslate_bricks"
+    },
+    "pier": {
+      "Name": "minecraft:deepslate_bricks"
+    },
+    "railing": {
+      "Name": "minecraft:deepslate_brick_wall"
+    }
+  },
+  "tunnel": {
+    "half_width": 3,
+    "height": 6,
+    "lining": {
+      "Name": "minecraft:deepslate_bricks"
+    },
+    "portal": {
+      "Name": "minecraft:chiseled_deepslate"
+    }
+  },
+  "additions": [
+    {
+      "where": [
+        "tunnel"
+      ],
+      "spacing": 12,
+      "side": "center",
+      "height": 0,
+      "blocks": [
+        {
+          "at": [
+            0,
+            5,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:soul_lantern",
+            "Properties": {
+              "hanging": "true"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "where": [
+        "open",
+        "cut"
+      ],
+      "spacing": 32,
+      "phase": 16,
+      "side": "both",
+      "offset": 3,
+      "blocks": [
+        {
+          "at": [
+            0,
+            0,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:deepslate_brick_wall"
+          }
+        },
+        {
+          "at": [
+            0,
+            1,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:deepslate_brick_wall"
+          }
+        },
+        {
+          "at": [
+            0,
+            2,
+            0
+          ],
+          "state": {
+            "Name": "minecraft:soul_lantern"
+          }
+        }
+      ]
+    }
+  ]
+}

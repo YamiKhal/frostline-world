@@ -1,0 +1,47 @@
+{
+  "biomes": [
+    "#frostline:rail/zone_3",
+    "#frostline:rail/zone_4"
+  ],
+  "where": [
+    "open",
+    "cut"
+  ],
+  "spacing": 48,
+  "phase": 7,
+  "chance": 0.3,
+  "side": "both",
+  "offset": 4,
+  "blocks": [
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "state": {
+        "Name": "minecraft:packed_ice"
+      }
+    },
+    {
+      "at": [
+        1,
+        0,
+        0
+      ],
+      "state": {
+        "Name": "minecraft:packed_ice"
+      }
+    },
+    {
+      "at": [
+        0,
+        1,
+        0
+      ],
+      "state": {
+        "Name": "minecraft:ice"
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "where": [
+    "south_end"
+  ],
+  "side": "center",
+  "replace": "any",
+  "blocks": [
+    {
+      "at": [
+        0,
+        0,
+        1
+      ],
+      "state": {
+        "Name": "minecraft:stone_brick_wall"
+      }
+    },
+    {
+      "at": [
+        -1,
+        0,
+        1
+      ],
+      "state": {
+        "Name": "minecraft:stone_brick_wall"
+      }
+    },
+    {
+      "at": [
+        1,
+        0,
+        1
+      ],
+      "state": {
+        "Name": "minecraft:stone_brick_wall"
+      }
+    },
+    {
+      "at": [
+        0,
+        1,
+        1
+      ],
+      "state": {
+        "Name": "minecraft:polished_andesite_slab"
+      }
+    },
+    {
+      "at": [
+        -1,
+        1,
+        1
+      ],
+      "state": {
+        "Name": "minecraft:lantern"
+      }
+    },
+    {
+      "at": [
+        1,
+        1,
+        1
+      ],
+      "state": {
+        "Name": "minecraft:lantern"
+      }
+    }
+  ]
+}

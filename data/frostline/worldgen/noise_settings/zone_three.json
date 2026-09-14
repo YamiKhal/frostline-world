@@ -28,31 +28,18 @@
         "input": {
           "type": "minecraft:clamp",
           "input": {
-            "type": "minecraft:add",
-            "argument1": {
-              "type": "frostline:progression",
-              "north_range": 8750.0,
-              "south_range": 8750.0,
-              "x_range": 1.0,
-              "x_cap": 0.0,
-              "south_cap": -0.2,
-              "start_value": -0.2,
-              "end_value": 0.15,
-              "z_direction": -1.0
-            },
-            "argument2": {
-              "type": "minecraft:mul",
-              "argument1": 0.075,
-              "argument2": {
-                "type": "minecraft:shifted_noise",
-                "noise": "frostline:progress_jitter",
-                "shift_x": "minecraft:shift_x",
-                "shift_y": 0.0,
-                "shift_z": "minecraft:shift_z",
-                "xz_scale": 0.35,
-                "y_scale": 0.0
-              }
-            }
+            "type": "frostline:progression",
+            "north_range": 6000.0,
+            "south_range": 6000.0,
+            "x_range": 1.0,
+            "x_cap": 0.0,
+            "south_cap": -0.2,
+            "start_value": -0.2,
+            "end_value": 0.15,
+            "z_direction": -1.0,
+            "jitter_noise": "frostline:progress_jitter",
+            "jitter_xz_scale": 0.35,
+            "jitter_blocks": 600.0
           },
           "min": -0.2,
           "max": 0.15
@@ -718,31 +705,18 @@
                                         "argument1": {
                                           "type": "minecraft:clamp",
                                           "input": {
-                                            "type": "minecraft:add",
-                                            "argument1": {
-                                              "type": "frostline:progression",
-                                              "north_range": 8750.0,
-                                              "south_range": 8750.0,
-                                              "x_range": 1.0,
-                                              "x_cap": 0.0,
-                                              "south_cap": -0.2,
-                                              "start_value": -0.2,
-                                              "end_value": 0.15,
-                                              "z_direction": -1.0
-                                            },
-                                            "argument2": {
-                                              "type": "minecraft:mul",
-                                              "argument1": 0.075,
-                                              "argument2": {
-                                                "type": "minecraft:shifted_noise",
-                                                "noise": "frostline:progress_jitter",
-                                                "shift_x": "minecraft:shift_x",
-                                                "shift_y": 0.0,
-                                                "shift_z": "minecraft:shift_z",
-                                                "xz_scale": 0.35,
-                                                "y_scale": 0.0
-                                              }
-                                            }
+                                            "type": "frostline:progression",
+                                            "north_range": 6000.0,
+                                            "south_range": 6000.0,
+                                            "x_range": 1.0,
+                                            "x_cap": 0.0,
+                                            "south_cap": -0.2,
+                                            "start_value": -0.2,
+                                            "end_value": 0.15,
+                                            "z_direction": -1.0,
+                                            "jitter_noise": "frostline:progress_jitter",
+                                            "jitter_xz_scale": 0.35,
+                                            "jitter_blocks": 600.0
                                           },
                                           "min": -0.2,
                                           "max": 0.15
@@ -777,31 +751,18 @@
                                       "argument1": {
                                         "type": "minecraft:clamp",
                                         "input": {
-                                          "type": "minecraft:add",
-                                          "argument1": {
-                                            "type": "frostline:progression",
-                                            "north_range": 8750.0,
-                                            "south_range": 8750.0,
-                                            "x_range": 1.0,
-                                            "x_cap": 0.0,
-                                            "south_cap": -0.2,
-                                            "start_value": -0.2,
-                                            "end_value": 0.15,
-                                            "z_direction": -1.0
-                                          },
-                                          "argument2": {
-                                            "type": "minecraft:mul",
-                                            "argument1": 0.075,
-                                            "argument2": {
-                                              "type": "minecraft:shifted_noise",
-                                              "noise": "frostline:progress_jitter",
-                                              "shift_x": "minecraft:shift_x",
-                                              "shift_y": 0.0,
-                                              "shift_z": "minecraft:shift_z",
-                                              "xz_scale": 0.35,
-                                              "y_scale": 0.0
-                                            }
-                                          }
+                                          "type": "frostline:progression",
+                                          "north_range": 6000.0,
+                                          "south_range": 6000.0,
+                                          "x_range": 1.0,
+                                          "x_cap": 0.0,
+                                          "south_cap": -0.2,
+                                          "start_value": -0.2,
+                                          "end_value": 0.15,
+                                          "z_direction": -1.0,
+                                          "jitter_noise": "frostline:progress_jitter",
+                                          "jitter_xz_scale": 0.35,
+                                          "jitter_blocks": 600.0
                                         },
                                         "min": -0.2,
                                         "max": 0.15
@@ -833,31 +794,18 @@
                                             "argument1": {
                                               "type": "minecraft:clamp",
                                               "input": {
-                                                "type": "minecraft:add",
-                                                "argument1": {
-                                                  "type": "frostline:progression",
-                                                  "north_range": 8750.0,
-                                                  "south_range": 8750.0,
-                                                  "x_range": 1.0,
-                                                  "x_cap": 0.0,
-                                                  "south_cap": -0.2,
-                                                  "start_value": -0.2,
-                                                  "end_value": 0.15,
-                                                  "z_direction": -1.0
-                                                },
-                                                "argument2": {
-                                                  "type": "minecraft:mul",
-                                                  "argument1": 0.075,
-                                                  "argument2": {
-                                                    "type": "minecraft:shifted_noise",
-                                                    "noise": "frostline:progress_jitter",
-                                                    "shift_x": "minecraft:shift_x",
-                                                    "shift_y": 0.0,
-                                                    "shift_z": "minecraft:shift_z",
-                                                    "xz_scale": 0.35,
-                                                    "y_scale": 0.0
-                                                  }
-                                                }
+                                                "type": "frostline:progression",
+                                                "north_range": 6000.0,
+                                                "south_range": 6000.0,
+                                                "x_range": 1.0,
+                                                "x_cap": 0.0,
+                                                "south_cap": -0.2,
+                                                "start_value": -0.2,
+                                                "end_value": 0.15,
+                                                "z_direction": -1.0,
+                                                "jitter_noise": "frostline:progress_jitter",
+                                                "jitter_xz_scale": 0.35,
+                                                "jitter_blocks": 600.0
                                               },
                                               "min": -0.2,
                                               "max": 0.15
@@ -904,31 +852,18 @@
                                 "argument1": {
                                   "type": "minecraft:clamp",
                                   "input": {
-                                    "type": "minecraft:add",
-                                    "argument1": {
-                                      "type": "frostline:progression",
-                                      "north_range": 8750.0,
-                                      "south_range": 8750.0,
-                                      "x_range": 1.0,
-                                      "x_cap": 0.0,
-                                      "south_cap": -0.2,
-                                      "start_value": -0.2,
-                                      "end_value": 0.15,
-                                      "z_direction": -1.0
-                                    },
-                                    "argument2": {
-                                      "type": "minecraft:mul",
-                                      "argument1": 0.075,
-                                      "argument2": {
-                                        "type": "minecraft:shifted_noise",
-                                        "noise": "frostline:progress_jitter",
-                                        "shift_x": "minecraft:shift_x",
-                                        "shift_y": 0.0,
-                                        "shift_z": "minecraft:shift_z",
-                                        "xz_scale": 0.35,
-                                        "y_scale": 0.0
-                                      }
-                                    }
+                                    "type": "frostline:progression",
+                                    "north_range": 6000.0,
+                                    "south_range": 6000.0,
+                                    "x_range": 1.0,
+                                    "x_cap": 0.0,
+                                    "south_cap": -0.2,
+                                    "start_value": -0.2,
+                                    "end_value": 0.15,
+                                    "z_direction": -1.0,
+                                    "jitter_noise": "frostline:progress_jitter",
+                                    "jitter_xz_scale": 0.35,
+                                    "jitter_blocks": 600.0
                                   },
                                   "min": -0.2,
                                   "max": 0.15
@@ -963,31 +898,18 @@
                               "argument1": {
                                 "type": "minecraft:clamp",
                                 "input": {
-                                  "type": "minecraft:add",
-                                  "argument1": {
-                                    "type": "frostline:progression",
-                                    "north_range": 8750.0,
-                                    "south_range": 8750.0,
-                                    "x_range": 1.0,
-                                    "x_cap": 0.0,
-                                    "south_cap": -0.2,
-                                    "start_value": -0.2,
-                                    "end_value": 0.15,
-                                    "z_direction": -1.0
-                                  },
-                                  "argument2": {
-                                    "type": "minecraft:mul",
-                                    "argument1": 0.075,
-                                    "argument2": {
-                                      "type": "minecraft:shifted_noise",
-                                      "noise": "frostline:progress_jitter",
-                                      "shift_x": "minecraft:shift_x",
-                                      "shift_y": 0.0,
-                                      "shift_z": "minecraft:shift_z",
-                                      "xz_scale": 0.35,
-                                      "y_scale": 0.0
-                                    }
-                                  }
+                                  "type": "frostline:progression",
+                                  "north_range": 6000.0,
+                                  "south_range": 6000.0,
+                                  "x_range": 1.0,
+                                  "x_cap": 0.0,
+                                  "south_cap": -0.2,
+                                  "start_value": -0.2,
+                                  "end_value": 0.15,
+                                  "z_direction": -1.0,
+                                  "jitter_noise": "frostline:progress_jitter",
+                                  "jitter_xz_scale": 0.35,
+                                  "jitter_blocks": 600.0
                                 },
                                 "min": -0.2,
                                 "max": 0.15
@@ -1019,31 +941,18 @@
                                     "argument1": {
                                       "type": "minecraft:clamp",
                                       "input": {
-                                        "type": "minecraft:add",
-                                        "argument1": {
-                                          "type": "frostline:progression",
-                                          "north_range": 8750.0,
-                                          "south_range": 8750.0,
-                                          "x_range": 1.0,
-                                          "x_cap": 0.0,
-                                          "south_cap": -0.2,
-                                          "start_value": -0.2,
-                                          "end_value": 0.15,
-                                          "z_direction": -1.0
-                                        },
-                                        "argument2": {
-                                          "type": "minecraft:mul",
-                                          "argument1": 0.075,
-                                          "argument2": {
-                                            "type": "minecraft:shifted_noise",
-                                            "noise": "frostline:progress_jitter",
-                                            "shift_x": "minecraft:shift_x",
-                                            "shift_y": 0.0,
-                                            "shift_z": "minecraft:shift_z",
-                                            "xz_scale": 0.35,
-                                            "y_scale": 0.0
-                                          }
-                                        }
+                                        "type": "frostline:progression",
+                                        "north_range": 6000.0,
+                                        "south_range": 6000.0,
+                                        "x_range": 1.0,
+                                        "x_cap": 0.0,
+                                        "south_cap": -0.2,
+                                        "start_value": -0.2,
+                                        "end_value": 0.15,
+                                        "z_direction": -1.0,
+                                        "jitter_noise": "frostline:progress_jitter",
+                                        "jitter_xz_scale": 0.35,
+                                        "jitter_blocks": 600.0
                                       },
                                       "min": -0.2,
                                       "max": 0.15
@@ -1164,31 +1073,18 @@
                             "argument1": {
                               "type": "minecraft:clamp",
                               "input": {
-                                "type": "minecraft:add",
-                                "argument1": {
-                                  "type": "frostline:progression",
-                                  "north_range": 8750.0,
-                                  "south_range": 8750.0,
-                                  "x_range": 1.0,
-                                  "x_cap": 0.0,
-                                  "south_cap": -0.2,
-                                  "start_value": -0.2,
-                                  "end_value": 0.15,
-                                  "z_direction": -1.0
-                                },
-                                "argument2": {
-                                  "type": "minecraft:mul",
-                                  "argument1": 0.075,
-                                  "argument2": {
-                                    "type": "minecraft:shifted_noise",
-                                    "noise": "frostline:progress_jitter",
-                                    "shift_x": "minecraft:shift_x",
-                                    "shift_y": 0.0,
-                                    "shift_z": "minecraft:shift_z",
-                                    "xz_scale": 0.35,
-                                    "y_scale": 0.0
-                                  }
-                                }
+                                "type": "frostline:progression",
+                                "north_range": 6000.0,
+                                "south_range": 6000.0,
+                                "x_range": 1.0,
+                                "x_cap": 0.0,
+                                "south_cap": -0.2,
+                                "start_value": -0.2,
+                                "end_value": 0.15,
+                                "z_direction": -1.0,
+                                "jitter_noise": "frostline:progress_jitter",
+                                "jitter_xz_scale": 0.35,
+                                "jitter_blocks": 600.0
                               },
                               "min": -0.2,
                               "max": 0.15
@@ -1219,31 +1115,18 @@
                             "argument1": {
                               "type": "minecraft:clamp",
                               "input": {
-                                "type": "minecraft:add",
-                                "argument1": {
-                                  "type": "frostline:progression",
-                                  "north_range": 8750.0,
-                                  "south_range": 8750.0,
-                                  "x_range": 1.0,
-                                  "x_cap": 0.0,
-                                  "south_cap": -0.2,
-                                  "start_value": -0.2,
-                                  "end_value": 0.15,
-                                  "z_direction": -1.0
-                                },
-                                "argument2": {
-                                  "type": "minecraft:mul",
-                                  "argument1": 0.075,
-                                  "argument2": {
-                                    "type": "minecraft:shifted_noise",
-                                    "noise": "frostline:progress_jitter",
-                                    "shift_x": "minecraft:shift_x",
-                                    "shift_y": 0.0,
-                                    "shift_z": "minecraft:shift_z",
-                                    "xz_scale": 0.35,
-                                    "y_scale": 0.0
-                                  }
-                                }
+                                "type": "frostline:progression",
+                                "north_range": 6000.0,
+                                "south_range": 6000.0,
+                                "x_range": 1.0,
+                                "x_cap": 0.0,
+                                "south_cap": -0.2,
+                                "start_value": -0.2,
+                                "end_value": 0.15,
+                                "z_direction": -1.0,
+                                "jitter_noise": "frostline:progress_jitter",
+                                "jitter_xz_scale": 0.35,
+                                "jitter_blocks": 600.0
                               },
                               "min": -0.2,
                               "max": 0.15
@@ -1368,31 +1251,18 @@
                             "argument1": {
                               "type": "minecraft:clamp",
                               "input": {
-                                "type": "minecraft:add",
-                                "argument1": {
-                                  "type": "frostline:progression",
-                                  "north_range": 8750.0,
-                                  "south_range": 8750.0,
-                                  "x_range": 1.0,
-                                  "x_cap": 0.0,
-                                  "south_cap": -0.2,
-                                  "start_value": -0.2,
-                                  "end_value": 0.15,
-                                  "z_direction": -1.0
-                                },
-                                "argument2": {
-                                  "type": "minecraft:mul",
-                                  "argument1": 0.075,
-                                  "argument2": {
-                                    "type": "minecraft:shifted_noise",
-                                    "noise": "frostline:progress_jitter",
-                                    "shift_x": "minecraft:shift_x",
-                                    "shift_y": 0.0,
-                                    "shift_z": "minecraft:shift_z",
-                                    "xz_scale": 0.35,
-                                    "y_scale": 0.0
-                                  }
-                                }
+                                "type": "frostline:progression",
+                                "north_range": 6000.0,
+                                "south_range": 6000.0,
+                                "x_range": 1.0,
+                                "x_cap": 0.0,
+                                "south_cap": -0.2,
+                                "start_value": -0.2,
+                                "end_value": 0.15,
+                                "z_direction": -1.0,
+                                "jitter_noise": "frostline:progress_jitter",
+                                "jitter_xz_scale": 0.35,
+                                "jitter_blocks": 600.0
                               },
                               "min": -0.2,
                               "max": 0.15
@@ -1438,31 +1308,18 @@
                                 "argument1": {
                                   "type": "minecraft:clamp",
                                   "input": {
-                                    "type": "minecraft:add",
-                                    "argument1": {
-                                      "type": "frostline:progression",
-                                      "north_range": 8750.0,
-                                      "south_range": 8750.0,
-                                      "x_range": 1.0,
-                                      "x_cap": 0.0,
-                                      "south_cap": -0.2,
-                                      "start_value": -0.2,
-                                      "end_value": 0.15,
-                                      "z_direction": -1.0
-                                    },
-                                    "argument2": {
-                                      "type": "minecraft:mul",
-                                      "argument1": 0.075,
-                                      "argument2": {
-                                        "type": "minecraft:shifted_noise",
-                                        "noise": "frostline:progress_jitter",
-                                        "shift_x": "minecraft:shift_x",
-                                        "shift_y": 0.0,
-                                        "shift_z": "minecraft:shift_z",
-                                        "xz_scale": 0.35,
-                                        "y_scale": 0.0
-                                      }
-                                    }
+                                    "type": "frostline:progression",
+                                    "north_range": 6000.0,
+                                    "south_range": 6000.0,
+                                    "x_range": 1.0,
+                                    "x_cap": 0.0,
+                                    "south_cap": -0.2,
+                                    "start_value": -0.2,
+                                    "end_value": 0.15,
+                                    "z_direction": -1.0,
+                                    "jitter_noise": "frostline:progress_jitter",
+                                    "jitter_xz_scale": 0.35,
+                                    "jitter_blocks": 600.0
                                   },
                                   "min": -0.2,
                                   "max": 0.15
@@ -2191,31 +2048,18 @@
                                                               "argument1": {
                                                                 "type": "minecraft:clamp",
                                                                 "input": {
-                                                                  "type": "minecraft:add",
-                                                                  "argument1": {
-                                                                    "type": "frostline:progression",
-                                                                    "north_range": 8750.0,
-                                                                    "south_range": 8750.0,
-                                                                    "x_range": 1.0,
-                                                                    "x_cap": 0.0,
-                                                                    "south_cap": -0.2,
-                                                                    "start_value": -0.2,
-                                                                    "end_value": 0.15,
-                                                                    "z_direction": -1.0
-                                                                  },
-                                                                  "argument2": {
-                                                                    "type": "minecraft:mul",
-                                                                    "argument1": 0.075,
-                                                                    "argument2": {
-                                                                      "type": "minecraft:shifted_noise",
-                                                                      "noise": "frostline:progress_jitter",
-                                                                      "shift_x": "minecraft:shift_x",
-                                                                      "shift_y": 0.0,
-                                                                      "shift_z": "minecraft:shift_z",
-                                                                      "xz_scale": 0.35,
-                                                                      "y_scale": 0.0
-                                                                    }
-                                                                  }
+                                                                  "type": "frostline:progression",
+                                                                  "north_range": 6000.0,
+                                                                  "south_range": 6000.0,
+                                                                  "x_range": 1.0,
+                                                                  "x_cap": 0.0,
+                                                                  "south_cap": -0.2,
+                                                                  "start_value": -0.2,
+                                                                  "end_value": 0.15,
+                                                                  "z_direction": -1.0,
+                                                                  "jitter_noise": "frostline:progress_jitter",
+                                                                  "jitter_xz_scale": 0.35,
+                                                                  "jitter_blocks": 600.0
                                                                 },
                                                                 "min": -0.2,
                                                                 "max": 0.15
@@ -2250,31 +2094,18 @@
                                                             "argument1": {
                                                               "type": "minecraft:clamp",
                                                               "input": {
-                                                                "type": "minecraft:add",
-                                                                "argument1": {
-                                                                  "type": "frostline:progression",
-                                                                  "north_range": 8750.0,
-                                                                  "south_range": 8750.0,
-                                                                  "x_range": 1.0,
-                                                                  "x_cap": 0.0,
-                                                                  "south_cap": -0.2,
-                                                                  "start_value": -0.2,
-                                                                  "end_value": 0.15,
-                                                                  "z_direction": -1.0
-                                                                },
-                                                                "argument2": {
-                                                                  "type": "minecraft:mul",
-                                                                  "argument1": 0.075,
-                                                                  "argument2": {
-                                                                    "type": "minecraft:shifted_noise",
-                                                                    "noise": "frostline:progress_jitter",
-                                                                    "shift_x": "minecraft:shift_x",
-                                                                    "shift_y": 0.0,
-                                                                    "shift_z": "minecraft:shift_z",
-                                                                    "xz_scale": 0.35,
-                                                                    "y_scale": 0.0
-                                                                  }
-                                                                }
+                                                                "type": "frostline:progression",
+                                                                "north_range": 6000.0,
+                                                                "south_range": 6000.0,
+                                                                "x_range": 1.0,
+                                                                "x_cap": 0.0,
+                                                                "south_cap": -0.2,
+                                                                "start_value": -0.2,
+                                                                "end_value": 0.15,
+                                                                "z_direction": -1.0,
+                                                                "jitter_noise": "frostline:progress_jitter",
+                                                                "jitter_xz_scale": 0.35,
+                                                                "jitter_blocks": 600.0
                                                               },
                                                               "min": -0.2,
                                                               "max": 0.15
@@ -2306,31 +2137,18 @@
                                                                   "argument1": {
                                                                     "type": "minecraft:clamp",
                                                                     "input": {
-                                                                      "type": "minecraft:add",
-                                                                      "argument1": {
-                                                                        "type": "frostline:progression",
-                                                                        "north_range": 8750.0,
-                                                                        "south_range": 8750.0,
-                                                                        "x_range": 1.0,
-                                                                        "x_cap": 0.0,
-                                                                        "south_cap": -0.2,
-                                                                        "start_value": -0.2,
-                                                                        "end_value": 0.15,
-                                                                        "z_direction": -1.0
-                                                                      },
-                                                                      "argument2": {
-                                                                        "type": "minecraft:mul",
-                                                                        "argument1": 0.075,
-                                                                        "argument2": {
-                                                                          "type": "minecraft:shifted_noise",
-                                                                          "noise": "frostline:progress_jitter",
-                                                                          "shift_x": "minecraft:shift_x",
-                                                                          "shift_y": 0.0,
-                                                                          "shift_z": "minecraft:shift_z",
-                                                                          "xz_scale": 0.35,
-                                                                          "y_scale": 0.0
-                                                                        }
-                                                                      }
+                                                                      "type": "frostline:progression",
+                                                                      "north_range": 6000.0,
+                                                                      "south_range": 6000.0,
+                                                                      "x_range": 1.0,
+                                                                      "x_cap": 0.0,
+                                                                      "south_cap": -0.2,
+                                                                      "start_value": -0.2,
+                                                                      "end_value": 0.15,
+                                                                      "z_direction": -1.0,
+                                                                      "jitter_noise": "frostline:progress_jitter",
+                                                                      "jitter_xz_scale": 0.35,
+                                                                      "jitter_blocks": 600.0
                                                                     },
                                                                     "min": -0.2,
                                                                     "max": 0.15
@@ -2377,31 +2195,18 @@
                                                       "argument1": {
                                                         "type": "minecraft:clamp",
                                                         "input": {
-                                                          "type": "minecraft:add",
-                                                          "argument1": {
-                                                            "type": "frostline:progression",
-                                                            "north_range": 8750.0,
-                                                            "south_range": 8750.0,
-                                                            "x_range": 1.0,
-                                                            "x_cap": 0.0,
-                                                            "south_cap": -0.2,
-                                                            "start_value": -0.2,
-                                                            "end_value": 0.15,
-                                                            "z_direction": -1.0
-                                                          },
-                                                          "argument2": {
-                                                            "type": "minecraft:mul",
-                                                            "argument1": 0.075,
-                                                            "argument2": {
-                                                              "type": "minecraft:shifted_noise",
-                                                              "noise": "frostline:progress_jitter",
-                                                              "shift_x": "minecraft:shift_x",
-                                                              "shift_y": 0.0,
-                                                              "shift_z": "minecraft:shift_z",
-                                                              "xz_scale": 0.35,
-                                                              "y_scale": 0.0
-                                                            }
-                                                          }
+                                                          "type": "frostline:progression",
+                                                          "north_range": 6000.0,
+                                                          "south_range": 6000.0,
+                                                          "x_range": 1.0,
+                                                          "x_cap": 0.0,
+                                                          "south_cap": -0.2,
+                                                          "start_value": -0.2,
+                                                          "end_value": 0.15,
+                                                          "z_direction": -1.0,
+                                                          "jitter_noise": "frostline:progress_jitter",
+                                                          "jitter_xz_scale": 0.35,
+                                                          "jitter_blocks": 600.0
                                                         },
                                                         "min": -0.2,
                                                         "max": 0.15
@@ -2436,31 +2241,18 @@
                                                     "argument1": {
                                                       "type": "minecraft:clamp",
                                                       "input": {
-                                                        "type": "minecraft:add",
-                                                        "argument1": {
-                                                          "type": "frostline:progression",
-                                                          "north_range": 8750.0,
-                                                          "south_range": 8750.0,
-                                                          "x_range": 1.0,
-                                                          "x_cap": 0.0,
-                                                          "south_cap": -0.2,
-                                                          "start_value": -0.2,
-                                                          "end_value": 0.15,
-                                                          "z_direction": -1.0
-                                                        },
-                                                        "argument2": {
-                                                          "type": "minecraft:mul",
-                                                          "argument1": 0.075,
-                                                          "argument2": {
-                                                            "type": "minecraft:shifted_noise",
-                                                            "noise": "frostline:progress_jitter",
-                                                            "shift_x": "minecraft:shift_x",
-                                                            "shift_y": 0.0,
-                                                            "shift_z": "minecraft:shift_z",
-                                                            "xz_scale": 0.35,
-                                                            "y_scale": 0.0
-                                                          }
-                                                        }
+                                                        "type": "frostline:progression",
+                                                        "north_range": 6000.0,
+                                                        "south_range": 6000.0,
+                                                        "x_range": 1.0,
+                                                        "x_cap": 0.0,
+                                                        "south_cap": -0.2,
+                                                        "start_value": -0.2,
+                                                        "end_value": 0.15,
+                                                        "z_direction": -1.0,
+                                                        "jitter_noise": "frostline:progress_jitter",
+                                                        "jitter_xz_scale": 0.35,
+                                                        "jitter_blocks": 600.0
                                                       },
                                                       "min": -0.2,
                                                       "max": 0.15
@@ -2492,31 +2284,18 @@
                                                           "argument1": {
                                                             "type": "minecraft:clamp",
                                                             "input": {
-                                                              "type": "minecraft:add",
-                                                              "argument1": {
-                                                                "type": "frostline:progression",
-                                                                "north_range": 8750.0,
-                                                                "south_range": 8750.0,
-                                                                "x_range": 1.0,
-                                                                "x_cap": 0.0,
-                                                                "south_cap": -0.2,
-                                                                "start_value": -0.2,
-                                                                "end_value": 0.15,
-                                                                "z_direction": -1.0
-                                                              },
-                                                              "argument2": {
-                                                                "type": "minecraft:mul",
-                                                                "argument1": 0.075,
-                                                                "argument2": {
-                                                                  "type": "minecraft:shifted_noise",
-                                                                  "noise": "frostline:progress_jitter",
-                                                                  "shift_x": "minecraft:shift_x",
-                                                                  "shift_y": 0.0,
-                                                                  "shift_z": "minecraft:shift_z",
-                                                                  "xz_scale": 0.35,
-                                                                  "y_scale": 0.0
-                                                                }
-                                                              }
+                                                              "type": "frostline:progression",
+                                                              "north_range": 6000.0,
+                                                              "south_range": 6000.0,
+                                                              "x_range": 1.0,
+                                                              "x_cap": 0.0,
+                                                              "south_cap": -0.2,
+                                                              "start_value": -0.2,
+                                                              "end_value": 0.15,
+                                                              "z_direction": -1.0,
+                                                              "jitter_noise": "frostline:progress_jitter",
+                                                              "jitter_xz_scale": 0.35,
+                                                              "jitter_blocks": 600.0
                                                             },
                                                             "min": -0.2,
                                                             "max": 0.15
@@ -2637,31 +2416,18 @@
                                                   "argument1": {
                                                     "type": "minecraft:clamp",
                                                     "input": {
-                                                      "type": "minecraft:add",
-                                                      "argument1": {
-                                                        "type": "frostline:progression",
-                                                        "north_range": 8750.0,
-                                                        "south_range": 8750.0,
-                                                        "x_range": 1.0,
-                                                        "x_cap": 0.0,
-                                                        "south_cap": -0.2,
-                                                        "start_value": -0.2,
-                                                        "end_value": 0.15,
-                                                        "z_direction": -1.0
-                                                      },
-                                                      "argument2": {
-                                                        "type": "minecraft:mul",
-                                                        "argument1": 0.075,
-                                                        "argument2": {
-                                                          "type": "minecraft:shifted_noise",
-                                                          "noise": "frostline:progress_jitter",
-                                                          "shift_x": "minecraft:shift_x",
-                                                          "shift_y": 0.0,
-                                                          "shift_z": "minecraft:shift_z",
-                                                          "xz_scale": 0.35,
-                                                          "y_scale": 0.0
-                                                        }
-                                                      }
+                                                      "type": "frostline:progression",
+                                                      "north_range": 6000.0,
+                                                      "south_range": 6000.0,
+                                                      "x_range": 1.0,
+                                                      "x_cap": 0.0,
+                                                      "south_cap": -0.2,
+                                                      "start_value": -0.2,
+                                                      "end_value": 0.15,
+                                                      "z_direction": -1.0,
+                                                      "jitter_noise": "frostline:progress_jitter",
+                                                      "jitter_xz_scale": 0.35,
+                                                      "jitter_blocks": 600.0
                                                     },
                                                     "min": -0.2,
                                                     "max": 0.15
@@ -2692,31 +2458,18 @@
                                                   "argument1": {
                                                     "type": "minecraft:clamp",
                                                     "input": {
-                                                      "type": "minecraft:add",
-                                                      "argument1": {
-                                                        "type": "frostline:progression",
-                                                        "north_range": 8750.0,
-                                                        "south_range": 8750.0,
-                                                        "x_range": 1.0,
-                                                        "x_cap": 0.0,
-                                                        "south_cap": -0.2,
-                                                        "start_value": -0.2,
-                                                        "end_value": 0.15,
-                                                        "z_direction": -1.0
-                                                      },
-                                                      "argument2": {
-                                                        "type": "minecraft:mul",
-                                                        "argument1": 0.075,
-                                                        "argument2": {
-                                                          "type": "minecraft:shifted_noise",
-                                                          "noise": "frostline:progress_jitter",
-                                                          "shift_x": "minecraft:shift_x",
-                                                          "shift_y": 0.0,
-                                                          "shift_z": "minecraft:shift_z",
-                                                          "xz_scale": 0.35,
-                                                          "y_scale": 0.0
-                                                        }
-                                                      }
+                                                      "type": "frostline:progression",
+                                                      "north_range": 6000.0,
+                                                      "south_range": 6000.0,
+                                                      "x_range": 1.0,
+                                                      "x_cap": 0.0,
+                                                      "south_cap": -0.2,
+                                                      "start_value": -0.2,
+                                                      "end_value": 0.15,
+                                                      "z_direction": -1.0,
+                                                      "jitter_noise": "frostline:progress_jitter",
+                                                      "jitter_xz_scale": 0.35,
+                                                      "jitter_blocks": 600.0
                                                     },
                                                     "min": -0.2,
                                                     "max": 0.15
@@ -2841,31 +2594,18 @@
                                                   "argument1": {
                                                     "type": "minecraft:clamp",
                                                     "input": {
-                                                      "type": "minecraft:add",
-                                                      "argument1": {
-                                                        "type": "frostline:progression",
-                                                        "north_range": 8750.0,
-                                                        "south_range": 8750.0,
-                                                        "x_range": 1.0,
-                                                        "x_cap": 0.0,
-                                                        "south_cap": -0.2,
-                                                        "start_value": -0.2,
-                                                        "end_value": 0.15,
-                                                        "z_direction": -1.0
-                                                      },
-                                                      "argument2": {
-                                                        "type": "minecraft:mul",
-                                                        "argument1": 0.075,
-                                                        "argument2": {
-                                                          "type": "minecraft:shifted_noise",
-                                                          "noise": "frostline:progress_jitter",
-                                                          "shift_x": "minecraft:shift_x",
-                                                          "shift_y": 0.0,
-                                                          "shift_z": "minecraft:shift_z",
-                                                          "xz_scale": 0.35,
-                                                          "y_scale": 0.0
-                                                        }
-                                                      }
+                                                      "type": "frostline:progression",
+                                                      "north_range": 6000.0,
+                                                      "south_range": 6000.0,
+                                                      "x_range": 1.0,
+                                                      "x_cap": 0.0,
+                                                      "south_cap": -0.2,
+                                                      "start_value": -0.2,
+                                                      "end_value": 0.15,
+                                                      "z_direction": -1.0,
+                                                      "jitter_noise": "frostline:progress_jitter",
+                                                      "jitter_xz_scale": 0.35,
+                                                      "jitter_blocks": 600.0
                                                     },
                                                     "min": -0.2,
                                                     "max": 0.15
@@ -2911,31 +2651,18 @@
                                                       "argument1": {
                                                         "type": "minecraft:clamp",
                                                         "input": {
-                                                          "type": "minecraft:add",
-                                                          "argument1": {
-                                                            "type": "frostline:progression",
-                                                            "north_range": 8750.0,
-                                                            "south_range": 8750.0,
-                                                            "x_range": 1.0,
-                                                            "x_cap": 0.0,
-                                                            "south_cap": -0.2,
-                                                            "start_value": -0.2,
-                                                            "end_value": 0.15,
-                                                            "z_direction": -1.0
-                                                          },
-                                                          "argument2": {
-                                                            "type": "minecraft:mul",
-                                                            "argument1": 0.075,
-                                                            "argument2": {
-                                                              "type": "minecraft:shifted_noise",
-                                                              "noise": "frostline:progress_jitter",
-                                                              "shift_x": "minecraft:shift_x",
-                                                              "shift_y": 0.0,
-                                                              "shift_z": "minecraft:shift_z",
-                                                              "xz_scale": 0.35,
-                                                              "y_scale": 0.0
-                                                            }
-                                                          }
+                                                          "type": "frostline:progression",
+                                                          "north_range": 6000.0,
+                                                          "south_range": 6000.0,
+                                                          "x_range": 1.0,
+                                                          "x_cap": 0.0,
+                                                          "south_cap": -0.2,
+                                                          "start_value": -0.2,
+                                                          "end_value": 0.15,
+                                                          "z_direction": -1.0,
+                                                          "jitter_noise": "frostline:progress_jitter",
+                                                          "jitter_xz_scale": 0.35,
+                                                          "jitter_blocks": 600.0
                                                         },
                                                         "min": -0.2,
                                                         "max": 0.15
@@ -3109,31 +2836,18 @@
                                                   "argument1": {
                                                     "type": "minecraft:clamp",
                                                     "input": {
-                                                      "type": "minecraft:add",
-                                                      "argument1": {
-                                                        "type": "frostline:progression",
-                                                        "north_range": 8750.0,
-                                                        "south_range": 8750.0,
-                                                        "x_range": 1.0,
-                                                        "x_cap": 0.0,
-                                                        "south_cap": -0.2,
-                                                        "start_value": -0.2,
-                                                        "end_value": 0.15,
-                                                        "z_direction": -1.0
-                                                      },
-                                                      "argument2": {
-                                                        "type": "minecraft:mul",
-                                                        "argument1": 0.075,
-                                                        "argument2": {
-                                                          "type": "minecraft:shifted_noise",
-                                                          "noise": "frostline:progress_jitter",
-                                                          "shift_x": "minecraft:shift_x",
-                                                          "shift_y": 0.0,
-                                                          "shift_z": "minecraft:shift_z",
-                                                          "xz_scale": 0.35,
-                                                          "y_scale": 0.0
-                                                        }
-                                                      }
+                                                      "type": "frostline:progression",
+                                                      "north_range": 6000.0,
+                                                      "south_range": 6000.0,
+                                                      "x_range": 1.0,
+                                                      "x_cap": 0.0,
+                                                      "south_cap": -0.2,
+                                                      "start_value": -0.2,
+                                                      "end_value": 0.15,
+                                                      "z_direction": -1.0,
+                                                      "jitter_noise": "frostline:progress_jitter",
+                                                      "jitter_xz_scale": 0.35,
+                                                      "jitter_blocks": 600.0
                                                     },
                                                     "min": -0.2,
                                                     "max": 0.15
@@ -3179,31 +2893,18 @@
                                                       "argument1": {
                                                         "type": "minecraft:clamp",
                                                         "input": {
-                                                          "type": "minecraft:add",
-                                                          "argument1": {
-                                                            "type": "frostline:progression",
-                                                            "north_range": 8750.0,
-                                                            "south_range": 8750.0,
-                                                            "x_range": 1.0,
-                                                            "x_cap": 0.0,
-                                                            "south_cap": -0.2,
-                                                            "start_value": -0.2,
-                                                            "end_value": 0.15,
-                                                            "z_direction": -1.0
-                                                          },
-                                                          "argument2": {
-                                                            "type": "minecraft:mul",
-                                                            "argument1": 0.075,
-                                                            "argument2": {
-                                                              "type": "minecraft:shifted_noise",
-                                                              "noise": "frostline:progress_jitter",
-                                                              "shift_x": "minecraft:shift_x",
-                                                              "shift_y": 0.0,
-                                                              "shift_z": "minecraft:shift_z",
-                                                              "xz_scale": 0.35,
-                                                              "y_scale": 0.0
-                                                            }
-                                                          }
+                                                          "type": "frostline:progression",
+                                                          "north_range": 6000.0,
+                                                          "south_range": 6000.0,
+                                                          "x_range": 1.0,
+                                                          "x_cap": 0.0,
+                                                          "south_cap": -0.2,
+                                                          "start_value": -0.2,
+                                                          "end_value": 0.15,
+                                                          "z_direction": -1.0,
+                                                          "jitter_noise": "frostline:progress_jitter",
+                                                          "jitter_xz_scale": 0.35,
+                                                          "jitter_blocks": 600.0
                                                         },
                                                         "min": -0.2,
                                                         "max": 0.15
@@ -3928,31 +3629,18 @@
                                                                       "argument1": {
                                                                         "type": "minecraft:clamp",
                                                                         "input": {
-                                                                          "type": "minecraft:add",
-                                                                          "argument1": {
-                                                                            "type": "frostline:progression",
-                                                                            "north_range": 8750.0,
-                                                                            "south_range": 8750.0,
-                                                                            "x_range": 1.0,
-                                                                            "x_cap": 0.0,
-                                                                            "south_cap": -0.2,
-                                                                            "start_value": -0.2,
-                                                                            "end_value": 0.15,
-                                                                            "z_direction": -1.0
-                                                                          },
-                                                                          "argument2": {
-                                                                            "type": "minecraft:mul",
-                                                                            "argument1": 0.075,
-                                                                            "argument2": {
-                                                                              "type": "minecraft:shifted_noise",
-                                                                              "noise": "frostline:progress_jitter",
-                                                                              "shift_x": "minecraft:shift_x",
-                                                                              "shift_y": 0.0,
-                                                                              "shift_z": "minecraft:shift_z",
-                                                                              "xz_scale": 0.35,
-                                                                              "y_scale": 0.0
-                                                                            }
-                                                                          }
+                                                                          "type": "frostline:progression",
+                                                                          "north_range": 6000.0,
+                                                                          "south_range": 6000.0,
+                                                                          "x_range": 1.0,
+                                                                          "x_cap": 0.0,
+                                                                          "south_cap": -0.2,
+                                                                          "start_value": -0.2,
+                                                                          "end_value": 0.15,
+                                                                          "z_direction": -1.0,
+                                                                          "jitter_noise": "frostline:progress_jitter",
+                                                                          "jitter_xz_scale": 0.35,
+                                                                          "jitter_blocks": 600.0
                                                                         },
                                                                         "min": -0.2,
                                                                         "max": 0.15
@@ -3987,31 +3675,18 @@
                                                                     "argument1": {
                                                                       "type": "minecraft:clamp",
                                                                       "input": {
-                                                                        "type": "minecraft:add",
-                                                                        "argument1": {
-                                                                          "type": "frostline:progression",
-                                                                          "north_range": 8750.0,
-                                                                          "south_range": 8750.0,
-                                                                          "x_range": 1.0,
-                                                                          "x_cap": 0.0,
-                                                                          "south_cap": -0.2,
-                                                                          "start_value": -0.2,
-                                                                          "end_value": 0.15,
-                                                                          "z_direction": -1.0
-                                                                        },
-                                                                        "argument2": {
-                                                                          "type": "minecraft:mul",
-                                                                          "argument1": 0.075,
-                                                                          "argument2": {
-                                                                            "type": "minecraft:shifted_noise",
-                                                                            "noise": "frostline:progress_jitter",
-                                                                            "shift_x": "minecraft:shift_x",
-                                                                            "shift_y": 0.0,
-                                                                            "shift_z": "minecraft:shift_z",
-                                                                            "xz_scale": 0.35,
-                                                                            "y_scale": 0.0
-                                                                          }
-                                                                        }
+                                                                        "type": "frostline:progression",
+                                                                        "north_range": 6000.0,
+                                                                        "south_range": 6000.0,
+                                                                        "x_range": 1.0,
+                                                                        "x_cap": 0.0,
+                                                                        "south_cap": -0.2,
+                                                                        "start_value": -0.2,
+                                                                        "end_value": 0.15,
+                                                                        "z_direction": -1.0,
+                                                                        "jitter_noise": "frostline:progress_jitter",
+                                                                        "jitter_xz_scale": 0.35,
+                                                                        "jitter_blocks": 600.0
                                                                       },
                                                                       "min": -0.2,
                                                                       "max": 0.15
@@ -4043,31 +3718,18 @@
                                                                           "argument1": {
                                                                             "type": "minecraft:clamp",
                                                                             "input": {
-                                                                              "type": "minecraft:add",
-                                                                              "argument1": {
-                                                                                "type": "frostline:progression",
-                                                                                "north_range": 8750.0,
-                                                                                "south_range": 8750.0,
-                                                                                "x_range": 1.0,
-                                                                                "x_cap": 0.0,
-                                                                                "south_cap": -0.2,
-                                                                                "start_value": -0.2,
-                                                                                "end_value": 0.15,
-                                                                                "z_direction": -1.0
-                                                                              },
-                                                                              "argument2": {
-                                                                                "type": "minecraft:mul",
-                                                                                "argument1": 0.075,
-                                                                                "argument2": {
-                                                                                  "type": "minecraft:shifted_noise",
-                                                                                  "noise": "frostline:progress_jitter",
-                                                                                  "shift_x": "minecraft:shift_x",
-                                                                                  "shift_y": 0.0,
-                                                                                  "shift_z": "minecraft:shift_z",
-                                                                                  "xz_scale": 0.35,
-                                                                                  "y_scale": 0.0
-                                                                                }
-                                                                              }
+                                                                              "type": "frostline:progression",
+                                                                              "north_range": 6000.0,
+                                                                              "south_range": 6000.0,
+                                                                              "x_range": 1.0,
+                                                                              "x_cap": 0.0,
+                                                                              "south_cap": -0.2,
+                                                                              "start_value": -0.2,
+                                                                              "end_value": 0.15,
+                                                                              "z_direction": -1.0,
+                                                                              "jitter_noise": "frostline:progress_jitter",
+                                                                              "jitter_xz_scale": 0.35,
+                                                                              "jitter_blocks": 600.0
                                                                             },
                                                                             "min": -0.2,
                                                                             "max": 0.15
@@ -4114,31 +3776,18 @@
                                                               "argument1": {
                                                                 "type": "minecraft:clamp",
                                                                 "input": {
-                                                                  "type": "minecraft:add",
-                                                                  "argument1": {
-                                                                    "type": "frostline:progression",
-                                                                    "north_range": 8750.0,
-                                                                    "south_range": 8750.0,
-                                                                    "x_range": 1.0,
-                                                                    "x_cap": 0.0,
-                                                                    "south_cap": -0.2,
-                                                                    "start_value": -0.2,
-                                                                    "end_value": 0.15,
-                                                                    "z_direction": -1.0
-                                                                  },
-                                                                  "argument2": {
-                                                                    "type": "minecraft:mul",
-                                                                    "argument1": 0.075,
-                                                                    "argument2": {
-                                                                      "type": "minecraft:shifted_noise",
-                                                                      "noise": "frostline:progress_jitter",
-                                                                      "shift_x": "minecraft:shift_x",
-                                                                      "shift_y": 0.0,
-                                                                      "shift_z": "minecraft:shift_z",
-                                                                      "xz_scale": 0.35,
-                                                                      "y_scale": 0.0
-                                                                    }
-                                                                  }
+                                                                  "type": "frostline:progression",
+                                                                  "north_range": 6000.0,
+                                                                  "south_range": 6000.0,
+                                                                  "x_range": 1.0,
+                                                                  "x_cap": 0.0,
+                                                                  "south_cap": -0.2,
+                                                                  "start_value": -0.2,
+                                                                  "end_value": 0.15,
+                                                                  "z_direction": -1.0,
+                                                                  "jitter_noise": "frostline:progress_jitter",
+                                                                  "jitter_xz_scale": 0.35,
+                                                                  "jitter_blocks": 600.0
                                                                 },
                                                                 "min": -0.2,
                                                                 "max": 0.15
@@ -4173,31 +3822,18 @@
                                                             "argument1": {
                                                               "type": "minecraft:clamp",
                                                               "input": {
-                                                                "type": "minecraft:add",
-                                                                "argument1": {
-                                                                  "type": "frostline:progression",
-                                                                  "north_range": 8750.0,
-                                                                  "south_range": 8750.0,
-                                                                  "x_range": 1.0,
-                                                                  "x_cap": 0.0,
-                                                                  "south_cap": -0.2,
-                                                                  "start_value": -0.2,
-                                                                  "end_value": 0.15,
-                                                                  "z_direction": -1.0
-                                                                },
-                                                                "argument2": {
-                                                                  "type": "minecraft:mul",
-                                                                  "argument1": 0.075,
-                                                                  "argument2": {
-                                                                    "type": "minecraft:shifted_noise",
-                                                                    "noise": "frostline:progress_jitter",
-                                                                    "shift_x": "minecraft:shift_x",
-                                                                    "shift_y": 0.0,
-                                                                    "shift_z": "minecraft:shift_z",
-                                                                    "xz_scale": 0.35,
-                                                                    "y_scale": 0.0
-                                                                  }
-                                                                }
+                                                                "type": "frostline:progression",
+                                                                "north_range": 6000.0,
+                                                                "south_range": 6000.0,
+                                                                "x_range": 1.0,
+                                                                "x_cap": 0.0,
+                                                                "south_cap": -0.2,
+                                                                "start_value": -0.2,
+                                                                "end_value": 0.15,
+                                                                "z_direction": -1.0,
+                                                                "jitter_noise": "frostline:progress_jitter",
+                                                                "jitter_xz_scale": 0.35,
+                                                                "jitter_blocks": 600.0
                                                               },
                                                               "min": -0.2,
                                                               "max": 0.15
@@ -4229,31 +3865,18 @@
                                                                   "argument1": {
                                                                     "type": "minecraft:clamp",
                                                                     "input": {
-                                                                      "type": "minecraft:add",
-                                                                      "argument1": {
-                                                                        "type": "frostline:progression",
-                                                                        "north_range": 8750.0,
-                                                                        "south_range": 8750.0,
-                                                                        "x_range": 1.0,
-                                                                        "x_cap": 0.0,
-                                                                        "south_cap": -0.2,
-                                                                        "start_value": -0.2,
-                                                                        "end_value": 0.15,
-                                                                        "z_direction": -1.0
-                                                                      },
-                                                                      "argument2": {
-                                                                        "type": "minecraft:mul",
-                                                                        "argument1": 0.075,
-                                                                        "argument2": {
-                                                                          "type": "minecraft:shifted_noise",
-                                                                          "noise": "frostline:progress_jitter",
-                                                                          "shift_x": "minecraft:shift_x",
-                                                                          "shift_y": 0.0,
-                                                                          "shift_z": "minecraft:shift_z",
-                                                                          "xz_scale": 0.35,
-                                                                          "y_scale": 0.0
-                                                                        }
-                                                                      }
+                                                                      "type": "frostline:progression",
+                                                                      "north_range": 6000.0,
+                                                                      "south_range": 6000.0,
+                                                                      "x_range": 1.0,
+                                                                      "x_cap": 0.0,
+                                                                      "south_cap": -0.2,
+                                                                      "start_value": -0.2,
+                                                                      "end_value": 0.15,
+                                                                      "z_direction": -1.0,
+                                                                      "jitter_noise": "frostline:progress_jitter",
+                                                                      "jitter_xz_scale": 0.35,
+                                                                      "jitter_blocks": 600.0
                                                                     },
                                                                     "min": -0.2,
                                                                     "max": 0.15
@@ -4374,31 +3997,18 @@
                                                           "argument1": {
                                                             "type": "minecraft:clamp",
                                                             "input": {
-                                                              "type": "minecraft:add",
-                                                              "argument1": {
-                                                                "type": "frostline:progression",
-                                                                "north_range": 8750.0,
-                                                                "south_range": 8750.0,
-                                                                "x_range": 1.0,
-                                                                "x_cap": 0.0,
-                                                                "south_cap": -0.2,
-                                                                "start_value": -0.2,
-                                                                "end_value": 0.15,
-                                                                "z_direction": -1.0
-                                                              },
-                                                              "argument2": {
-                                                                "type": "minecraft:mul",
-                                                                "argument1": 0.075,
-                                                                "argument2": {
-                                                                  "type": "minecraft:shifted_noise",
-                                                                  "noise": "frostline:progress_jitter",
-                                                                  "shift_x": "minecraft:shift_x",
-                                                                  "shift_y": 0.0,
-                                                                  "shift_z": "minecraft:shift_z",
-                                                                  "xz_scale": 0.35,
-                                                                  "y_scale": 0.0
-                                                                }
-                                                              }
+                                                              "type": "frostline:progression",
+                                                              "north_range": 6000.0,
+                                                              "south_range": 6000.0,
+                                                              "x_range": 1.0,
+                                                              "x_cap": 0.0,
+                                                              "south_cap": -0.2,
+                                                              "start_value": -0.2,
+                                                              "end_value": 0.15,
+                                                              "z_direction": -1.0,
+                                                              "jitter_noise": "frostline:progress_jitter",
+                                                              "jitter_xz_scale": 0.35,
+                                                              "jitter_blocks": 600.0
                                                             },
                                                             "min": -0.2,
                                                             "max": 0.15
@@ -4429,31 +4039,18 @@
                                                           "argument1": {
                                                             "type": "minecraft:clamp",
                                                             "input": {
-                                                              "type": "minecraft:add",
-                                                              "argument1": {
-                                                                "type": "frostline:progression",
-                                                                "north_range": 8750.0,
-                                                                "south_range": 8750.0,
-                                                                "x_range": 1.0,
-                                                                "x_cap": 0.0,
-                                                                "south_cap": -0.2,
-                                                                "start_value": -0.2,
-                                                                "end_value": 0.15,
-                                                                "z_direction": -1.0
-                                                              },
-                                                              "argument2": {
-                                                                "type": "minecraft:mul",
-                                                                "argument1": 0.075,
-                                                                "argument2": {
-                                                                  "type": "minecraft:shifted_noise",
-                                                                  "noise": "frostline:progress_jitter",
-                                                                  "shift_x": "minecraft:shift_x",
-                                                                  "shift_y": 0.0,
-                                                                  "shift_z": "minecraft:shift_z",
-                                                                  "xz_scale": 0.35,
-                                                                  "y_scale": 0.0
-                                                                }
-                                                              }
+                                                              "type": "frostline:progression",
+                                                              "north_range": 6000.0,
+                                                              "south_range": 6000.0,
+                                                              "x_range": 1.0,
+                                                              "x_cap": 0.0,
+                                                              "south_cap": -0.2,
+                                                              "start_value": -0.2,
+                                                              "end_value": 0.15,
+                                                              "z_direction": -1.0,
+                                                              "jitter_noise": "frostline:progress_jitter",
+                                                              "jitter_xz_scale": 0.35,
+                                                              "jitter_blocks": 600.0
                                                             },
                                                             "min": -0.2,
                                                             "max": 0.15
@@ -4578,31 +4175,18 @@
                                                           "argument1": {
                                                             "type": "minecraft:clamp",
                                                             "input": {
-                                                              "type": "minecraft:add",
-                                                              "argument1": {
-                                                                "type": "frostline:progression",
-                                                                "north_range": 8750.0,
-                                                                "south_range": 8750.0,
-                                                                "x_range": 1.0,
-                                                                "x_cap": 0.0,
-                                                                "south_cap": -0.2,
-                                                                "start_value": -0.2,
-                                                                "end_value": 0.15,
-                                                                "z_direction": -1.0
-                                                              },
-                                                              "argument2": {
-                                                                "type": "minecraft:mul",
-                                                                "argument1": 0.075,
-                                                                "argument2": {
-                                                                  "type": "minecraft:shifted_noise",
-                                                                  "noise": "frostline:progress_jitter",
-                                                                  "shift_x": "minecraft:shift_x",
-                                                                  "shift_y": 0.0,
-                                                                  "shift_z": "minecraft:shift_z",
-                                                                  "xz_scale": 0.35,
-                                                                  "y_scale": 0.0
-                                                                }
-                                                              }
+                                                              "type": "frostline:progression",
+                                                              "north_range": 6000.0,
+                                                              "south_range": 6000.0,
+                                                              "x_range": 1.0,
+                                                              "x_cap": 0.0,
+                                                              "south_cap": -0.2,
+                                                              "start_value": -0.2,
+                                                              "end_value": 0.15,
+                                                              "z_direction": -1.0,
+                                                              "jitter_noise": "frostline:progress_jitter",
+                                                              "jitter_xz_scale": 0.35,
+                                                              "jitter_blocks": 600.0
                                                             },
                                                             "min": -0.2,
                                                             "max": 0.15
@@ -4648,31 +4232,18 @@
                                                               "argument1": {
                                                                 "type": "minecraft:clamp",
                                                                 "input": {
-                                                                  "type": "minecraft:add",
-                                                                  "argument1": {
-                                                                    "type": "frostline:progression",
-                                                                    "north_range": 8750.0,
-                                                                    "south_range": 8750.0,
-                                                                    "x_range": 1.0,
-                                                                    "x_cap": 0.0,
-                                                                    "south_cap": -0.2,
-                                                                    "start_value": -0.2,
-                                                                    "end_value": 0.15,
-                                                                    "z_direction": -1.0
-                                                                  },
-                                                                  "argument2": {
-                                                                    "type": "minecraft:mul",
-                                                                    "argument1": 0.075,
-                                                                    "argument2": {
-                                                                      "type": "minecraft:shifted_noise",
-                                                                      "noise": "frostline:progress_jitter",
-                                                                      "shift_x": "minecraft:shift_x",
-                                                                      "shift_y": 0.0,
-                                                                      "shift_z": "minecraft:shift_z",
-                                                                      "xz_scale": 0.35,
-                                                                      "y_scale": 0.0
-                                                                    }
-                                                                  }
+                                                                  "type": "frostline:progression",
+                                                                  "north_range": 6000.0,
+                                                                  "south_range": 6000.0,
+                                                                  "x_range": 1.0,
+                                                                  "x_cap": 0.0,
+                                                                  "south_cap": -0.2,
+                                                                  "start_value": -0.2,
+                                                                  "end_value": 0.15,
+                                                                  "z_direction": -1.0,
+                                                                  "jitter_noise": "frostline:progress_jitter",
+                                                                  "jitter_xz_scale": 0.35,
+                                                                  "jitter_blocks": 600.0
                                                                 },
                                                                 "min": -0.2,
                                                                 "max": 0.15
@@ -4793,31 +4364,18 @@
                                                               "argument1": {
                                                                 "type": "minecraft:clamp",
                                                                 "input": {
-                                                                  "type": "minecraft:add",
-                                                                  "argument1": {
-                                                                    "type": "frostline:progression",
-                                                                    "north_range": 8750.0,
-                                                                    "south_range": 8750.0,
-                                                                    "x_range": 1.0,
-                                                                    "x_cap": 0.0,
-                                                                    "south_cap": -0.2,
-                                                                    "start_value": -0.2,
-                                                                    "end_value": 0.15,
-                                                                    "z_direction": -1.0
-                                                                  },
-                                                                  "argument2": {
-                                                                    "type": "minecraft:mul",
-                                                                    "argument1": 0.075,
-                                                                    "argument2": {
-                                                                      "type": "minecraft:shifted_noise",
-                                                                      "noise": "frostline:progress_jitter",
-                                                                      "shift_x": "minecraft:shift_x",
-                                                                      "shift_y": 0.0,
-                                                                      "shift_z": "minecraft:shift_z",
-                                                                      "xz_scale": 0.35,
-                                                                      "y_scale": 0.0
-                                                                    }
-                                                                  }
+                                                                  "type": "frostline:progression",
+                                                                  "north_range": 6000.0,
+                                                                  "south_range": 6000.0,
+                                                                  "x_range": 1.0,
+                                                                  "x_cap": 0.0,
+                                                                  "south_cap": -0.2,
+                                                                  "start_value": -0.2,
+                                                                  "end_value": 0.15,
+                                                                  "z_direction": -1.0,
+                                                                  "jitter_noise": "frostline:progress_jitter",
+                                                                  "jitter_xz_scale": 0.35,
+                                                                  "jitter_blocks": 600.0
                                                                 },
                                                                 "min": -0.2,
                                                                 "max": 0.15
@@ -4852,31 +4410,18 @@
                                                             "argument1": {
                                                               "type": "minecraft:clamp",
                                                               "input": {
-                                                                "type": "minecraft:add",
-                                                                "argument1": {
-                                                                  "type": "frostline:progression",
-                                                                  "north_range": 8750.0,
-                                                                  "south_range": 8750.0,
-                                                                  "x_range": 1.0,
-                                                                  "x_cap": 0.0,
-                                                                  "south_cap": -0.2,
-                                                                  "start_value": -0.2,
-                                                                  "end_value": 0.15,
-                                                                  "z_direction": -1.0
-                                                                },
-                                                                "argument2": {
-                                                                  "type": "minecraft:mul",
-                                                                  "argument1": 0.075,
-                                                                  "argument2": {
-                                                                    "type": "minecraft:shifted_noise",
-                                                                    "noise": "frostline:progress_jitter",
-                                                                    "shift_x": "minecraft:shift_x",
-                                                                    "shift_y": 0.0,
-                                                                    "shift_z": "minecraft:shift_z",
-                                                                    "xz_scale": 0.35,
-                                                                    "y_scale": 0.0
-                                                                  }
-                                                                }
+                                                                "type": "frostline:progression",
+                                                                "north_range": 6000.0,
+                                                                "south_range": 6000.0,
+                                                                "x_range": 1.0,
+                                                                "x_cap": 0.0,
+                                                                "south_cap": -0.2,
+                                                                "start_value": -0.2,
+                                                                "end_value": 0.15,
+                                                                "z_direction": -1.0,
+                                                                "jitter_noise": "frostline:progress_jitter",
+                                                                "jitter_xz_scale": 0.35,
+                                                                "jitter_blocks": 600.0
                                                               },
                                                               "min": -0.2,
                                                               "max": 0.15
@@ -4908,31 +4453,18 @@
                                                                   "argument1": {
                                                                     "type": "minecraft:clamp",
                                                                     "input": {
-                                                                      "type": "minecraft:add",
-                                                                      "argument1": {
-                                                                        "type": "frostline:progression",
-                                                                        "north_range": 8750.0,
-                                                                        "south_range": 8750.0,
-                                                                        "x_range": 1.0,
-                                                                        "x_cap": 0.0,
-                                                                        "south_cap": -0.2,
-                                                                        "start_value": -0.2,
-                                                                        "end_value": 0.15,
-                                                                        "z_direction": -1.0
-                                                                      },
-                                                                      "argument2": {
-                                                                        "type": "minecraft:mul",
-                                                                        "argument1": 0.075,
-                                                                        "argument2": {
-                                                                          "type": "minecraft:shifted_noise",
-                                                                          "noise": "frostline:progress_jitter",
-                                                                          "shift_x": "minecraft:shift_x",
-                                                                          "shift_y": 0.0,
-                                                                          "shift_z": "minecraft:shift_z",
-                                                                          "xz_scale": 0.35,
-                                                                          "y_scale": 0.0
-                                                                        }
-                                                                      }
+                                                                      "type": "frostline:progression",
+                                                                      "north_range": 6000.0,
+                                                                      "south_range": 6000.0,
+                                                                      "x_range": 1.0,
+                                                                      "x_cap": 0.0,
+                                                                      "south_cap": -0.2,
+                                                                      "start_value": -0.2,
+                                                                      "end_value": 0.15,
+                                                                      "z_direction": -1.0,
+                                                                      "jitter_noise": "frostline:progress_jitter",
+                                                                      "jitter_xz_scale": 0.35,
+                                                                      "jitter_blocks": 600.0
                                                                     },
                                                                     "min": -0.2,
                                                                     "max": 0.15
@@ -5234,31 +4766,18 @@
                                                         "argument1": {
                                                           "type": "minecraft:clamp",
                                                           "input": {
-                                                            "type": "minecraft:add",
-                                                            "argument1": {
-                                                              "type": "frostline:progression",
-                                                              "north_range": 8750.0,
-                                                              "south_range": 8750.0,
-                                                              "x_range": 1.0,
-                                                              "x_cap": 0.0,
-                                                              "south_cap": -0.2,
-                                                              "start_value": -0.2,
-                                                              "end_value": 0.15,
-                                                              "z_direction": -1.0
-                                                            },
-                                                            "argument2": {
-                                                              "type": "minecraft:mul",
-                                                              "argument1": 0.075,
-                                                              "argument2": {
-                                                                "type": "minecraft:shifted_noise",
-                                                                "noise": "frostline:progress_jitter",
-                                                                "shift_x": "minecraft:shift_x",
-                                                                "shift_y": 0.0,
-                                                                "shift_z": "minecraft:shift_z",
-                                                                "xz_scale": 0.35,
-                                                                "y_scale": 0.0
-                                                              }
-                                                            }
+                                                            "type": "frostline:progression",
+                                                            "north_range": 6000.0,
+                                                            "south_range": 6000.0,
+                                                            "x_range": 1.0,
+                                                            "x_cap": 0.0,
+                                                            "south_cap": -0.2,
+                                                            "start_value": -0.2,
+                                                            "end_value": 0.15,
+                                                            "z_direction": -1.0,
+                                                            "jitter_noise": "frostline:progress_jitter",
+                                                            "jitter_xz_scale": 0.35,
+                                                            "jitter_blocks": 600.0
                                                           },
                                                           "min": -0.2,
                                                           "max": 0.15
@@ -5304,31 +4823,18 @@
                                                             "argument1": {
                                                               "type": "minecraft:clamp",
                                                               "input": {
-                                                                "type": "minecraft:add",
-                                                                "argument1": {
-                                                                  "type": "frostline:progression",
-                                                                  "north_range": 8750.0,
-                                                                  "south_range": 8750.0,
-                                                                  "x_range": 1.0,
-                                                                  "x_cap": 0.0,
-                                                                  "south_cap": -0.2,
-                                                                  "start_value": -0.2,
-                                                                  "end_value": 0.15,
-                                                                  "z_direction": -1.0
-                                                                },
-                                                                "argument2": {
-                                                                  "type": "minecraft:mul",
-                                                                  "argument1": 0.075,
-                                                                  "argument2": {
-                                                                    "type": "minecraft:shifted_noise",
-                                                                    "noise": "frostline:progress_jitter",
-                                                                    "shift_x": "minecraft:shift_x",
-                                                                    "shift_y": 0.0,
-                                                                    "shift_z": "minecraft:shift_z",
-                                                                    "xz_scale": 0.35,
-                                                                    "y_scale": 0.0
-                                                                  }
-                                                                }
+                                                                "type": "frostline:progression",
+                                                                "north_range": 6000.0,
+                                                                "south_range": 6000.0,
+                                                                "x_range": 1.0,
+                                                                "x_cap": 0.0,
+                                                                "south_cap": -0.2,
+                                                                "start_value": -0.2,
+                                                                "end_value": 0.15,
+                                                                "z_direction": -1.0,
+                                                                "jitter_noise": "frostline:progress_jitter",
+                                                                "jitter_xz_scale": 0.35,
+                                                                "jitter_blocks": 600.0
                                                               },
                                                               "min": -0.2,
                                                               "max": 0.15

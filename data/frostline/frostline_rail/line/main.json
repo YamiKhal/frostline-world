@@ -1,0 +1,9 @@
+{
+  "dimension": "minecraft:overworld",
+  "south": { "climate": "continentalness", "value": 0.25, "search_limit": 20000 },
+  "north": { "climate": "temperature", "value": 0.591, "search_limit": 40000 },
+  "grade": { "run": 16, "lookahead": 300, "hysteresis": 3, "sample_spacing": 8 },
+  "steering": { "tolerance": 24, "min_straight": 160, "average_window": 192 },
+  "bed": { "half_width": 2, "clearance": 5, "max_fill": 6, "tunnel_min_cover": 6, "pier_spacing": 12, "max_pier_depth": 64 },
+  "blocks": { "ballast": "minecraft:gravel", "fill": "minecraft:cobblestone", "pier": "minecraft:stone_bricks" }
+}
