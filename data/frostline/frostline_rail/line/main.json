@@ -29,7 +29,11 @@
     "max_fill": 6,
     "tunnel_min_cover": 6,
     "pier_spacing": 12,
-    "max_pier_depth": 64
+    "max_pier_depth": 64,
+    "bridge_min_height": 4,
+    "berm_reach": 6,
+    "cut_slope_reach": 8,
+    "slope_step": 1
   },
   "blocks": {
     "ballast": "minecraft:gravel",

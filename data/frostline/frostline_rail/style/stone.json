@@ -40,7 +40,8 @@
     "track_z": 4,
     "track_y": 1,
     "min_depth": 5,
-    "min_length": 10
+    "min_length": 8,
+    "merge_gap": 6
   },
   "bridge_structures": {
     "flat": "frostline:bridge/stone_flat",
@@ -49,13 +50,51 @@
     "end": "frostline:bridge/stone_end",
     "track_z": 3,
     "track_y": 9,
+    "min_height": 6,
     "min_length": 20,
     "max_length": 160,
     "min_gap": 96,
+    "merge_gap": 3,
     "foundation": {
       "Name": "minecraft:stone_bricks"
     },
     "foundation_depth": 64
+  },
+  "tunnel_structures": {
+    "weight": 49,
+    "start": "frostline:tunnel/stone_start",
+    "end": "frostline:tunnel/stone_end",
+    "track_z": 7,
+    "track_y": 1,
+    "min_length": 6,
+    "merge_gap": 2,
+    "variants": [
+      {
+        "weight": 1,
+        "start": "frostline:tunnel/stone_start_boarded",
+        "middle": "frostline:tunnel/stone_middle_boarded",
+        "end": "frostline:tunnel/stone_end_boarded"
+      }
+    ]
+  },
+  "cover_layer": {
+    "state": {
+      "Name": "minecraft:snow",
+      "Properties": {
+        "layers": "1"
+      }
+    },
+    "chance": 1.0,
+    "reach": 12,
+    "exclude_biomes": [
+      "frostline:green_bluffs",
+      "frostline:green_crags",
+      "frostline:green_hills",
+      "frostline:green_hollows",
+      "frostline:green_meadow",
+      "frostline:green_plains",
+      "frostline:green_slopes"
+    ]
   },
   "additions": [
     {
