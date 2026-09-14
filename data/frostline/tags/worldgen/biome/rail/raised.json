@@ -1,0 +1,73 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "frostline:snowy_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:snowy_highlands",
+      "required": false
+    },
+    {
+      "id": "frostline:snowy_stony_highlands",
+      "required": false
+    },
+    {
+      "id": "frostline:frozen_burrow_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:frozen_crevasse_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:frozen_deadwood_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:glacial_slate_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:glacial_spike_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:blizzard_barren_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:blizzard_rubble_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:blizzard_ruined_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:green_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:tainted_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:infested_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:consumed_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:overgrown_hills",
+      "required": false
+    },
+    {
+      "id": "frostline:ice_wall_hills",
+      "required": false
+    }
+  ]
+}

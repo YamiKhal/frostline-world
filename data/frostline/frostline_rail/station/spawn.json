@@ -1,0 +1,19 @@
+{
+  "spawn": true,
+  "length": 48,
+  "side": "east",
+  "gap": 3,
+  "template": {
+    "id": "frostline:ru_station",
+    "track_z": 23,
+    "track_y": 1,
+    "foundation": {
+      "Name": "minecraft:stone_bricks"
+    },
+    "foundation_depth": 16
+  },
+  "station_block": true,
+  "direction": "both",
+  "name": "Frostline Central",
+  "train": "frostline:ru_train"
+}
