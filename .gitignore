@@ -4,6 +4,7 @@ STRUCTURES.md
 WORLDGEN.md
 REF.md
 RAILWAYS.md
+WEATHER.md
 ref/
 *.pkl
 __pycache__/
