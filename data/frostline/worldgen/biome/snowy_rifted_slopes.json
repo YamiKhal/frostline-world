@@ -14,8 +14,8 @@
       "block_search_extent": 8,
       "offset": 2.0
     },
-    "grass_color": 6326127,
-    "foliage_color": 9346202,
+    "grass_color": 8828803,
+    "foliage_color": 6857828,
     "music": {
       "sound": "minecraft:music.overworld.snowy_slopes",
       "min_delay": 14000,
