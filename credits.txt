@@ -1,0 +1,2 @@
+Railways Untold - Railways generation inspiration/idea
+Terralith - Learned how to do worldgen by studying their packs and implemented what I love from them into the Frostline worldgen

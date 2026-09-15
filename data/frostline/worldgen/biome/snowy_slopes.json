@@ -109,7 +109,9 @@
     [],
     [],
     [
-      "frostline:tree/fells_grove"
+      "frostline:tree/r1/grove_old",
+      "frostline:tree/r1/grove",
+      "frostline:tree/r1/grove_understory"
     ],
     [
       "frostline:bare/dirt",

@@ -112,7 +112,10 @@
     [],
     [],
     [
-      "minecraft:trees_taiga"
+      "frostline:tree/r1/forest_core",
+      "frostline:tree/r1/forest_stand",
+      "frostline:tree/r1/forest_understory",
+      "frostline:tree/r1/litter"
     ],
     [
       "frostline:bare/dirt",
