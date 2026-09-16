@@ -97,11 +97,7 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": {
-    "air": [
-      "frostline:shallow_cave"
-    ]
-  },
+  "carvers": {},
   "features": [
     [],
     [],
@@ -110,6 +106,8 @@
     [],
     [],
     [
+      "frostline:r1/cave/room_small",
+      "frostline:r1/cave/room",
       "frostline:r1/cave/coal_seam"
     ],
     [],

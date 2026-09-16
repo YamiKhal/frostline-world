@@ -99,8 +99,7 @@
   "spawn_costs": {},
   "carvers": {
     "air": [
-      "frostline:surface_rift",
-      "frostline:shallow_cave"
+      "frostline:surface_rift"
     ]
   },
   "features": [
