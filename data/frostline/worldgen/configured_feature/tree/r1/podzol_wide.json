@@ -4,26 +4,32 @@
     "state_provider": {
       "fallback": {
         "type": "minecraft:noise_provider",
-        "seed": 510383,
+        "seed": 920477,
         "noise": {
           "firstOctave": 0,
           "amplitudes": [
             1.0
           ]
         },
-        "scale": 0.2,
+        "scale": 0.25,
         "states": [
           {
-            "Name": "minecraft:cobblestone"
+            "Name": "minecraft:coarse_dirt"
           },
           {
-            "Name": "minecraft:stone"
+            "Name": "minecraft:podzol",
+            "Properties": {
+              "snowy": "false"
+            }
           },
           {
-            "Name": "minecraft:stone"
+            "Name": "minecraft:podzol",
+            "Properties": {
+              "snowy": "false"
+            }
           },
           {
-            "Name": "minecraft:cobblestone"
+            "Name": "minecraft:coarse_dirt"
           }
         ]
       },
@@ -33,25 +39,17 @@
       "type": "minecraft:matching_blocks",
       "blocks": [
         "minecraft:grass_block",
-        "minecraft:dirt",
         "minecraft:coarse_dirt",
-        "minecraft:podzol",
-        "minecraft:snow_block",
-        "minecraft:gravel",
-        "minecraft:stone",
-        "minecraft:cobblestone",
-        "minecraft:andesite",
-        "minecraft:granite",
-        "minecraft:tuff"
+        "minecraft:dirt"
       ]
     },
     "radius": {
       "type": "minecraft:uniform",
       "value": {
-        "min_inclusive": 2,
-        "max_inclusive": 4
+        "min_inclusive": 3,
+        "max_inclusive": 5
       }
     },
-    "half_height": 1
+    "half_height": 2
   }
 }

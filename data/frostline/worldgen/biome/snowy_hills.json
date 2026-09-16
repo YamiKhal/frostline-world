@@ -117,7 +117,9 @@
     [
       "frostline:tree/r1/grove_old",
       "frostline:tree/r1/grove",
-      "frostline:tree/r1/grove_understory"
+      "frostline:tree/r1/grove_understory",
+      "frostline:tree/r1/podzol_floor",
+      "frostline:tree/r1/podzol_wide"
     ],
     [
       "minecraft:freeze_top_layer",

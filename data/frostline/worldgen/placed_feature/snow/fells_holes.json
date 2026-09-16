@@ -41,6 +41,7 @@
             "type": "minecraft:matching_blocks",
             "blocks": [
               "minecraft:coarse_dirt",
+              "minecraft:podzol",
               "minecraft:dirt",
               "minecraft:stone",
               "minecraft:andesite",
@@ -59,6 +60,7 @@
                 "type": "minecraft:matching_blocks",
                 "blocks": [
                   "minecraft:coarse_dirt",
+                  "minecraft:podzol",
                   "minecraft:stone",
                   "minecraft:andesite",
                   "minecraft:gravel"
@@ -73,6 +75,7 @@
                 "type": "minecraft:matching_blocks",
                 "blocks": [
                   "minecraft:coarse_dirt",
+                  "minecraft:podzol",
                   "minecraft:stone",
                   "minecraft:andesite",
                   "minecraft:gravel"
@@ -87,6 +90,7 @@
                 "type": "minecraft:matching_blocks",
                 "blocks": [
                   "minecraft:coarse_dirt",
+                  "minecraft:podzol",
                   "minecraft:stone",
                   "minecraft:andesite",
                   "minecraft:gravel"
@@ -101,6 +105,7 @@
                 "type": "minecraft:matching_blocks",
                 "blocks": [
                   "minecraft:coarse_dirt",
+                  "minecraft:podzol",
                   "minecraft:stone",
                   "minecraft:andesite",
                   "minecraft:gravel"
