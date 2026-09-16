@@ -97,7 +97,11 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "frostline:shallow_cave"
+    ]
+  },
   "features": [
     [],
     [],
@@ -105,15 +109,15 @@
     [],
     [],
     [],
-    [],
+    [
+      "frostline:cave/coal_seam"
+    ],
     [],
     [],
     [
       "frostline:tree/r1/highland_exposed"
     ],
     [
-      "frostline:bare/stone",
-      "frostline:bare/gravel",
       "minecraft:freeze_top_layer",
       "frostline:snow/fells_holes",
       "frostline:snow/fells_canopy",

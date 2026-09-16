@@ -101,7 +101,11 @@
   "features": [
     [],
     [],
-    [],
+    [
+      "frostline:boulder/scattered",
+      "frostline:boulder/field",
+      "frostline:boulder/crust"
+    ],
     [],
     [],
     [],
@@ -111,11 +115,10 @@
     [
       "frostline:tree/r1/dying_stand",
       "frostline:tree/r1/grove_understory",
+      "frostline:tree/r1/rare_stand",
       "frostline:tree/r1/litter"
     ],
     [
-      "frostline:bare/dirt",
-      "frostline:bare/gravel",
       "minecraft:freeze_top_layer",
       "frostline:snow/fells_holes",
       "frostline:snow/fells_canopy",

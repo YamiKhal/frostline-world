@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.35,
+        "feature": "frostline:tree/r1/rare/ancient"
+      }
+    ],
+    "default": "frostline:tree/r1/rare/monarch"
+  }
+}

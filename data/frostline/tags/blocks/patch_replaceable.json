@@ -25,6 +25,10 @@
     "minecraft:obsidian",
     "minecraft:sculk",
     "minecraft:snow",
-    "minecraft:powder_snow"
+    "minecraft:powder_snow",
+    "minecraft:mossy_cobblestone",
+    "immersive_weathering:snowy_cobblestone",
+    "minecraft:clay",
+    "minecraft:sand"
   ]
 }

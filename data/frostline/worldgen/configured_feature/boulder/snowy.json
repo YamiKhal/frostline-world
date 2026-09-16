@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:forest_rock",
+  "config": {
+    "state": {
+      "Name": "immersive_weathering:snowy_cobblestone"
+    }
+  }
+}

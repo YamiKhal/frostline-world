@@ -102,8 +102,9 @@
     [],
     [],
     [
-      "frostline:cobble_rock",
-      "frostline:snowy_rock"
+      "frostline:boulder/scattered",
+      "frostline:boulder/field",
+      "frostline:boulder/crust"
     ],
     [],
     [],
@@ -118,7 +119,6 @@
       "frostline:tree/r1/litter"
     ],
     [
-      "frostline:bare/dirt",
       "minecraft:freeze_top_layer",
       "frostline:snow/fells_holes",
       "frostline:snow/fells_canopy",

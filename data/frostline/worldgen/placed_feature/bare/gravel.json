@@ -9,12 +9,33 @@
       "type": "minecraft:in_square"
     },
     {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 3,
+          "max_inclusive": 6
+        }
+      }
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": -5,
+          "max_inclusive": 5
+        }
+      },
+      "y_spread": 0
+    },
+    {
       "type": "minecraft:heightmap",
       "heightmap": "WORLD_SURFACE_WG"
     },
     {
       "type": "minecraft:noise_based_count",
-      "noise_factor": 140,
+      "noise_factor": 160,
       "noise_offset": 0.0,
       "noise_to_count_ratio": 1
     },

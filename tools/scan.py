@@ -1,5 +1,10 @@
-"""Flatten a dimension's generated chunks into surface grids.
+"""Flatten a dimension into surface grids of the TOP SOLID GROUND block.
 
+Water and ice count as NOT ground. They used to count as ground, which made every
+height reading in a world with sea_level 63 report the sea surface: a flooded column
+came back as y62 (the top water block), so a biome whose land had sunk to y45 still
+measured "min 62" and the terrain looked fine when it was five blocks under water.
+Measure land with this; measure water coverage from the fraction below sea level.
 Usage: python tools/scan.py <save>/dimensions/frostline/zone_one/region [surface.pkl]
 Then: python tools/lone_blocks.py surface.pkl
 """
@@ -17,7 +22,7 @@ AIR = w.sid('minecraft:air')
 def not_ground(name):
     n = name.split('[')[0]
     base = n.split(':')[1]
-    if base in ('air', 'cave_air', 'snow', 'short_grass', 'grass', 'tall_grass', 'fern', 'large_fern',
+    if base in ('water', 'bubble_column', 'ice', 'frosted_ice', 'air', 'cave_air', 'snow', 'short_grass', 'grass', 'tall_grass', 'fern', 'large_fern',
                 'dead_bush', 'sweet_berry_bush', 'vine', 'powder_snow'):
         return True
     for k in ('leaves', '_log', '_wood', 'sapling', 'flower', 'tulip', 'orchid', 'daisy', 'poppy',

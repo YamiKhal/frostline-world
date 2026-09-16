@@ -89,45 +89,7 @@
         }
       }
     },
-    "decorators": [
-      {
-        "type": "minecraft:alter_ground",
-        "provider": {
-          "type": "minecraft:noise_provider",
-          "seed": 771221,
-          "noise": {
-            "firstOctave": 0,
-            "amplitudes": [
-              1.0
-            ]
-          },
-          "scale": 0.3,
-          "states": [
-            {
-              "Name": "minecraft:grass_block",
-              "Properties": {
-                "snowy": "false"
-              }
-            },
-            {
-              "Name": "minecraft:podzol",
-              "Properties": {
-                "snowy": "false"
-              }
-            },
-            {
-              "Name": "minecraft:podzol",
-              "Properties": {
-                "snowy": "false"
-              }
-            },
-            {
-              "Name": "minecraft:coarse_dirt"
-            }
-          ]
-        }
-      }
-    ],
+    "decorators": [],
     "ignore_vines": true,
     "force_dirt": false,
     "dirt_provider": {

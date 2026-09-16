@@ -101,7 +101,9 @@
   "features": [
     [],
     [],
-    [],
+    [
+      "frostline:boulder/rare"
+    ],
     [],
     [],
     [],
@@ -113,7 +115,6 @@
       "frostline:tree/r1/plains_bush"
     ],
     [
-      "frostline:bare/dirt",
       "minecraft:freeze_top_layer",
       "frostline:snow/fells_holes",
       "frostline:snow/fells_canopy",
