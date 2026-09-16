@@ -110,21 +110,21 @@
     [],
     [],
     [
-      "frostline:cave/coal_seam"
+      "frostline:r1/cave/coal_seam"
     ],
     [],
     [],
     [
-      "frostline:tree/r1/highland_exposed"
+      "frostline:r1/tree/highland_exposed"
     ],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/fells_holes",
-      "frostline:snow/fells_canopy",
-      "frostline:snow/fells_unstack",
-      "frostline:snow/fells_flatten",
-      "frostline:pond/deep_mountain",
-      "frostline:pond/shallow_mountain"
+      "frostline:r1/snow/fells_holes",
+      "frostline:r1/snow/fells_canopy",
+      "frostline:r1/snow/fells_unstack",
+      "frostline:r1/snow/fells_flatten",
+      "frostline:r1/pond/deep_mountain",
+      "frostline:r1/pond/shallow_mountain"
     ]
   ]
 }

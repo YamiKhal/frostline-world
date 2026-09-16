@@ -106,11 +106,11 @@
     [],
     [],
     [
-      "frostline:rubble_rust"
+      "frostline:r4/rubble/rust"
     ],
     [],
     [
-      "frostline:ice_spike_dense"
+      "frostline:shared/ice/spike_dense"
     ],
     [],
     [],
@@ -119,10 +119,10 @@
     [],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/deep/first",
-      "frostline:snow/deep/second",
-      "frostline:snow/deep/third",
-      "frostline:snow/fix"
+      "frostline:shared/snow/deep/first",
+      "frostline:shared/snow/deep/second",
+      "frostline:shared/snow/deep/third",
+      "frostline:shared/snow/fix"
     ]
   ]
 }

@@ -102,7 +102,7 @@
     [],
     [],
     [
-      "frostline:rare_ice_spike"
+      "frostline:r2/ice/rare_spike"
     ],
     [],
     [],
@@ -111,10 +111,10 @@
     [],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/normal/first",
-      "frostline:snow/normal/second",
-      "frostline:snow/normal/third",
-      "frostline:snow/fix"
+      "frostline:r2/snow/normal/first",
+      "frostline:r2/snow/normal/second",
+      "frostline:r2/snow/normal/third",
+      "frostline:shared/snow/fix"
     ]
   ]
 }

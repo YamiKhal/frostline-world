@@ -106,11 +106,11 @@
     [],
     [],
     [
-      "frostline:ice_sheet"
+      "frostline:shared/ice/sheet"
     ],
     [],
     [
-      "frostline:icicle"
+      "frostline:shared/ice/icicle"
     ],
     [],
     [],
@@ -119,10 +119,10 @@
     [],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/heavy/first",
-      "frostline:snow/heavy/second",
-      "frostline:snow/heavy/third",
-      "frostline:snow/fix"
+      "frostline:shared/snow/heavy/first",
+      "frostline:shared/snow/heavy/second",
+      "frostline:shared/snow/heavy/third",
+      "frostline:shared/snow/fix"
     ]
   ]
 }

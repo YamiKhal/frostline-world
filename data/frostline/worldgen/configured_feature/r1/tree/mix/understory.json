@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.5,
+        "feature": "frostline:r1/tree/bush"
+      }
+    ],
+    "default": "frostline:r1/tree/young"
+  }
+}

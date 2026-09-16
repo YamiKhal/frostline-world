@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 14,
+    "xz_spread": 3,
+    "y_spread": 1,
+    "feature": {
+      "feature": "frostline:r2/tree/dead_giant",
+      "placement": []
+    }
+  }
+}

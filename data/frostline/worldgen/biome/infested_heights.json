@@ -87,19 +87,19 @@
     [],
     [],
     [
-      "frostline:sculk_boulder"
+      "frostline:q/boulder/sculk"
     ],
     [],
     [
-      "frostline:quiet/spine"
+      "frostline:q/terrain/spine"
     ],
     [],
     [],
     [],
     [],
     [
-      "frostline:sculk/spread",
-      "frostline:sculk/veins"
+      "frostline:q/sculk/spread",
+      "frostline:q/sculk/veins"
     ],
     []
   ]

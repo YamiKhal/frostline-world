@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.5,
+        "feature": "frostline:r1/tree/windswept"
+      },
+      {
+        "chance": 0.25,
+        "feature": "frostline:r1/tree/spruce_thin"
+      }
+    ],
+    "default": "frostline:r1/tree/pine"
+  }
+}

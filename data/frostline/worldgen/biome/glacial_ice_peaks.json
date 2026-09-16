@@ -108,9 +108,9 @@
     [],
     [],
     [
-      "frostline:ice_spike_dense",
-      "frostline:ice_needle",
-      "frostline:icicle"
+      "frostline:shared/ice/spike_dense",
+      "frostline:shared/ice/needle",
+      "frostline:shared/ice/icicle"
     ],
     [],
     [],
@@ -119,10 +119,10 @@
     [],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/deep/first",
-      "frostline:snow/deep/second",
-      "frostline:snow/deep/third",
-      "frostline:snow/fix"
+      "frostline:shared/snow/deep/first",
+      "frostline:shared/snow/deep/second",
+      "frostline:shared/snow/deep/third",
+      "frostline:shared/snow/fix"
     ]
   ]
 }

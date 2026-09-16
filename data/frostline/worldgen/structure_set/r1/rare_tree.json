@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "frostline:r1/rare_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 6,
+    "separation": 2,
+    "salt": 771802
+  }
+}

@@ -106,11 +106,11 @@
     [],
     [],
     [
-      "frostline:granite_boulder"
+      "frostline:r4/boulder/granite"
     ],
     [],
     [
-      "frostline:icicle"
+      "frostline:shared/ice/icicle"
     ],
     [],
     [],
@@ -119,10 +119,10 @@
     [],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/deep/first",
-      "frostline:snow/deep/second",
-      "frostline:snow/deep/third",
-      "frostline:snow/fix"
+      "frostline:shared/snow/deep/first",
+      "frostline:shared/snow/deep/second",
+      "frostline:shared/snow/deep/third",
+      "frostline:shared/snow/fix"
     ]
   ]
 }

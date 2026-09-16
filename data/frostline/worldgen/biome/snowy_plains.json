@@ -109,17 +109,17 @@
     [],
     [],
     [
-      "frostline:tree/r1/plains_lone",
-      "frostline:tree/r1/plains_bush"
+      "frostline:r1/tree/plains_lone",
+      "frostline:r1/tree/plains_bush"
     ],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/fells_holes",
-      "frostline:snow/fells_canopy",
-      "frostline:snow/fells_unstack",
-      "frostline:snow/fells_flatten",
-      "frostline:pond/deep_flat",
-      "frostline:pond/shallow_flat"
+      "frostline:r1/snow/fells_holes",
+      "frostline:r1/snow/fells_canopy",
+      "frostline:r1/snow/fells_unstack",
+      "frostline:r1/snow/fells_flatten",
+      "frostline:r1/pond/deep_flat",
+      "frostline:r1/pond/shallow_flat"
     ]
   ]
 }

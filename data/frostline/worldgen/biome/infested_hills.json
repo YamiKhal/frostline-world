@@ -87,7 +87,7 @@
     [],
     [],
     [
-      "frostline:sculk_boulder"
+      "frostline:q/boulder/sculk"
     ],
     [],
     [],
@@ -96,8 +96,8 @@
     [],
     [],
     [
-      "frostline:sculk/spread",
-      "frostline:sculk/veins"
+      "frostline:q/sculk/spread",
+      "frostline:q/sculk/veins"
     ],
     []
   ]

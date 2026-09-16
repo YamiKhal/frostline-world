@@ -81,7 +81,7 @@
     [],
     [
       "minecraft:freeze_top_layer",
-      "frostline:frozen_lake/lake"
+      "frostline:r1/lake/frozen"
     ]
   ]
 }

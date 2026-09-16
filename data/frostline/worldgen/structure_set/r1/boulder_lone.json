@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "frostline:r1/boulder_lone",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 7,
+    "separation": 3,
+    "salt": 771902
+  }
+}

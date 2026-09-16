@@ -106,12 +106,12 @@
     [],
     [],
     [
-      "frostline:frost_boulder"
+      "frostline:shared/boulder/frost"
     ],
     [],
     [
-      "frostline:ice_needle",
-      "frostline:icicle"
+      "frostline:shared/ice/needle",
+      "frostline:shared/ice/icicle"
     ],
     [],
     [],
@@ -120,10 +120,10 @@
     [],
     [
       "minecraft:freeze_top_layer",
-      "frostline:snow/heavy/first",
-      "frostline:snow/heavy/second",
-      "frostline:snow/heavy/third",
-      "frostline:snow/fix"
+      "frostline:shared/snow/heavy/first",
+      "frostline:shared/snow/heavy/second",
+      "frostline:shared/snow/heavy/third",
+      "frostline:shared/snow/fix"
     ]
   ]
 }

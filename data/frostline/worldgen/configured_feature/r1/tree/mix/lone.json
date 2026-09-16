@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": "frostline:r1/tree/spruce_grand"
+      },
+      {
+        "chance": 0.06,
+        "feature": "frostline:r1/tree/spruce_ragged"
+      },
+      {
+        "chance": 0.3,
+        "feature": "frostline:r1/tree/spruce_tall"
+      },
+      {
+        "chance": 0.15,
+        "feature": "frostline:r1/tree/spruce_thin"
+      },
+      {
+        "chance": 0.25,
+        "feature": "frostline:r1/tree/pine"
+      }
+    ],
+    "default": "frostline:r1/tree/spruce"
+  }
+}

@@ -87,19 +87,19 @@
     [],
     [],
     [
-      "frostline:quiet/crater"
+      "frostline:q/terrain/crater"
     ],
     [],
     [
-      "frostline:sculk/pillar"
+      "frostline:q/sculk/pillar"
     ],
     [],
     [],
     [],
     [],
     [
-      "frostline:sculk/bloom",
-      "frostline:sculk/veins"
+      "frostline:q/sculk/bloom",
+      "frostline:q/sculk/veins"
     ],
     []
   ]
