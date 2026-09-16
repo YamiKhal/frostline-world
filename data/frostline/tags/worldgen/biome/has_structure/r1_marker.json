@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "frostline:snowy_highlands",
-    "frostline:snowy_stony_highlands",
-    "frostline:snowy_slopes",
-    "frostline:snowy_rifted_slopes",
     "frostline:snowy_hills",
     "frostline:snowy_dead_forest",
     "frostline:snowy_pine_forest",

@@ -2,12 +2,8 @@
   "values": [
     "frostline:snowy_dead_forest",
     "frostline:snowy_gravel_plains",
-    "frostline:snowy_highlands",
     "frostline:snowy_hills",
     "frostline:snowy_pine_forest",
-    "frostline:snowy_plains",
-    "frostline:snowy_rifted_slopes",
-    "frostline:snowy_slopes",
-    "frostline:snowy_stony_highlands"
+    "frostline:snowy_plains"
   ]
 }

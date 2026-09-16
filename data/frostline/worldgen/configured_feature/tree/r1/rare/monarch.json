@@ -63,36 +63,7 @@
         }
       }
     },
-    "decorators": [
-      {
-        "type": "minecraft:alter_ground",
-        "provider": {
-          "type": "minecraft:noise_provider",
-          "seed": 771611,
-          "noise": {
-            "firstOctave": 0,
-            "amplitudes": [
-              1.0
-            ]
-          },
-          "scale": 0.3,
-          "states": [
-            {
-              "Name": "minecraft:podzol"
-            },
-            {
-              "Name": "minecraft:podzol"
-            },
-            {
-              "Name": "minecraft:coarse_dirt"
-            },
-            {
-              "Name": "minecraft:grass_block"
-            }
-          ]
-        }
-      }
-    ],
+    "decorators": [],
     "ignore_vines": true,
     "force_dirt": false
   }

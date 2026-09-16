@@ -1,64 +1,57 @@
 {
-  "type": "minecraft:vegetation_patch",
+  "type": "minecraft:disk",
   "config": {
-    "surface": "floor",
-    "depth": {
-      "type": "minecraft:uniform",
-      "value": {
-        "min_inclusive": 1,
-        "max_inclusive": 2
-      }
-    },
-    "vertical_range": 3,
-    "extra_bottom_block_chance": 0.0,
-    "extra_edge_column_chance": 0.65,
-    "vegetation_chance": 1.0,
-    "xz_radius": {
-      "type": "minecraft:uniform",
-      "value": {
-        "min_inclusive": 1,
-        "max_inclusive": 2
-      }
-    },
-    "ground_state": {
-      "type": "minecraft:noise_provider",
-      "seed": 510382,
-      "noise": {
-        "firstOctave": 0,
-        "amplitudes": [
-          1.0
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:noise_provider",
+        "seed": 510382,
+        "noise": {
+          "firstOctave": 0,
+          "amplitudes": [
+            1.0
+          ]
+        },
+        "scale": 0.2,
+        "states": [
+          {
+            "Name": "minecraft:dirt"
+          },
+          {
+            "Name": "minecraft:coarse_dirt"
+          },
+          {
+            "Name": "minecraft:coarse_dirt"
+          },
+          {
+            "Name": "minecraft:dirt"
+          }
         ]
       },
-      "scale": 0.2,
-      "states": [
-        {
-          "Name": "minecraft:dirt"
-        },
-        {
-          "Name": "minecraft:coarse_dirt"
-        },
-        {
-          "Name": "minecraft:coarse_dirt"
-        },
-        {
-          "Name": "minecraft:dirt"
-        }
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:grass_block",
+        "minecraft:dirt",
+        "minecraft:coarse_dirt",
+        "minecraft:podzol",
+        "minecraft:snow_block",
+        "minecraft:gravel",
+        "minecraft:stone",
+        "minecraft:cobblestone",
+        "minecraft:andesite",
+        "minecraft:granite",
+        "minecraft:tuff"
       ]
     },
-    "replaceable": "#frostline:patch_replaceable",
-    "vegetation_feature": {
-      "feature": {
-        "type": "minecraft:simple_block",
-        "config": {
-          "to_place": {
-            "type": "minecraft:simple_state_provider",
-            "state": {
-              "Name": "minecraft:air"
-            }
-          }
-        }
-      },
-      "placement": []
-    }
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 2,
+        "max_inclusive": 4
+      }
+    },
+    "half_height": 1
   }
 }
