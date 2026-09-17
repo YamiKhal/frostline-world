@@ -97,21 +97,8 @@ def write_litematic(path, regions, data_version=3465):
     nbtio.save(path, '', root)
 
 
-class Opts:
-    air = 'keep'
-    gap = 'void'
-    keep_entities = False
-    keep_only = set()
-    drop_types = {'minecraft:marker'}
-    no_block_entities = False
-    data_version = None
-
-
-def opts(**kw):
-    o = Opts()
-    for k, v in kw.items():
-        setattr(o, k, v)
-    return o
+def policy(**kw):
+    return L.Policy(**kw)
 
 
 def read_grid(root):
@@ -144,8 +131,8 @@ def test_bit_roundtrip():
           and L.bits_for(16) == 4 and L.bits_for(17) == 5, 'bits_for matches Litematica')
 
 
-def test_block_entities(tmp):
-    print('block entity data')
+def test_block_nbt(tmp):
+    print('block nbt')
     pal = [state('minecraft:air'), state('minecraft:structure_void'),
            state('minecraft:chest', {'facing': 'north', 'type': 'single',
                                      'waterlogged': 'false'}),
@@ -181,7 +168,7 @@ def test_block_entities(tmp):
     p = os.path.join(tmp, 'be.litematic')
     write_litematic(p, [('main', region([0, 0, 0], [3, 2, 1], pal, cells,
                                         tiles=[chest, sign, spawner]))])
-    root, rep = L.convert(p, opts())
+    root, rep = L.convert(p, policy())
     _, grid = read_grid(root)
 
     got_chest = grid[(0, 0, 0)][1]
@@ -211,16 +198,68 @@ def test_block_entities(tmp):
                                  (('facing', 'north'), ('type', 'single'),
                                   ('waterlogged', 'false'))),
           'block state properties preserved')
-    check(sum(rep['block_entities'].values()) == 3, 'all three block entities reported')
+    check(sum(rep['block_nbt'].values()) == 3, 'all three blocks with NBT reported')
 
-    root, rep = L.convert(p, opts(no_block_entities=True))
+    root, rep = L.convert(p, policy(block_nbt=False))
     _, grid = read_grid(root)
-    check(all(v[1] is None for v in grid.values()), '--no-block-entities drops the data')
+    check(all(v[1] is None for v in grid.values()), '--no-block-nbt drops the data')
 
     # A dropped air policy must not silently strip a block entity with it.
-    root, rep = L.convert(p, opts(air='drop'))
+    root, rep = L.convert(p, policy(air='drop'))
     _, grid = read_grid(root)
     check(grid[(0, 0, 0)][1] is not None, 'block entity survives --air drop')
+
+
+def test_modded_block_nbt(tmp):
+    print('modded block nbt')
+    # A block this tool has never heard of, with data shaped nothing like a
+    # chest. Nothing may be filtered by id, or modded builds lose their guts.
+    pal = [state('minecraft:air'),
+           state('create:copycat_panel', {'facing': 'north', 'waterlogged': 'false'})]
+    copycat = nbtio.comp(OrderedDict([
+        ('id', nbtio.string('create:copycat_panel')),
+        ('x', nbtio.i32(0)), ('y', nbtio.i32(0)), ('z', nbtio.i32(0)),
+        ('Material', nbtio.comp(OrderedDict([
+            ('Name', nbtio.string('minecraft:warped_planks')),
+            ('Properties', nbtio.comp(OrderedDict([('waterlogged', nbtio.string('false'))]))),
+        ]))),
+        ('Redstone', ('b', 1)),
+        ('Colour', ('i', 16733525)),
+        ('Consumed', ('f', 0.25)),
+        ('Sides', ('ba', [0, 1, 2, 3, 4, 5])),
+        ('Wrapped', ('la', [-9007199254740993, 7])),
+        ('Slots', ('ia', [4, 8, 15])),
+        ('Ratio', ('d', 0.3333333333333333)),
+        ('Frequency', ('s', -12000)),
+    ]))
+    p = os.path.join(tmp, 'modded.litematic')
+    write_litematic(p, [('main', region([0, 0, 0], [1, 1, 1], pal, {(0, 0, 0): 1},
+                                        tiles=[copycat]))])
+    root, rep = L.convert(p, policy())
+    _, grid = read_grid(root)
+    got = grid[(0, 0, 0)]
+    check(got[0] == ('create:copycat_panel',
+                     (('facing', 'north'), ('waterlogged', 'false'))),
+          'modded block state and properties preserved')
+    check(got[1] is not None, 'modded block keeps its nbt')
+    if got[1]:
+        d = got[1][1]
+        check(d['Material'][1]['Name'][1] == 'minecraft:warped_planks',
+              'nested modded compound preserved')
+        check(d['Redstone'] == ('b', 1) and d['Colour'] == ('i', 16733525)
+              and d['Frequency'] == ('s', -12000),
+              'byte, int and short stay their own types')
+        check(d['Consumed'] == ('f', 0.25) and d['Ratio'] == ('d', 0.3333333333333333),
+              'float and double stay distinct and exact')
+        check(d['Sides'] == ('ba', [0, 1, 2, 3, 4, 5])
+              and d['Slots'] == ('ia', [4, 8, 15])
+              and d['Wrapped'] == ('la', [-9007199254740993, 7]),
+              'byte, int and long arrays survive, 64-bit values intact')
+        check(sorted(d) == sorted(['id', 'Material', 'Redstone', 'Colour', 'Consumed',
+                                   'Sides', 'Wrapped', 'Slots', 'Ratio', 'Frequency']),
+              'no modded key was dropped, and x/y/z are gone')
+    check(rep['block_nbt'] == {'create:copycat_panel': 1},
+          'modded block reported by its own id')
 
 
 def test_negative_size(tmp):
@@ -231,7 +270,7 @@ def test_negative_size(tmp):
     cells = {(0, 0, 0): 1, (2, 0, 0): 2, (0, 0, 1): 2}
     p = os.path.join(tmp, 'neg.litematic')
     write_litematic(p, [('main', region([10, 5, 10], [-3, 1, -2], pal, cells))])
-    root, _ = L.convert(p, opts())
+    root, _ = L.convert(p, policy())
     size, grid = read_grid(root)
     check(size == [3, 1, 2], 'negative size yields a positive box')
     # Position 10 with size -3 spans world x 8..10, so local x = 10 - 8 = 2.
@@ -247,14 +286,14 @@ def test_multi_region(tmp):
     b = region([5, 0, 0], [2, 1, 1], pal, {(0, 0, 0): 1, (1, 0, 0): 1})
     p = os.path.join(tmp, 'multi.litematic')
     write_litematic(p, [('a', a), ('b', b)])
-    root, rep = L.convert(p, opts())
+    root, rep = L.convert(p, policy())
     size, grid = read_grid(root)
     check(size == [7, 1, 1], 'bounding box spans both regions')
     check(rep['gaps'] == 3, 'the three cells between the regions are reported as gaps')
     check(grid[(3, 0, 0)][0][0] == 'minecraft:structure_void',
           'uncovered cells default to structure_void')
     check(grid[(6, 0, 0)][0][0] == 'minecraft:stone', 'far region placed at the right offset')
-    root, _ = L.convert(p, opts(gap='drop'))
+    root, _ = L.convert(p, policy(gap='drop'))
     _, grid = read_grid(root)
     check((3, 0, 0) not in grid, '--gap drop omits uncovered cells')
 
@@ -265,13 +304,13 @@ def test_air_policy(tmp):
     p = os.path.join(tmp, 'air.litematic')
     write_litematic(p, [('main', region([0, 0, 0], [2, 1, 1], pal, {(1, 0, 0): 1}))])
     for mode, expect in (('keep', 'minecraft:air'), ('void', 'minecraft:structure_void')):
-        root, _ = L.convert(p, opts(air=mode))
+        root, _ = L.convert(p, policy(air=mode))
         _, grid = read_grid(root)
         check(grid[(0, 0, 0)][0][0] == expect, '--air %s' % mode)
-    root, rep = L.convert(p, opts(air='drop'))
+    root, rep = L.convert(p, policy(air='drop'))
     _, grid = read_grid(root)
     check((0, 0, 0) not in grid and len(grid) == 1, '--air drop omits the cell entirely')
-    root, rep = L.convert(p, opts(air='keep'))
+    root, rep = L.convert(p, policy(air='keep'))
     check(any('carve terrain' in w for w in rep['warnings']),
           'air with no voids is warned about')
 
@@ -299,17 +338,25 @@ def test_entities(tmp):
                   ent('minecraft:stray', [1.5, 0.0, 0.5]),
                   ent('minecraft:marker', [0.5, 0.0, 0.5])]))])
 
-    root, rep = L.convert(p, opts())
-    check(len(root[1]['entities'][1][1]) == 0, 'entities dropped by default')
-    check(sum(rep['entities_dropped'].values()) == 4, 'all four reported as dropped')
+    root, rep = L.convert(p, policy())
+    kept = sorted(e[1]['nbt'][1]['id'][1] for e in root[1]['entities'][1][1])
+    check(kept == ['minecraft:armor_stand', 'minecraft:item_frame',
+                   'minecraft:marker', 'minecraft:stray'],
+          'every entity is kept by default, armour stands and item frames included')
+    check(not rep['entities_dropped'], 'nothing is dropped unasked')
 
-    root, rep = L.convert(p, opts(keep_entities=True))
-    kept = [e[1]['nbt'][1]['id'][1] for e in root[1]['entities'][1][1]]
-    check(sorted(kept) == ['minecraft:armor_stand', 'minecraft:item_frame',
-                           'minecraft:stray'], '--keep-entities keeps all but the marker')
+    root, rep = L.convert(p, policy(drop_entities={'minecraft:stray',
+                                                   'minecraft:marker'}))
+    kept = sorted(e[1]['nbt'][1]['id'][1] for e in root[1]['entities'][1][1])
+    check(kept == ['minecraft:armor_stand', 'minecraft:item_frame'],
+          '--drop-entity removes only what was named')
+    check(sum(rep['entities_dropped'].values()) == 2, 'dropped entities are reported')
 
-    root, rep = L.convert(p, opts(keep_only={'minecraft:item_frame',
-                                             'minecraft:armor_stand'}))
+    root, rep = L.convert(p, policy(keep_entities=set()))
+    check(len(root[1]['entities'][1][1]) == 0, '--no-entities drops them all')
+
+    root, rep = L.convert(p, policy(keep_entities={'minecraft:item_frame',
+                                                   'minecraft:armor_stand'}))
     kept = [e[1]['nbt'][1]['id'][1] for e in root[1]['entities'][1][1]]
     check(sorted(kept) == ['minecraft:armor_stand', 'minecraft:item_frame'],
           '--keep-entity keeps only the listed types')
@@ -353,22 +400,108 @@ def test_cli(tmp):
         check(L.main(['fallen_tree_*', '-o', 'x.nbt', '-q']) == 2,
               '-o with several matches is refused')
         check(L.main(['fallen_tree_1', '--keep-entity', 'stray',
-                      '--keep-entities', '-q']) == 2,
+                      '--drop-entity', 'marker', '-q']) == 2,
               'contradictory entity flags are refused')
+        check(L.main(['--list', 'fallen_tree_1', '-q']) == 0, '--list runs')
+        check(L.main(['--list', '--json', 'fallen_tree_1']) == 0, '--list --json runs')
     finally:
         os.chdir(cwd)
+
+
+def test_inventory(tmp):
+    print('inventory')
+    pal = [state('minecraft:air'), state('minecraft:stone'),
+           state('minecraft:snow', {'layers': '3'})]
+    chest = nbtio.comp(OrderedDict([
+        ('id', nbtio.string('minecraft:chest')),
+        ('x', nbtio.i32(1)), ('y', nbtio.i32(0)), ('z', nbtio.i32(0)),
+    ]))
+    ents = [nbtio.comp(OrderedDict([('id', nbtio.string('minecraft:armor_stand')),
+                                    ('Pos', nbtio.dbl_list([0.5, 0.0, 0.5]))]))]
+    p = os.path.join(tmp, 'inv.litematic')
+    write_litematic(p, [('main', region([0, 0, 0], [3, 1, 1], pal,
+                                        {(1, 0, 0): 1, (2, 0, 0): 2},
+                                        tiles=[chest], entities=ents))])
+    inv = L.inventory(L.read_schematic(p))
+    check(inv['size'] == [3, 1, 1] and inv['volume'] == 3, 'inventory reports the box')
+    check(inv['blocks'] == {'minecraft:air': 1, 'minecraft:stone': 1,
+                            'minecraft:snow[layers=3]': 1},
+          'inventory counts every block state, properties included')
+    check(inv['entities'] == {'minecraft:armor_stand': 1}, 'inventory lists entities')
+    check(inv['block_nbt'] == {'minecraft:chest': 1}, 'inventory lists blocks with NBT')
+
+
+def test_drop_block(tmp):
+    print('block exclusion')
+    pal = [state('minecraft:air'), state('minecraft:stone'),
+           state('minecraft:grass_block', {'snowy': 'false'})]
+    p = os.path.join(tmp, 'db.litematic')
+    write_litematic(p, [('main', region([0, 0, 0], [3, 1, 1], pal,
+                                        {(0, 0, 0): 1, (1, 0, 0): 2, (2, 0, 0): 2}))])
+    root, rep = L.convert(p, policy(drop_blocks={'minecraft:grass_block'}))
+    _, grid = read_grid(root)
+    check(grid[(0, 0, 0)][0][0] == 'minecraft:stone', 'untouched block still placed')
+    check(grid[(1, 0, 0)][0][0] == 'minecraft:structure_void'
+          and grid[(2, 0, 0)][0][0] == 'minecraft:structure_void',
+          'dropped block type becomes structure_void')
+    check(rep['blocks_dropped'] == {'minecraft:grass_block': 2}, 'dropped blocks reported')
+
+
+def test_gui(tmp):
+    print('gui')
+    try:
+        import tkinter as tk
+        import litematic_gui as G
+        root = tk.Tk()
+    except Exception as e:
+        print('  skip  no tkinter or no display (%s)' % e)
+        return
+    try:
+        root.withdraw()
+        pal = [state('minecraft:air'), state('minecraft:stone')]
+        ents = [nbtio.comp(OrderedDict([('id', nbtio.string('minecraft:stray')),
+                                        ('Pos', nbtio.dbl_list([0.5, 0.0, 0.5]))]))]
+        src = os.path.join(tmp, 'gui.litematic')
+        write_litematic(src, [('main', region([0, 0, 0], [2, 1, 1], pal,
+                                              {(0, 0, 0): 1}, entities=ents))])
+        out = os.path.join(tmp, 'guiout')
+        app = G.App(root, outdir=out)
+        app.add_paths([src])
+        check(len(app.good_scenes()) == 1, 'gui loads a schematic')
+        check(set(app.entities.state) == {'minecraft:stray'}, 'gui lists the entity')
+        check(all(app.entities.state.values()) and all(app.blocks.state.values()),
+              'everything starts ticked')
+        check(app.policy().drop_entities == set(), 'nothing is dropped while all ticked')
+        app.entities.toggle(['minecraft:stray'])
+        check(app.policy().drop_entities == {'minecraft:stray'},
+              'unticking an entity drops it')
+        app.convert()
+        made = os.path.join(out, 'gui.nbt')
+        check(os.path.isfile(made), 'gui writes the .nbt')
+        if os.path.isfile(made):
+            _, r = nbtio.load(made)
+            check(len(r[1]['entities'][1][1]) == 0, 'the unticked entity is gone from output')
+        app.blocks.set_all(False)
+        check(app.policy().drop_blocks == {'minecraft:air', 'minecraft:stone'},
+              'unticking every state of a block drops that block')
+    finally:
+        root.destroy()
 
 
 def main():
     tmp = tempfile.mkdtemp(prefix='lite2nbt-')
     try:
         test_bit_roundtrip()
-        test_block_entities(tmp)
+        test_block_nbt(tmp)
+        test_modded_block_nbt(tmp)
         test_negative_size(tmp)
         test_multi_region(tmp)
         test_air_policy(tmp)
         test_entities(tmp)
         test_cli(tmp)
+        test_inventory(tmp)
+        test_drop_block(tmp)
+        test_gui(tmp)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     print()
