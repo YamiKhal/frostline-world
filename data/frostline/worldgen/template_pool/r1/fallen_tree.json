@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "frostline:r1/fallen_tree_1",
-        "processors": "frostline:fallen_tree",
+        "processors": "frostline:nature_condition",
         "projection": "rigid"
       }
     },
@@ -16,7 +16,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "frostline:r1/fallen_tree_2",
-        "processors": "frostline:fallen_tree",
+        "processors": "frostline:nature_condition",
         "projection": "rigid"
       }
     },
@@ -25,7 +25,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "frostline:r1/fallen_tree_3",
-        "processors": "frostline:fallen_tree",
+        "processors": "frostline:nature_condition",
         "projection": "rigid"
       }
     },
@@ -34,7 +34,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "frostline:r1/fallen_tree_4",
-        "processors": "frostline:fallen_tree",
+        "processors": "frostline:nature_condition",
         "projection": "rigid"
       }
     }
