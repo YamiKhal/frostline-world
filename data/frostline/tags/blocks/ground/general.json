@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#frostline:ground/nature",
+    "#frostline:ground/stone"
+  ]
+}

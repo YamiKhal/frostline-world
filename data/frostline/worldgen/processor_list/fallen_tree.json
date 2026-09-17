@@ -1,0 +1,16 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:block_ignore",
+      "blocks": [
+        { "Name": "minecraft:structure_void" }
+      ]
+    },
+    {
+      "processor_type": "frostline:ground_filter",
+      "ground": "#frostline:ground/nature",
+      "max_drop": 3,
+      "min_fraction": 1.0
+    }
+  ]
+}
