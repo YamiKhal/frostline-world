@@ -107,7 +107,10 @@
     [],
     [],
     [],
-    [],
+    [
+      "frostline:r1/cave/room",
+      "frostline:r1/cave/ores"
+    ],
     [],
     [],
     [

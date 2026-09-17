@@ -1,20 +1,20 @@
 {
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 4,
-    "xz_spread": 1,
-    "y_spread": 0,
+    "tries": 6,
+    "xz_spread": 2,
+    "y_spread": 1,
     "feature": {
       "feature": {
         "type": "minecraft:random_selector",
         "config": {
           "features": [
             {
-              "chance": 0.4,
+              "chance": 0.35,
               "feature": "frostline:r1/cave/coal"
             }
           ],
-          "default": "frostline:r1/cave/air_small"
+          "default": "frostline:r1/cave/air_large"
         }
       },
       "placement": []
