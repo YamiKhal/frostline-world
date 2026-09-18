@@ -6,7 +6,7 @@
       "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "frostline:r1/boulder_1",
+        "location": "frostline:boulder/r1/boulder_1",
         "processors": "frostline:general_condition",
         "projection": "rigid"
       }
@@ -15,7 +15,7 @@
       "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "frostline:r1/boulder_2",
+        "location": "frostline:boulder/r1/boulder_2",
         "processors": "frostline:general_condition",
         "projection": "rigid"
       }
@@ -24,7 +24,7 @@
       "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "frostline:r1/boulder_3",
+        "location": "frostline:boulder/r1/boulder_3",
         "processors": "frostline:general_condition",
         "projection": "rigid"
       }

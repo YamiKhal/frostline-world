@@ -1,0 +1,60 @@
+{
+  "name": "frostline:r1/grave",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:extra/r1/grave_1",
+        "processors": "frostline:grave_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:extra/r1/grave_2",
+        "processors": "frostline:grave_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:extra/r1/grave_3",
+        "processors": "frostline:grave_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:extra/r1/grave_4",
+        "processors": "frostline:grave_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:extra/r1/grave_5",
+        "processors": "frostline:grave_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:extra/r1/grave_6",
+        "processors": "frostline:grave_condition",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

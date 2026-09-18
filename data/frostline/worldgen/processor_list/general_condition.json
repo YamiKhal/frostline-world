@@ -3,14 +3,18 @@
     {
       "processor_type": "minecraft:block_ignore",
       "blocks": [
-        { "Name": "minecraft:structure_void" }
+        {
+          "Name": "minecraft:structure_void"
+        }
       ]
     },
     {
       "processor_type": "frostline:placement_filter",
       "ground": "#frostline:ground/general",
       "max_drop": 5,
-      "min_fraction": 0.6
+      "min_fraction": 0.6,
+      "yield_to": "#frostline:r1/boulder",
+      "yield_margin": 1
     }
   ]
 }

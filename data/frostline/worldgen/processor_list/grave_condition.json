@@ -1,0 +1,45 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:air"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "position_predicate": {
+            "predicate_type": "minecraft:axis_aligned_linear_pos",
+            "axis": "y",
+            "min_dist": 3,
+            "max_dist": 4,
+            "min_chance": 0.0,
+            "max_chance": 1.0
+          },
+          "output_state": {
+            "Name": "minecraft:structure_void"
+          }
+        }
+      ]
+    },
+    {
+      "processor_type": "minecraft:block_ignore",
+      "blocks": [
+        {
+          "Name": "minecraft:structure_void"
+        }
+      ]
+    },
+    {
+      "processor_type": "frostline:placement_filter",
+      "ground": "#frostline:ground/general",
+      "max_drop": 5,
+      "min_fraction": 0.6,
+      "yield_to": "#frostline:r1/grave",
+      "yield_margin": 1
+    }
+  ]
+}

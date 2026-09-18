@@ -3,7 +3,9 @@
     {
       "processor_type": "minecraft:block_ignore",
       "blocks": [
-        { "Name": "minecraft:structure_void" }
+        {
+          "Name": "minecraft:structure_void"
+        }
       ]
     },
     {
@@ -11,7 +13,9 @@
       "ground": "#frostline:ground/nature",
       "max_drop": 5,
       "min_fraction": 0.05,
-      "max_slope": 10
+      "max_slope": 10,
+      "yield_to": "#frostline:r1/dead_tree",
+      "yield_margin": 0
     }
   ]
 }

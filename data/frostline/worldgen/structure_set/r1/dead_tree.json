@@ -11,6 +11,11 @@
     "separation": 0,
     "salt": 771802,
     "frequency": 0.7,
-    "frequency_reduction_method": "default"
+    "frequency_reduction_method": "default",
+    "locate_offset": [
+      8,
+      0,
+      8
+    ]
   }
 }

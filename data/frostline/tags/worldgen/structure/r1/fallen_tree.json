@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "frostline:r1/grave",
+    "frostline:r1/grave_lone",
+    "frostline:r1/boulder",
+    "frostline:r1/boulder_lone",
+    "frostline:r1/fallen_tree"
+  ]
+}
