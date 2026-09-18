@@ -1,0 +1,8 @@
+{
+  "feature": "frostline:shared/snow/freeze",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

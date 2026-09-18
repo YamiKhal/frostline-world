@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": [],
+  "start_pool": "biomancy:keter_worm/start",
+  "size": 5,
+  "max_distance_from_center": 100,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": -32
+    },
+    "max_inclusive": {
+      "absolute": 16
+    }
+  },
+  "step": "underground_structures",
+  "terrain_adaptation": "none",
+  "use_expansion_hack": false,
+  "spawn_overrides": {}
+}

@@ -54,6 +54,9 @@
       }
     },
     {
+      "type": "frostline:not_structure_snow"
+    },
+    {
       "type": "minecraft:biome"
     }
   ]

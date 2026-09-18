@@ -112,7 +112,7 @@
       "frostline:r1/tree/highland_exposed"
     ],
     [
-      "minecraft:freeze_top_layer",
+      "frostline:shared/snow/freeze",
       "frostline:shared/ice/cracked_river",
       "frostline:r1/snow/fells_holes",
       "frostline:r1/snow/fells_canopy",

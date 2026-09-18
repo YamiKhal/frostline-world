@@ -120,7 +120,7 @@
     [],
     [],
     [
-      "minecraft:freeze_top_layer",
+      "frostline:shared/snow/freeze",
       "frostline:shared/snow/deep/first",
       "frostline:shared/snow/deep/second",
       "frostline:shared/snow/deep/third",
