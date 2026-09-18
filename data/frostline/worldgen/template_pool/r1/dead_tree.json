@@ -1,0 +1,51 @@
+{
+  "name": "frostline:r1/dead_tree",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:r1/dead_tree_1",
+        "processors": "frostline:nature_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:r1/dead_tree_2",
+        "processors": "frostline:nature_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:r1/dead_tree_3",
+        "processors": "frostline:nature_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:r1/dead_tree_4",
+        "processors": "frostline:nature_condition",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "frostline:r1/dead_tree_5",
+        "processors": "frostline:nature_condition",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
