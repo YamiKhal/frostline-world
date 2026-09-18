@@ -111,6 +111,7 @@
     [],
     [
       "minecraft:freeze_top_layer",
+      "frostline:shared/ice/cracked_river",
       "frostline:r2/snow/normal/first",
       "frostline:r2/snow/normal/second",
       "frostline:r2/snow/normal/third",

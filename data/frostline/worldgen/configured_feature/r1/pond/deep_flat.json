@@ -20,10 +20,9 @@
     "cap": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "immersive_weathering:thin_ice",
+        "Name": "frostline:cracked_ice",
         "Properties": {
-          "cracked": "0",
-          "can_expand": "false"
+          "cracked": "0"
         }
       }
     },

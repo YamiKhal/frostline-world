@@ -120,6 +120,7 @@
     ],
     [
       "minecraft:freeze_top_layer",
+      "frostline:shared/ice/cracked_river",
       "frostline:r1/snow/fells_holes",
       "frostline:r1/snow/fells_canopy",
       "frostline:r1/snow/fells_unstack",

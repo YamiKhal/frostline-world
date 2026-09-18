@@ -13,7 +13,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "decorative_winter:thin_branch"
+        "Name": "minecraft:birch_leaves"
       }
     },
     "minimum_size": {

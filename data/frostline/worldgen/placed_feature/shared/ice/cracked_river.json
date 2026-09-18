@@ -1,5 +1,5 @@
 {
-  "feature": "frostline:r1/tree/dead/litter",
+  "feature": "frostline:shared/ice/cracked_river",
   "placement": [
     {
       "type": "minecraft:count",
@@ -9,8 +9,10 @@
       "type": "minecraft:in_square"
     },
     {
-      "type": "minecraft:heightmap",
-      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+      "type": "minecraft:noise_based_count",
+      "noise_factor": 200,
+      "noise_offset": 0.1,
+      "noise_to_count_ratio": 1
     },
     {
       "type": "minecraft:biome"

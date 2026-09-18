@@ -118,11 +118,11 @@
       "frostline:r1/tree/dead/grove_understory",
       "frostline:r1/tree/dead/rare_stand",
       "frostline:r1/tree/podzol_floor",
-      "frostline:r1/tree/podzol_wide",
-      "frostline:r1/tree/dead/litter"
+      "frostline:r1/tree/podzol_wide"
     ],
     [
       "minecraft:freeze_top_layer",
+      "frostline:shared/ice/cracked_river",
       "frostline:r1/snow/fells_holes",
       "frostline:r1/snow/fells_canopy",
       "frostline:r1/snow/fells_unstack",
