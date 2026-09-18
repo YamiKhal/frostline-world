@@ -266,17 +266,25 @@ def test_negative_size(tmp):
     print('negative region sizes')
     pal = [state('minecraft:air'), state('minecraft:stone'),
            state('minecraft:structure_void')]
-    # Local index (0,0,0) is the corner AT Position; the region grows -x, -z.
+    # Litematica indexes blocks AND tile entities from the region's minimum corner, whichever
+    # way the selection was dragged (takeBlocksFromWorld loops x + minCorner.x). A negative
+    # size only moves that corner; it never mirrors the index. The graves (size z -3) and
+    # fallen_tree_4 (size z -7) came out mirrored on z, and their snowrealmagic tile entities
+    # were dropped, before this was fixed.
     cells = {(0, 0, 0): 1, (2, 0, 0): 2, (0, 0, 1): 2}
+    tile = nbtio.comp(OrderedDict([('id', nbtio.string('snowrealmagic:texture_tile')),
+                                   ('Block', nbtio.string('minecraft:cobblestone_wall')),
+                                   ('x', nbtio.i32(0)), ('y', nbtio.i32(0)), ('z', nbtio.i32(0))]))
     p = os.path.join(tmp, 'neg.litematic')
-    write_litematic(p, [('main', region([10, 5, 10], [-3, 1, -2], pal, cells))])
-    root, _ = L.convert(p, policy())
+    write_litematic(p, [('main', region([10, 5, 10], [-3, 1, -2], pal, cells, tiles=[tile]))])
+    root, rep = L.convert(p, policy())
     size, grid = read_grid(root)
     check(size == [3, 1, 2], 'negative size yields a positive box')
-    # Position 10 with size -3 spans world x 8..10, so local x = 10 - 8 = 2.
-    check(grid[(2, 0, 1)][0][0] == 'minecraft:stone', 'origin cell lands at the high corner')
-    check(grid[(0, 0, 1)][0][0] == 'minecraft:structure_void', 'x offset mirrors correctly')
-    check(grid[(2, 0, 0)][0][0] == 'minecraft:structure_void', 'z offset mirrors correctly')
+    check(grid[(0, 0, 0)][0][0] == 'minecraft:stone', 'index 0 is the low corner, not Position')
+    check(grid[(2, 0, 0)][0][0] == 'minecraft:structure_void', 'x is not mirrored')
+    check(grid[(0, 0, 1)][0][0] == 'minecraft:structure_void', 'z is not mirrored')
+    check(grid[(0, 0, 0)][1] is not None, 'a tile entity in a negative region lands on its block')
+    check(rep['block_nbt'] == {'snowrealmagic:texture_tile': 1}, 'and is reported, not orphaned')
 
 
 def test_multi_region(tmp):

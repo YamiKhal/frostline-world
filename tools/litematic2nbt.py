@@ -110,17 +110,18 @@ def unpack_states(longs, bits, count):
     return out
 
 
-def axis_span(pos, size):
-    """A region size may be negative, meaning the region grows the other way.
+def axis_min(pos, size):
+    """World coordinate of a region's low corner on one axis.
 
-    Returns (world_min, step). With step -1 the local index 0 sits at the high
-    end, so local i maps to world_min + (extent - 1 - i).
+    A region size may be negative, meaning the region grows the other way from
+    Position. Litematica still stores the block array and the tile entity
+    positions indexed from the region's minimum corner, whichever way it was
+    dragged (LitematicaSchematic.takeBlocksFromWorld loops x + minCorner.x), so
+    the size's sign only moves the corner, never the direction of the index.
     """
     if size == 0:
         raise ConvertError('region has a zero-length axis')
-    if size > 0:
-        return pos, 1
-    return pos + size + 1, -1
+    return pos if size > 0 else pos + size + 1
 
 
 # --- palette -------------------------------------------------------------
@@ -213,19 +214,19 @@ def read_schematic(path):
         d = reg[1]
         pos = [d['Position'][1][k][1] for k in 'xyz']
         size = [d['Size'][1][k][1] for k in 'xyz']
-        spans = [axis_span(pos[i], size[i]) for i in range(3)]
+        mins = [axis_min(pos[i], size[i]) for i in range(3)]
         dims = [abs(s) for s in size]
         for i in range(3):
-            mn = spans[i][0]
+            mn = mins[i]
             mx = mn + dims[i] - 1
             lo[i] = mn if lo[i] is None else min(lo[i], mn)
             hi[i] = mx if hi[i] is None else max(hi[i], mx)
-        parsed.append((rname, d, pos, spans, dims))
+        parsed.append((rname, d, pos, mins, dims))
 
     scene.size = [hi[i] - lo[i] + 1 for i in range(3)]
 
     # Pass 2: rasterise every region into the one box.
-    for rname, d, pos, spans, dims in parsed:
+    for rname, d, pos, mins, dims in parsed:
         pal = [state_key(e) for e in d['BlockStatePalette'][1][1]]
         w, h, l = dims
         indices = unpack_states(d['BlockStates'][1], bits_for(len(pal)), w * h * l)
@@ -236,10 +237,7 @@ def read_schematic(path):
                                    % (rname, si, len(pal)))
             y, rem = divmod(i, w * l)
             z, x = divmod(rem, w)
-            wx = spans[0][0] + (x if spans[0][1] > 0 else w - 1 - x)
-            wy = spans[1][0] + (y if spans[1][1] > 0 else h - 1 - y)
-            wz = spans[2][0] + (z if spans[2][1] > 0 else l - 1 - z)
-            cell = (wx - lo[0], wy - lo[1], wz - lo[2])
+            cell = (mins[0] + x - lo[0], mins[1] + y - lo[1], mins[2] + z - lo[2])
             if cell in scene.grid:
                 scene.overlaps += 1
             scene.grid[cell] = pal[si]
@@ -249,8 +247,8 @@ def read_schematic(path):
             tx, ty, tz = (td.get(k, ('i', 0))[1] for k in 'xyz')
             for k in BLOCK_NBT_JUNK:
                 td.pop(k, None)
-            scene.block_nbt[(pos[0] + tx - lo[0], pos[1] + ty - lo[1],
-                             pos[2] + tz - lo[2])] = td
+            scene.block_nbt[(mins[0] + tx - lo[0], mins[1] + ty - lo[1],
+                             mins[2] + tz - lo[2])] = td
 
         for ent in d.get('Entities', ('list', (10, [])))[1][1]:
             ed = OrderedDict(ent[1])
