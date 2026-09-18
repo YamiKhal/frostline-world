@@ -15,7 +15,6 @@
     "minecraft:basalt",
     "minecraft:smooth_basalt",
     "minecraft:terracotta",
-    "minecraft:red_terracotta",
-    "immersive_weathering:snowy_cobblestone"
+    "minecraft:red_terracotta"
   ]
 }

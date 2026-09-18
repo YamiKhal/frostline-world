@@ -114,12 +114,12 @@
     [],
     [],
     [
-      "frostline:r1/tree/dying_stand",
-      "frostline:r1/tree/grove_understory",
-      "frostline:r1/tree/rare_stand",
+      "frostline:r1/tree/dead/dying_stand",
+      "frostline:r1/tree/dead/grove_understory",
+      "frostline:r1/tree/dead/rare_stand",
       "frostline:r1/tree/podzol_floor",
       "frostline:r1/tree/podzol_wide",
-      "frostline:r1/tree/litter"
+      "frostline:r1/tree/dead/litter"
     ],
     [
       "minecraft:freeze_top_layer",

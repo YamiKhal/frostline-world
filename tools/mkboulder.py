@@ -19,12 +19,10 @@ SPEC = [
     ('boulder_2', 1.5, 1.4, 1.7, [('minecraft:cobblestone', 3), ('minecraft:mossy_cobblestone', 2)], 22),
     ('boulder_3', 2.0, 2.0, 1.9, [('minecraft:stone', 4), ('minecraft:andesite', 2),
                                   ('minecraft:cobblestone', 1)], 33),
-    ('boulder_4', 2.2, 2.4, 2.0, [('minecraft:mossy_cobblestone', 3), ('minecraft:cobblestone', 3),
-                                  ('immersive_weathering:snowy_cobblestone', 2)], 44),
+    ('boulder_4', 2.2, 2.4, 2.0, [('minecraft:mossy_cobblestone', 3), ('minecraft:cobblestone', 3)], 44),
     ('boulder_5', 2.4, 2.8, 2.3, [('minecraft:stone', 4), ('minecraft:cobblestone', 2),
                                   ('minecraft:andesite', 2)], 55),
     ('boulder_6', 2.7, 3.4, 2.6, [('minecraft:mossy_cobblestone', 3), ('minecraft:cobblestone', 2),
-                                  ('immersive_weathering:snowy_cobblestone', 2),
                                   ('minecraft:andesite', 1)], 66),
 ]
 
