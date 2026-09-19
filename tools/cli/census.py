@@ -2,7 +2,7 @@
 
 Answers "did this feature actually generate?" without flying. Give it block
 substrings; it reports counts and how many chunks of each biome were scanned.
-Usage: python tools/census.py <region dir> <substr> [substr ...]
+Usage: python tools/cli/census.py <region dir> <substr> [substr ...]
 """
 import sys, os, glob, collections
 import numpy as np

@@ -4,7 +4,7 @@ score how rectangular each one is.
     fill = area / bounding-box area      1.00 = a perfect filled rectangle
     A natural blob sits around 0.55-0.75. Anything >= 0.85 with area >= 9 is a stamp.
 
-Usage: python tools/patch_shapes.py surface.pkl [min_area]
+Usage: python tools/cli/patch_shapes.py surface.pkl [min_area]
 """
 import sys, pickle, collections
 import numpy as np

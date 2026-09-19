@@ -1,7 +1,7 @@
 """Count structure STARTS recorded in generated chunks.
 
 Exact: reads chunk.structures.starts, so it does not depend on a marker block.
-Usage: python tools/structcount.py <region dir>
+Usage: python tools/cli/structcount.py <region dir>
 """
 import sys, os, glob, collections
 sys.path.insert(0, os.path.dirname(__file__))

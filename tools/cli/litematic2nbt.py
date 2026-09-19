@@ -17,22 +17,22 @@ fallen_tree schematic wherever it lives.
 
 Examples
     # what is actually in these files?
-    python tools/litematic2nbt.py --list "fallen_tree_*"
+    python tools/cli/litematic2nbt.py --list "fallen_tree_*"
 
     # point and click instead
-    python tools/litematic2nbt.py --gui
+    python tools/cli/litematic2nbt.py --gui
 
     # convert, keeping everything
-    python tools/litematic2nbt.py "fallen_tree_*" -d data/frostline/structures/r1
+    python tools/cli/litematic2nbt.py "fallen_tree_*" -d data/frostline/structures/r1
 
     # a build with no voids placed: make air non-destructive
-    python tools/litematic2nbt.py "boulder_*" --air void -d data/frostline/structures/r1
+    python tools/cli/litematic2nbt.py "boulder_*" --air void -d data/frostline/structures/r1
 
     # drop the mob the selection box caught, keep everything else
-    python tools/litematic2nbt.py fallen_tree_2 --drop-entity stray -d out/
+    python tools/cli/litematic2nbt.py fallen_tree_2 --drop-entity stray -d out/
 
     # keep only these two entity types
-    python tools/litematic2nbt.py r3_shrine --keep-entity item_frame,armor_stand -d out/
+    python tools/cli/litematic2nbt.py r3_shrine --keep-entity item_frame,armor_stand -d out/
 
 Read the report line `solid N  air N  structure_void N`. If air is non-zero and
 structure_void is zero, that structure will carve terrain when it generates.
@@ -40,7 +40,10 @@ structure_void is zero, that structure will carve terrain when it generates.
 import argparse, glob, json, math, os, struct, sys
 from collections import Counter, OrderedDict
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_APPS = os.path.join(os.path.dirname(_HERE), 'apps')
+sys.path.insert(0, _HERE)
+sys.path.insert(0, _APPS)                 # litematic_convert lives in tools/apps/
 import nbtio
 
 AIR = 'minecraft:air'
@@ -609,8 +612,8 @@ def main(argv=None):
     a = ap.parse_args(argv)
 
     if a.gui:
-        import litematic_gui
-        return litematic_gui.run(a.inputs, outdir=a.outdir)
+        import litematic_convert
+        return litematic_convert.run(a.inputs, outdir=a.outdir)
     # Reported rather than raised through argparse, so main() stays callable as
     # a function (the tests drive it directly).
     if not a.inputs:

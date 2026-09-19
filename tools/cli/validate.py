@@ -1,6 +1,6 @@
 """Load-time checks for the datapack, without launching the game.
 
-    python tools/validate.py
+    python tools/cli/validate.py
 
 Catches, in about a second, the four things that otherwise cost a full launch:
 
@@ -17,7 +17,7 @@ Exit code is non-zero if anything failed, so it can gate a deploy.
 """
 import json, glob, os, sys, collections
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.chdir(ROOT)
 
 problems = []

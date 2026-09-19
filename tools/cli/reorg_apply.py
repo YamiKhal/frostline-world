@@ -6,9 +6,9 @@ can never eat a longer one that contains it (frostline:.../spruce vs .../spruce_
 """
 import json, os, re, io, glob, shutil, sys
 
-feat  = json.load(open('tools/_moves.json'))
-extra = json.load(open('tools/_moves_extra.json'))
-paths = json.load(open('tools/_moves_extra_paths.json'))
+feat  = json.load(open('tools/cli/_moves.json'))
+extra = json.load(open('tools/cli/_moves_extra.json'))
+paths = json.load(open('tools/cli/_moves_extra_paths.json'))
 
 FEATREG = ('configured_feature','placed_feature')
 moves = []          # (old_path, new_path)

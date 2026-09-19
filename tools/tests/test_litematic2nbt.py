@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Self-contained tests for litematic2nbt. Run: python tools/test_litematic2nbt.py
+"""Self-contained tests for litematic2nbt. Run: python tools/tests/test_litematic2nbt.py
 
 Builds synthetic .litematic files -- including the cases a hand-saved schematic
 rarely covers, like negative region sizes and two overlapping regions -- and
@@ -8,7 +8,10 @@ checks the converted structure cell by cell. No game, no fixtures.
 import os, shutil, sys, tempfile
 from collections import OrderedDict
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_TOOLS = os.path.dirname(_HERE)
+sys.path.insert(0, os.path.join(_TOOLS, 'apps'))
+sys.path.insert(0, os.path.join(_TOOLS, 'cli'))
 import nbtio
 import litematic2nbt as L
 
@@ -459,7 +462,7 @@ def test_gui(tmp):
     print('gui')
     try:
         import tkinter as tk
-        import litematic_gui as G
+        import litematic_convert as G
         root = tk.Tk()
     except Exception as e:
         print('  skip  no tkinter or no display (%s)' % e)

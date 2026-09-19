@@ -5,8 +5,8 @@ height reading in a world with sea_level 63 report the sea surface: a flooded co
 came back as y62 (the top water block), so a biome whose land had sunk to y45 still
 measured "min 62" and the terrain looked fine when it was five blocks under water.
 Measure land with this; measure water coverage from the fraction below sea level.
-Usage: python tools/scan.py <save>/dimensions/frostline/zone_one/region [surface.pkl]
-Then: python tools/lone_blocks.py surface.pkl
+Usage: python tools/cli/scan.py <save>/dimensions/frostline/zone_one/region [surface.pkl]
+Then: python tools/cli/lone_blocks.py surface.pkl
 """
 import sys, os, glob, collections, pickle
 import numpy as np

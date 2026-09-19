@@ -89,8 +89,8 @@ if '--plan' in sys.argv:
             print('%-42s -> %s' % (old, moves[old]))
     print('\n%d features, %d move' % (len(moves), sum(1 for k,v in moves.items() if k!=v)))
     sys.exit()
-json.dump(moves, open('tools/_moves.json','w'), indent=1)
-print('wrote tools/_moves.json (%d entries)' % len(moves))
+json.dump(moves, open('tools/cli/_moves.json','w'), indent=1)
+print('wrote tools/cli/_moves.json (%d entries)' % len(moves))
 
 # ---- structures, structure sets, tags: <zone>_<name> -> <zone>/<name> ----
 ZKEY = ('q','r1','r2','r3','r4','r5','rc')
@@ -114,6 +114,6 @@ for p in glob.glob('data/frostline/tags/worldgen/biome/has_structure/*.json'):
             'frostline:has_structure/'+n,
             'data/frostline/tags/worldgen/biome/has_structure/%s.json' % stem,
             'data/frostline/tags/worldgen/biome/has_structure/%s.json' % n)
-json.dump({k:v[0] for k,v in extra.items()}, open('tools/_moves_extra.json','w'), indent=1)
-json.dump({k:[v[1],v[2]] for k,v in extra.items()}, open('tools/_moves_extra_paths.json','w'), indent=1)
+json.dump({k:v[0] for k,v in extra.items()}, open('tools/cli/_moves_extra.json','w'), indent=1)
+json.dump({k:[v[1],v[2]] for k,v in extra.items()}, open('tools/cli/_moves_extra_paths.json','w'), indent=1)
 print('extra: %d structures/sets/tags' % len(extra))

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Point-and-click front end for litematic2nbt. Run: python tools/litematic2nbt.py --gui
+"""Point-and-click front end for litematic2nbt.
+
+Run: python tools/apps/litematic_convert.py  (or litematic2nbt.py --gui)
 
 Add schematics, look at every block state and entity they contain, untick the
 ones you do not want, pick where the .nbt goes, convert. Nothing is dropped
@@ -11,12 +13,16 @@ import os
 import sys
 import traceback
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, _HERE)
+sys.path.insert(0, os.path.join(os.path.dirname(_HERE), 'cli'))   # litematic2nbt, nbtio
 import litematic2nbt as L
+import litematic_roots as R
 
 try:
     import tkinter as tk
     from tkinter import ttk, filedialog, messagebox
+    import rootsui
 except ImportError as e:  # pragma: no cover - only on a python built without tk
     tk = None
     _IMPORT_ERROR = e
@@ -128,6 +134,8 @@ class App(ttk.Frame):
         self.rowconfigure(4, weight=1)
 
         self.scenes = {}        # path -> Scene or the exception that stopped it
+        self.roots = R.Roots.load()
+        self.master_window = master
 
         self._build_files()
         self._build_lists()
@@ -163,6 +171,7 @@ class App(ttk.Frame):
         ttk.Button(row, text='Remove', command=self.remove_selected).pack(side='left',
                                                                           padx=(6, 0))
         ttk.Button(row, text='Clear', command=self.clear_files).pack(side='left', padx=(6, 0))
+        ttk.Button(row, text='Roots...', command=self.edit_roots).pack(side='right')
 
     def _build_lists(self):
         pane = ttk.Frame(self)
@@ -274,13 +283,15 @@ class App(ttk.Frame):
     def add_files(self):
         paths = filedialog.askopenfilenames(
             title='Pick schematics',
+            initialdir=self.anchor_in(),
             filetypes=[('Litematica schematics', '*.litematic *.litematica'),
                        ('All files', '*.*')])
         if paths:
             self.add_paths(paths)
 
     def add_folder(self):
-        folder = filedialog.askdirectory(title='Pick a folder of schematics')
+        folder = filedialog.askdirectory(title='Pick a folder of schematics',
+                                         initialdir=self.anchor_in())
         if not folder:
             return
         found = L.walk_dir(folder)
@@ -300,10 +311,30 @@ class App(ttk.Frame):
         self.refresh()
 
     def pick_outdir(self):
-        folder = filedialog.askdirectory(title='Where should the .nbt files go?',
-                                         initialdir=self.outdir.get() or os.getcwd())
+        folder = filedialog.askdirectory(
+            title='Where should the .nbt files go?',
+            initialdir=self.roots.anchor(R.STRUCTURES, self.outdir.get().strip() or None))
         if folder:
             self.outdir.set(folder)
+
+    # -- roots
+    def anchor_in(self):
+        """Where a "pick schematics" dialog opens: inside the schematics root,
+        or at the root itself when the last folder used was outside it. Without
+        this, converting into data/frostline/structures/ leaves the next open
+        dialog sitting in structures/, nowhere near the schematics."""
+        last = None
+        if self.scenes:
+            last = os.path.dirname(sorted(self.scenes)[-1])
+        return self.roots.anchor(R.SCHEMATICS, last)
+
+    def edit_roots(self):
+        dialog = rootsui.RootsDialog(self.master_window, self.roots,
+                                     kinds=(R.SCHEMATICS, R.STRUCTURES))
+        if dialog.saved:
+            self.say('schematics root: %s' % (self.roots.get(R.SCHEMATICS) or '(none)'))
+            self.say('structure output root: %s'
+                     % (self.roots.get(R.STRUCTURES) or '(none)'))
 
     # -- refresh
     def good_scenes(self):
@@ -423,7 +454,7 @@ def run(inputs=(), outdir=None):
               file=sys.stderr)
         return 2
     root = tk.Tk()
-    root.title('litematic2nbt')
+    root.title('litematic convert')
     root.geometry('980x820')
     root.minsize(760, 620)
     try:
