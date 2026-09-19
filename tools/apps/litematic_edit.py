@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """Edit a .litematic in place: see every block state and entity, take some out,
 swap others for a different id, rename the thing, save.
-Run: python tools/apps/litematic_edit.py
+Run: python tools/apps/litematic_edit.py [file.litematic | folder]
+
+Open a folder instead of a file and the whole folder is listed, subfolders
+included: click a file to edit it, or walk the list with Prev/Next (Alt+Left,
+Alt+Right). Files you have saved keep a mark, so a pass over a set of variants
+shows how far you got.
 
 The sibling app, litematic_convert, reads a schematic and writes a structure
 .nbt -- the schematic itself is never touched. This one edits the schematic and
@@ -215,12 +220,20 @@ class App(ttk.Frame):
         self.doc = None
         self.master_window = master
         self.roots = R.Roots.load()
+        self.folder = ''        # the folder being walked, if any
+        self.files = []         # every .litematic under it, in order
+        self.index = -1         # which of them is open; -1 = none of them
+        self.saved_paths = set()
 
         self._build_file_row()
         self._build_lists()
         self._build_options()
         self._build_actions()
         self._build_log()
+        # Walking a folder is a two-handed job -- one hand on the lists, one on
+        # the keyboard -- so Prev/Next get keys as well as buttons.
+        master.bind('<Alt-Left>', lambda _e: self.step(-1))
+        master.bind('<Alt-Right>', lambda _e: self.step(1))
         self.refresh()
 
     # -- widgets
@@ -256,12 +269,15 @@ class App(ttk.Frame):
     def _build_lists(self):
         pane = ttk.Frame(self)
         pane.grid(row=1, column=0, sticky='nsew', pady=(8, 0))
-        pane.columnconfigure(0, weight=3)
-        pane.columnconfigure(1, weight=2)
+        pane.columnconfigure(0, weight=2, minsize=210)
+        pane.columnconfigure(1, weight=3)
+        pane.columnconfigure(2, weight=2)
         pane.rowconfigure(0, weight=1)
 
+        self._build_folder(pane)
+
         left = ttk.LabelFrame(pane, text='Blocks', padding=6)
-        left.grid(row=0, column=0, sticky='nsew', padx=(0, 4))
+        left.grid(row=0, column=1, sticky='nsew', padx=(4, 4))
         left.rowconfigure(0, weight=1)
         left.columnconfigure(0, weight=1)
         self.blocks = PlanTree(left, 'block state', 'cells')
@@ -271,7 +287,7 @@ class App(ttk.Frame):
         self.blocks.on_keep = self.keep_blocks
 
         right = ttk.LabelFrame(pane, text='Entities', padding=6)
-        right.grid(row=0, column=1, sticky='nsew', padx=(4, 0))
+        right.grid(row=0, column=2, sticky='nsew', padx=(4, 0))
         right.rowconfigure(0, weight=1)
         right.columnconfigure(0, weight=1)
         self.entities = PlanTree(right, 'entity type', 'count')
@@ -279,6 +295,169 @@ class App(ttk.Frame):
         self.entities.on_remove = self.remove_entities
         self.entities.on_replace = self.replace_entities
         self.entities.on_keep = self.keep_entities
+
+    def _build_folder(self, pane):
+        """The folder browser: every schematic under one folder, in order.
+
+        Checking six variants of the same tree means opening six files, and
+        doing that through the Open dialog is six trips through a file picker.
+        Here it is one click, or Next.
+        """
+        box = ttk.LabelFrame(pane, text='Folder', padding=6)
+        box.grid(row=0, column=0, sticky='nsew', padx=(0, 4))
+        box.rowconfigure(1, weight=1)
+        box.columnconfigure(0, weight=1)
+
+        top = ttk.Frame(box)
+        top.grid(row=0, column=0, columnspan=2, sticky='ew')
+        ttk.Button(top, text='Open folder...', command=self.open_folder).pack(side='left')
+        self.folder_label = ttk.Label(top, text='no folder', foreground='#666')
+        self.folder_label.pack(side='left', padx=(6, 0))
+
+        self.file_tree = ttk.Treeview(box, columns=('mark', 'name', 'where'),
+                                      show='headings', selectmode='browse', height=12)
+        self.file_tree.heading('mark', text='')
+        self.file_tree.heading('name', text='file')
+        self.file_tree.heading('where', text='in')
+        self.file_tree.column('mark', width=22, anchor='center', stretch=False)
+        self.file_tree.column('name', width=150, anchor='w')
+        self.file_tree.column('where', width=90, anchor='w', stretch=False)
+        bar = ttk.Scrollbar(box, orient='vertical', command=self.file_tree.yview)
+        self.file_tree.configure(yscrollcommand=bar.set)
+        self.file_tree.grid(row=1, column=0, sticky='nsew', pady=(6, 0))
+        bar.grid(row=1, column=1, sticky='ns', pady=(6, 0))
+        self.file_tree.tag_configure('open', font=('TkDefaultFont', 9, 'bold'))
+        self.file_tree.tag_configure('saved', foreground='#080')
+        self.file_tree.bind('<Button-1>', self._click_file)
+        self.file_tree.bind('<Return>', lambda _e: self._open_selected())
+        self.file_tree.bind('<Double-1>', lambda _e: self._open_selected())
+
+        nav = ttk.Frame(box)
+        nav.grid(row=2, column=0, columnspan=2, sticky='ew', pady=(4, 0))
+        self.prev_button = ttk.Button(nav, text='< Prev', width=8,
+                                      command=lambda: self.step(-1))
+        self.prev_button.pack(side='left')
+        self.next_button = ttk.Button(nav, text='Next >', width=8,
+                                      command=lambda: self.step(1))
+        self.next_button.pack(side='left', padx=(4, 0))
+        self.position_label = ttk.Label(nav, text='', foreground='#666')
+        self.position_label.pack(side='left', padx=(8, 0))
+
+    # -- walking a folder
+    def open_folder(self):
+        if not self.confirm_discard():
+            return
+        folder = filedialog.askdirectory(title='Pick a folder of schematics',
+                                         initialdir=self.anchor())
+        if folder:
+            self.load_folder(folder)
+
+    def load_folder(self, folder, open_first=True):
+        """List every .litematic under `folder`, subfolders included."""
+        folder = os.path.abspath(folder)
+        found = L.walk_dir(folder)
+        if not found:
+            messagebox.showinfo('Nothing found',
+                                'No .litematic files under:\n%s' % folder)
+            return False
+        self.folder = folder
+        self.files = found
+        self.index = -1
+        self.saved_paths = set()
+        self.fill_file_list()
+        self.say('folder %s: %d schematic%s'
+                 % (folder, len(found), '' if len(found) == 1 else 's'))
+        if open_first:
+            self.load_index(0, force=True)
+        else:
+            self.refresh_nav()
+        return True
+
+    def fill_file_list(self):
+        self.file_tree.delete(*self.file_tree.get_children())
+        for path in self.files:
+            where = os.path.relpath(os.path.dirname(path), self.folder)
+            self.file_tree.insert('', 'end', iid=path,
+                                  values=('', os.path.basename(path),
+                                          '' if where == '.' else where))
+
+    def load_index(self, i, force=False):
+        """Open the i-th file in the folder, asking about unsaved edits first."""
+        if not 0 <= i < len(self.files):
+            return False
+        if not force and not self.confirm_discard():
+            self.refresh_nav()          # put the selection back on what is open
+            return False
+        self.index = i
+        ok = self.load_path(self.files[i], guard=False)
+        self.refresh_nav()
+        return ok
+
+    def step(self, delta):
+        """Prev/Next. From outside the folder list, Next starts at the top."""
+        if not self.files:
+            return
+        target = self.index + delta
+        if self.index < 0:
+            target = 0 if delta > 0 else len(self.files) - 1
+        if 0 <= target < len(self.files):
+            self.load_index(target)
+
+    def _click_file(self, event):
+        if self.file_tree.identify_region(event.x, event.y) not in ('cell', 'tree'):
+            return None
+        path = self.file_tree.identify_row(event.y)
+        if not path:
+            return None
+        self._open(path)
+        return 'break'
+
+    def _open_selected(self):
+        for path in self.file_tree.selection():
+            self._open(path)
+            return
+
+    def _open(self, path):
+        if path in self.files:
+            self.load_index(self.files.index(path))
+
+    def mark_saved(self, path):
+        """Tick a file, so a pass over a folder of variants shows its progress."""
+        if path in self.files:
+            self.saved_paths.add(path)
+            self.file_tree.set(path, 'mark', '*')
+            self.refresh_nav()
+
+    def refresh_nav(self):
+        """Selection, ticks and the Prev/Next state, all from self.index."""
+        for path in self.files:
+            tags = []
+            if path in self.saved_paths:
+                tags.append('saved')
+            if 0 <= self.index < len(self.files) and path == self.files[self.index]:
+                tags.append('open')
+            self.file_tree.item(path, tags=tuple(tags))
+        if 0 <= self.index < len(self.files):
+            current = self.files[self.index]
+            self.file_tree.selection_set(current)
+            self.file_tree.see(current)
+            self.position_label.configure(
+                text='%d / %d' % (self.index + 1, len(self.files)))
+        elif self.files:
+            self.file_tree.selection_remove(*self.file_tree.selection())
+            self.position_label.configure(
+                text='%d files' % len(self.files))
+        else:
+            self.position_label.configure(text='')
+        has = bool(self.files)
+        self.prev_button.state(['!disabled']
+                               if has and self.index != 0 else ['disabled'])
+        self.next_button.state(['!disabled']
+                               if has and self.index < len(self.files) - 1
+                               else ['disabled'])
+        self.folder_label.configure(
+            text=(os.path.basename(self.folder) or self.folder) if self.folder
+            else 'no folder')
 
     def _build_options(self):
         box = ttk.LabelFrame(self, text='Options', padding=6)
@@ -341,7 +520,9 @@ class App(ttk.Frame):
         if path:
             self.load_path(path)
 
-    def load_path(self, path, keep_plan=False):
+    def load_path(self, path, keep_plan=False, guard=False):
+        if guard and not self.confirm_discard():
+            return False
         path = os.path.abspath(path)
         try:
             self.doc = D.Doc.load(path)
@@ -353,6 +534,9 @@ class App(ttk.Frame):
         if not keep_plan:
             self.blocks.clear_plan()
             self.entities.clear_plan()
+        # Opening a file that happens to be in the folder list -- through Open,
+        # or after a save -- puts the walk back in step with it.
+        self.index = self.files.index(path) if path in self.files else -1
         self.say('opened %s' % path)
         orphans = self.doc.orphan_nbt_count()
         if orphans:
@@ -482,6 +666,7 @@ class App(ttk.Frame):
             self.name_entry.state(['disabled'])
             self.blocks.load([])
             self.entities.load([])
+            self.refresh_nav()
             self.update_summary()
             return
         self.file_label.configure(text=self.doc.path)
@@ -498,6 +683,7 @@ class App(ttk.Frame):
                     len(rows), '' if len(rows) == 1 else 's', with_nbt))
         self.blocks.load([(L.state_label(k), n, nbt) for k, n, nbt in rows])
         self.entities.load(ents)
+        self.refresh_nav()
         self.update_summary()
 
     def update_summary(self):
@@ -612,6 +798,7 @@ class App(ttk.Frame):
         self.blocks.clear_plan()
         self.entities.clear_plan()
         self.load_path(dest)
+        self.mark_saved(dest)
 
 
 def run(inputs=()):
@@ -621,15 +808,16 @@ def run(inputs=()):
         return 2
     root = tk.Tk()
     root.title('litematic edit')
-    root.geometry('1020x820')
-    root.minsize(820, 640)
+    root.geometry('1180x820')
+    root.minsize(940, 640)
     try:
         app = App(root)
     except Exception:
         traceback.print_exc()
         return 1
     for path in inputs:
-        if app.load_path(path):
+        loaded = app.load_folder(path) if os.path.isdir(path) else app.load_path(path)
+        if loaded:
             break
     root.mainloop()
     return 0

@@ -542,6 +542,83 @@ def test_gui(tmp):
         root.destroy()
 
 
+def test_gui_folder(tmp):
+    print('gui: walking a folder')
+    try:
+        import tkinter as tk
+        import litematic_edit as E
+        window = tk.Tk()
+    except Exception as e:
+        print('  skip  no tkinter or no display (%s)' % e)
+        return
+
+    folder = os.path.join(tmp, 'walk')
+    os.makedirs(os.path.join(folder, 'sub'))
+    names = ['a.litematic', 'b.litematic', os.path.join('sub', 'c.litematic')]
+    for n in names:
+        simple(os.path.join(folder, n))
+    open(os.path.join(folder, 'notes.txt'), 'w').close()
+
+    answers = {'yes': True}
+    try:
+        window.withdraw()
+        app = E.App(window)
+        check(app.load_folder(folder), 'a folder of schematics opens')
+        check(len(app.files) == 3, 'every .litematic under it is listed, subfolders too')
+        check(all(not f.endswith('.txt') for f in app.files), 'and nothing else is')
+        check(len(app.file_tree.get_children()) == 3, 'the list shows them all')
+        check(app.index == 0 and app.doc.path == app.files[0],
+              'the first one is opened straight away')
+        check(app.position_label.cget('text') == '1 / 3', 'the position is shown')
+        check('disabled' in app.prev_button.state(), 'Prev is dead at the top')
+
+        app.step(1)
+        check(app.index == 1 and app.doc.path == app.files[1], 'Next moves on')
+        app.step(1)
+        check(app.index == 2, 'and again')
+        check('disabled' in app.next_button.state(), 'Next is dead at the end')
+        app.step(1)
+        check(app.index == 2, 'and stepping past the end stays put')
+        app.step(-1)
+        check(app.index == 1, 'Prev goes back')
+
+        app._open(app.files[0])
+        check(app.index == 0 and app.doc.path == app.files[0],
+              'clicking a row opens that file')
+        check(app.file_tree.selection() == (app.files[0],),
+              'and the list follows what is open')
+
+        # Switching away from unsaved edits asks first, and no means no.
+        app.blocks.set_action([STONE], (E.REMOVE,))
+        E.messagebox.askyesno = lambda *_a, **_kw: answers['yes']
+        answers['yes'] = False
+        app.step(1)
+        check(app.index == 0 and app.planned(),
+              'saying no to the unsaved-edits prompt keeps you on the file')
+        answers['yes'] = True
+        app.step(1)
+        check(app.index == 1 and not app.planned(), 'saying yes moves on and drops them')
+
+        app.backup.set(False)
+        app.blocks.set_action([STONE], (E.REMOVE,))
+        app.save()
+        check(app.files[1] in app.saved_paths, 'a saved file is marked in the list')
+        check(app.file_tree.set(app.files[1], 'mark') == '*', 'with a visible mark')
+        check(app.index == 1, 'and saving leaves you where you were')
+
+        # A file opened from outside the folder leaves the walk without a place
+        # in it, which Next has to cope with.
+        outside = simple(os.path.join(tmp, 'outsider.litematic'))
+        app.load_path(outside)
+        check(app.index == -1, 'a file from elsewhere is not in the walk')
+        check(app.position_label.cget('text') == '3 files',
+              'so the position shows the count instead')
+        app.step(1)
+        check(app.index == 0, 'and Next starts the folder again from the top')
+    finally:
+        window.destroy()
+
+
 def main():
     tmp = tempfile.mkdtemp(prefix='litedit')
     try:
@@ -572,6 +649,7 @@ def main():
         test_save_as(tmp)
         test_rejects_non_schematic(tmp)
         test_gui(tmp)
+        test_gui_folder(tmp)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     print('')
